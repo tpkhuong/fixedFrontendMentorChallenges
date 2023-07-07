@@ -1,0 +1,75 @@
+/* mobile */
+
+.game-options-bg {
+  height: 100%;
+  font-size: var(--font-size-24px);
+  font-weight: 600;
+}
+
+.game-options-bg span {
+  color: var(--color-neutral-black);
+}
+
+.options-container {
+  background-color: var(--color-purple);
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-game:hover,
+.start-game:focus,
+.rules-btn:hover,
+.rules-btn:focus {
+  box-shadow: var(--bottom-box-shadow-hover);
+  border-color: var(--color-dark-purple);
+}
+
+.start-game,
+.rules-btn {
+  border-color: var(--color-neutral-black);
+  padding: 20px;
+  width: 100%;
+  border-block-start: var(--border-block-start-inline);
+  border-inline: var(--border-block-start-inline);
+  border-radius: var(--border-radius);
+  box-shadow: var(--bottom-box-shadow);
+}
+
+.start-game {
+  background-color: var(--color-yellow);
+  display: flex;
+  align-items: center;
+  margin-block: 70px;
+  margin-block-end: 30px;
+  padding-inline-end: 17px;
+}
+
+.rules-btn {
+  background-color: var(--color-neutral-white);
+}
+
+@media screen and (max-width: 23.625rem) {
+  .options-container {
+    min-height: 100%;
+  }
+}
+/* --color-dark-purple main bg */
+/* --color-purple:  */
+
+/* tablet */
+
+@media screen and (min-width: 48rem) {
+  .game-options-bg {
+    background-color: var(--color-dark-purple);
+  }
+
+  .options-container {
+    flex-basis: 480px;
+    height: min-content;
+  }
+}
+
+/* desktop */
