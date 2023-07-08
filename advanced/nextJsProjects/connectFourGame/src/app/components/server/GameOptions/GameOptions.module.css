@@ -29,13 +29,13 @@
 
 .start-game,
 .rules-btn {
-  border-color: var(--color-neutral-black);
   padding: 20px;
   width: 100%;
   border-block-start: var(--border-block-start-inline);
   border-inline: var(--border-block-start-inline);
   border-radius: var(--border-radius);
   box-shadow: var(--bottom-box-shadow);
+  border-color: var(--color-neutral-black);
 }
 
 .start-game {
@@ -45,10 +45,12 @@
   margin-block: 70px;
   margin-block-end: 30px;
   padding-inline-end: 17px;
+  justify-content: space-between;
 }
 
 .rules-btn {
   background-color: var(--color-neutral-white);
+  text-align: left;
 }
 
 @media screen and (max-width: 23.625rem) {
@@ -64,11 +66,26 @@
 @media screen and (min-width: 48rem) {
   .game-options-bg {
     background-color: var(--color-dark-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .options-container {
     flex-basis: 480px;
     height: min-content;
+    padding-inline: 40px;
+    padding-block: 70px;
+    padding-block-end: 60px;
+    border-block-start: var(--border-block-start-inline);
+    border-inline: var(--border-block-start-inline);
+    border-radius: var(--border-radius);
+    box-shadow: var(--bottom-box-shadow);
+    border-color: var(--color-neutral-black);
+  }
+
+  .start-game {
+    margin-block-start: 79px;
   }
 }
 
