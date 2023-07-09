@@ -3,7 +3,7 @@ import styles from "./GameOptions.module.css";
 
 export default function GameOptions({ children }) {
   return (
-    <main className={styles[`game-options-bg`]}>
+    <main data-showrules="false" className={styles[`game-options-bg`]}>
       <h1 className="visually-hidden">Connect Four</h1>
       <div className={styles[`options-container`]}>
         {/* img */}
@@ -22,6 +22,27 @@ export default function GameOptions({ children }) {
         <button type="button" className={styles[`rules-btn`]}>
           Game Rules
         </button>
+      </div>
+      {/* rules modal */}
+      <div className={styles[`modal-container`]}>
+        <div
+          aria-labelledby="rules-title"
+          aria-modal="true"
+          role="dialog"
+          className={styles[`rules-modal`]}
+        >
+          <h2 id="rules-title">Rules</h2>
+          <h3></h3>
+          <p></p>
+          <h3></h3>
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+          <img src="" alt="" />
+        </div>
       </div>
     </main>
   );
