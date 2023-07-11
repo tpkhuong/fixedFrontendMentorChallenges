@@ -31,17 +31,48 @@ export default function GameOptions({ children }) {
           role="dialog"
           className={styles[`rules-modal`]}
         >
-          <h2 id="rules-title">Rules</h2>
-          <h3></h3>
-          <p></p>
-          <h3></h3>
-          <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+          <h2 className={styles[`modal-title`]} id="rules-title">
+            Rules
+          </h2>
+          <h3 className={`${styles[`text-color`]} ${styles[`font-size-20px`]}`}>
+            OBJECTIVE
+          </h3>
+          <p className={styles[`objective`]}>
+            Be the first player to connect 4 of the same colored discs in a row
+            (either vertically, horizontally, or diagonally).
+          </p>
+          <h3 className={`${styles[`text-color`]} ${styles[`font-size-20px`]}`}>
+            HOW TO PLAY
+          </h3>
+          <ol className={styles[`list-of-rules`]}>
+            <li>
+              <span>1</span> <span>Red goes first in the first game.</span>
+            </li>
+            <li>
+              <span>2</span>
+              <span>
+                Players must alternate turns, and only one disc can be dropped
+                in each turn.
+              </span>
+            </li>
+            <li>
+              <span>3</span>
+              <span>
+                The game ends when there is a 4-in-a-row or a stalemate.
+              </span>
+            </li>
+            <li>
+              <span>4</span>
+              <span>
+                The starter of the previous game goes second on the next game.
+              </span>
+            </li>
           </ol>
-          <img src="" alt="" />
+          <img
+            className={styles[`checked-imgage`]}
+            src="/images/icon-check.svg"
+            alt=""
+          />
         </div>
       </div>
     </main>
