@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./GameOptions.module.css";
+import RulesButton from "../../client/RulesButton";
+import BackToGameMenu from "../../client/BackToGameMenu";
 
 export default function GameOptions({ children }) {
   return (
-    <main data-showrules="false" className={styles[`game-options-bg`]}>
+    <main
+      id="game-options-selector"
+      data-showrules="false"
+      className={styles[`game-options-bg`]}
+    >
       <h1 className="visually-hidden">Connect Four</h1>
       <div className={styles[`options-container`]}>
         {/* img */}
@@ -19,9 +25,16 @@ export default function GameOptions({ children }) {
           <SvgPlayerVsPlayer />
         </a>
         {/* rules */}
-        <button type="button" className={styles[`rules-btn`]}>
+        <RulesButton />
+        {/* <button
+          onClick={(event) => {
+            showRulesModal({ event });
+          }}
+          type="button"
+          className={styles[`rules-btn`]}
+        >
           Game Rules
-        </button>
+        </button> */}
       </div>
       {/* rules modal */}
       <div className={styles[`modal-container`]}>
@@ -29,6 +42,8 @@ export default function GameOptions({ children }) {
           aria-labelledby="rules-title"
           aria-modal="true"
           role="dialog"
+          tabIndex="-1"
+          id="rules-modal-selector"
           className={styles[`rules-modal`]}
         >
           <h2 className={styles[`modal-title`]} id="rules-title">
@@ -68,11 +83,12 @@ export default function GameOptions({ children }) {
               </span>
             </li>
           </ol>
-          <img
-            className={styles[`checked-imgage`]}
+          <BackToGameMenu />
+          {/* <img
+            className={styles[`checked-image`]}
             src="/images/icon-check.svg"
             alt=""
-          />
+          /> */}
         </div>
       </div>
     </main>

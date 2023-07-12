@@ -95,6 +95,7 @@
   padding-block-start: 30px;
   padding-block-end: 61px;
   position: relative;
+  max-width: 480px;
 
   border-block-start: var(--border-block-start-inline);
   border-inline: var(--border-block-start-inline);
@@ -137,7 +138,7 @@
   margin-block-start: 10px;
 }
 
-.checked-imgage {
+.checked-image {
   width: 65px;
   height: 65px;
   position: absolute;
@@ -147,6 +148,7 @@
   left: 0px;
   right: 0px;
 }
+
 @media screen and (max-width: 23.625rem) {
   .options-container {
     min-height: 100%;
@@ -180,6 +182,15 @@
 
   .start-game {
     margin-block-start: 79px;
+  }
+
+  .modal-container {
+    width: 100%;
+  }
+
+  .rules-modal {
+    padding-inline: 34px;
+    padding-block-end: 54px;
   }
 }
 
