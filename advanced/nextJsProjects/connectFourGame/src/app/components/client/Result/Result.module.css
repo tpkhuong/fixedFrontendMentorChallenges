@@ -1,0 +1,23 @@
+.results-container {
+  font-size: var(--font-size-56px);
+  font-weight: 600;
+  background-color: var(--color-neutral-white);
+
+  max-width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winner,
+.play-again-btn {
+  font-size: var(--font-size-16px);
+}
+
+.play-again-btn {
+  background-color: var(--color-dark-purple);
+  color: var(--color-neutral-white);
+  padding: 22px;
+  padding-block: 10px;
+  border-radius: 100vw;
+}

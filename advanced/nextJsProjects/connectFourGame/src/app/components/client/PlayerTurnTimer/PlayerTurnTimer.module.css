@@ -1,0 +1,40 @@
+/* mobile */
+
+.font-size-16px {
+  font-size: var(--font-size-16px);
+}
+
+.font-size-56px {
+  font-size: var(--font-size-56px);
+}
+
+.player-turns-bg-container {
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-weight: 600;
+
+  height: 168px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block-start: 28px;
+}
+
+[data-playerturn="one"] .player-turns-bg-container {
+  background-image: url("/images/turn-background-red.svg");
+  color: var(--color-neutral-white);
+}
+
+[data-playerturn="two"] .player-turns-bg-container {
+  background-image: url("/images/turn-background-yellow.svg");
+  color: var(--color-neutral-black);
+}
+
+.text-container {
+  margin-block-start: -5px;
+}
+
+/* tablet */
+/* desktop */
