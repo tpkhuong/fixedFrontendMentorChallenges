@@ -173,6 +173,7 @@
     padding-inline: 40px;
     padding-block: 70px;
     padding-block-end: 60px;
+
     border-block-start: var(--border-block-start-inline);
     border-inline: var(--border-block-start-inline);
     border-radius: var(--border-radius);

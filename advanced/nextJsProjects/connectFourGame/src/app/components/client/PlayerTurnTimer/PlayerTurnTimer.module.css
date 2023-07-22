@@ -15,7 +15,7 @@
 
   height: 168px;
   width: 200px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -25,11 +25,13 @@
 [data-playerturn="one"] .player-turns-bg-container {
   background-image: url("/images/turn-background-red.svg");
   color: var(--color-neutral-white);
+  display: flex;
 }
 
 [data-playerturn="two"] .player-turns-bg-container {
   background-image: url("/images/turn-background-yellow.svg");
   color: var(--color-neutral-black);
+  display: flex;
 }
 
 .text-container {

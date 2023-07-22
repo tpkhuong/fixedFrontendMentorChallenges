@@ -13,7 +13,17 @@ export default function PlayerGameBoard({ children }) {
       data-result="null"
       className={styles[`game-board-bg-container`]}
     >
-      <ResultsDisplay />
+      {/* <ResultsDisplay /> */}
+      <div className={styles[`circle-container`]}>
+        <div
+          className={`${styles[`circle`]} ${styles[`back-of-circle`]}`}
+        ></div>
+        <div
+          className={`${styles[`circle`]} ${styles[`front-of-circle`]}`}
+        ></div>
+      </div>
+      {/* <div className={`${styles[`circle`]} ${styles[`top`]}`}></div> */}
+
       {/* <PlayerTurnTimer /> */}
       {/* lower bg change bg color based on results */}
       <div id="lower-bg-selector" className={styles[`bottom-bg`]}></div>
