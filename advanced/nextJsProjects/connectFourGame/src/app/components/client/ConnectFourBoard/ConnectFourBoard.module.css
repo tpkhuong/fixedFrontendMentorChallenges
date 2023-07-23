@@ -1,4 +1,33 @@
 /* mobile */
 
+.connect-four-board-container {
+  width: max-content;
+  margin-block-start: 20px;
+  margin-inline-start: 20px;
+  position: relative;
+}
+
+.front-game-board {
+  position: absolute;
+  transform: translateY(-320px);
+}
+
+.chips-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  position: absolute;
+  padding: 6px;
+  top: 0;
+  gap: 7px 8px;
+}
+
+.chips-container span {
+  display: block;
+  width: 39px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 /* tablet */
 /* desktop */

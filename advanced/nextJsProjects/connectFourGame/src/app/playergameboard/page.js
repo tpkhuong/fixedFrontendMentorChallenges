@@ -13,16 +13,26 @@ export default function PlayerGameBoard({ children }) {
       data-result="null"
       className={styles[`game-board-bg-container`]}
     >
+      <ConnectFourBoard />
       {/* <ResultsDisplay /> */}
-      <div className={styles[`circle-container`]}>
-        <div
-          className={`${styles[`circle`]} ${styles[`back-of-circle`]}`}
-        ></div>
-        <div
-          className={`${styles[`circle`]} ${styles[`front-of-circle`]}`}
-        ></div>
-      </div>
+      {/* <div className={styles[`circle-container`]}>
+        <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+        <div className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}></div>
+        <div className={`${styles[`circle`]} ${styles[`chip-top`]}`}></div>
+        <div className={`${styles[`circle`]} ${styles[`chip-border`]}`}></div>
+      </div> */}
       {/* <div className={`${styles[`circle`]} ${styles[`top`]}`}></div> */}
+      {/* <div className={styles[`dropped-circle-container`]}>
+        <div
+          className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+        ></div>
+        <div
+          className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+        ></div>
+        <div
+          className={`${styles[`circle`]} ${styles[`dropped-chip-border`]}`}
+        ></div>
+      </div> */}
 
       {/* <PlayerTurnTimer /> */}
       {/* lower bg change bg color based on results */}
