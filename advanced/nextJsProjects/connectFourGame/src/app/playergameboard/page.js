@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./PlayerGameBoard.module.css";
-import { GameContext } from "../components/context/index";
 import ConnectFourBoard from "../components/client/ConnectFourBoard";
-import PlayerTurnTimer from "../components/client/PlayerTurnTimer";
-import ResultsDisplay from "../components/client/Result";
+import MenuPlayerDisplayBoard from "../components/server/MenuPlayerDisplayBoard";
+// import { GameContext } from "../components/context/index";
 
 export default function PlayerGameBoard({ children }) {
   return (
@@ -13,7 +12,8 @@ export default function PlayerGameBoard({ children }) {
       data-result="null"
       className={styles[`game-board-bg-container`]}
     >
-      <ConnectFourBoard />
+      <MenuPlayerDisplayBoard />
+      {/* <ConnectFourBoard /> */}
       {/* <ResultsDisplay /> */}
       {/* <div className={styles[`circle-container`]}>
         <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>

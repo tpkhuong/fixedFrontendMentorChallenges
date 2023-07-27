@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./ConnectFourBoard.module.css";
 import PlayerTurnTimer from "../PlayerTurnTimer";
+import ResultsDisplay from "../Result/index";
 
 export default function ConnectFourBoard({ children }) {
   return (
     <div className={styles[`connect-four-board-container`]}>
-      <PlayerTurnTimer whichPlayerTurn="one" />
+      <PlayerTurnTimer />
       {/* import result and player turn timer to this component */}
       {/* back img */}
       <div className={styles[`back-game-board`]}>
@@ -22,7 +23,7 @@ export default function ConnectFourBoard({ children }) {
       </div>
       {/* rows/columns of chips */}
       <div className={styles[`chips-container`]}>
-        <div className={styles[`row`]}>
+        <div id="first-row" className={styles[`row`]}>
           <span></span>
           <span></span>
           <span></span>
