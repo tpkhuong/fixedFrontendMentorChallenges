@@ -71,9 +71,10 @@
 .game-board-bg-container {
   height: 100%;
   background-color: var(--color-purple);
+  padding-block-start: 50px;
+  padding-inline: 20px;
 
   position: relative;
-  padding: 0.1px;
 }
 
 .bottom-bg {

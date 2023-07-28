@@ -1,0 +1,11 @@
+.player-display-container {
+  display: flex;
+  gap: 27px;
+  padding-inline-start: 8px;
+}
+
+@media screen and (min-width: 90rem) {
+  .player-display-container {
+    display: none;
+  }
+}

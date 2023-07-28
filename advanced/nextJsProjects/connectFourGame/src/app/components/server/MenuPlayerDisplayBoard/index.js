@@ -10,6 +10,7 @@ export default function MenuPlayerDisplayBoard({ children }) {
       {/* menu */}
       <MenuControls />
       {/* player display */}
+      {/* hide at desktop */}
       <div className={styles[`player-display-container`]}>
         <PlayerDisplay isCpu={false} firstOrSecond="first" />
         <PlayerDisplay isCpu={false} firstOrSecond="second" />
