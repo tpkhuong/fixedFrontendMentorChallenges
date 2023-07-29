@@ -7,6 +7,7 @@ export default function ConnectFourBoard({ children }) {
   return (
     <div className={styles[`connect-four-board-container`]}>
       <PlayerTurnTimer />
+      <ResultsDisplay />
       {/* import result and player turn timer to this component */}
       {/* back img */}
       <div className={styles[`back-game-board`]}>

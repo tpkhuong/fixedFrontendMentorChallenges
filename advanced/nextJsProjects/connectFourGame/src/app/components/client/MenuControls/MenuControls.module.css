@@ -10,9 +10,12 @@
   font-size: var(--font-size-16px);
   color: var(--color-neutral-white);
   background-color: var(--color-dark-purple);
-  padding: 7px;
-  padding-inline: 30px;
+  padding-block: 7px;
   border-radius: 100vw;
+}
+
+.menu-btn {
+  padding-inline: 30px;
 }
 
 .restart-btn {
@@ -26,3 +29,12 @@
 
 /* tablet */
 /* desktop */
+@media screen and (min-width: 90rem) {
+  .menu-controls-container {
+    margin-block-end: 51px;
+  }
+  .menu-controls-container img {
+    width: 52px;
+    height: 52px;
+  }
+}

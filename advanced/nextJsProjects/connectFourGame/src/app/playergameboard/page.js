@@ -12,6 +12,8 @@ export default function PlayerGameBoard({ children }) {
       data-result="null"
       className={styles[`game-board-bg-container`]}
     >
+      {/* lower bg change bg color based on results */}
+      <div id="lower-bg-selector" className={styles[`bottom-bg`]}></div>
       <MenuPlayerDisplayBoard />
       {/* <ConnectFourBoard /> */}
       {/* <ResultsDisplay /> */}
@@ -35,8 +37,7 @@ export default function PlayerGameBoard({ children }) {
       </div> */}
 
       {/* <PlayerTurnTimer /> */}
-      {/* lower bg change bg color based on results */}
-      <div id="lower-bg-selector" className={styles[`bottom-bg`]}></div>
+
       {/* game board */}
       {/* pause modal */}
     </main>

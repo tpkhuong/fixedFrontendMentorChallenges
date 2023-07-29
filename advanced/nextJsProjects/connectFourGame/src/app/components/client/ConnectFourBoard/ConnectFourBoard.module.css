@@ -53,4 +53,31 @@
 }
 
 /* tablet */
+
+@media screen and (min-width: 48rem) {
+  .front-game-board {
+    transform: translateY(-593px);
+  }
+
+  .chips-container {
+    position: absolute;
+    top: 0;
+    padding-block-start: 17px;
+    padding-inline-start: 16px;
+  }
+
+  .chips-container > * + * {
+    margin-block-start: 17px;
+  }
+
+  .row {
+    gap: 17px;
+  }
+
+  .chips-container span {
+    width: 71px;
+    height: 71px;
+  }
+}
+
 /* desktop */

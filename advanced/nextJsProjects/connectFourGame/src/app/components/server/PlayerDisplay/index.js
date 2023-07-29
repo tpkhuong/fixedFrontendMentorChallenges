@@ -1,11 +1,17 @@
 import React from "react";
 import PlayerDisplayStyles from "./PlayerDisplay.module.css";
 
-export default function PlayerDisplay({ children, isCpu, firstOrSecond }) {
+export default function PlayerDisplay({
+  children,
+  isDesktop,
+  isCpu,
+  firstOrSecond,
+}) {
   return (
     <div
       data-isplayercpu={isCpu}
       data-firstorsecondplayer={firstOrSecond}
+      data-isdesktop={isDesktop}
       className={PlayerDisplayStyles[`player-display-container`]}
     >
       {isCpu && firstOrSecond == "second" && (

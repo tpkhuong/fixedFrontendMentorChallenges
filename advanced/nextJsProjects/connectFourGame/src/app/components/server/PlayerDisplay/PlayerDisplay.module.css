@@ -1,5 +1,9 @@
 /* mobile */
 
+.player-display-container[data-isdesktop="true"] {
+  display: none;
+}
+
 .player-display-container {
   display: flex;
   flex-direction: column;
@@ -69,6 +73,9 @@
 /* desktop */
 
 @media screen and (min-width: 90rem) {
+  .player-display-container[data-isdesktop="true"] {
+    display: revert;
+  }
   .player-display-container[data-firstorsecondplayer="second"] {
     flex-direction: column;
     padding-inline-start: revert;
@@ -81,6 +88,12 @@
     padding-inline: 20px;
     padding-block: 45px;
     padding-block-end: 12px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-block: auto;
+    height: min-content;
   }
   [data-firstorsecondplayer="second"] .image {
     left: 0;

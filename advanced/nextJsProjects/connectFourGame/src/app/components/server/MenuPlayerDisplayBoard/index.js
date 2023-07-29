@@ -16,6 +16,8 @@ export default function MenuPlayerDisplayBoard({ children }) {
         <PlayerDisplay isCpu={false} firstOrSecond="second" />
       </div>
       <ConnectFourBoard />
+      <PlayerDisplay isDesktop="true" isCpu={false} firstOrSecond="first" />
+      <PlayerDisplay isDesktop="true" isCpu={false} firstOrSecond="second" />
       {/* game board */}
     </div>
   );
