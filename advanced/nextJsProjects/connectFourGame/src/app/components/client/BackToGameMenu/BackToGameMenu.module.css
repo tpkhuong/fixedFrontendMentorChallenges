@@ -8,6 +8,11 @@
   right: 0px;
 }
 
+.checked-btn:hover .checked-circle-border,
+.checked-btn:focus .checked-circle-border {
+  fill: var(--color-dark-purple);
+}
+
 .checked-image {
   width: 65px;
   height: 65px;

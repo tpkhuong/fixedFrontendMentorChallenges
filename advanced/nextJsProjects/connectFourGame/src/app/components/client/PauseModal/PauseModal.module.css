@@ -59,5 +59,11 @@
   border-color: var(--color-neutral-black);
 }
 
+.pause-modal button:hover,
+.pause-modal button:focus {
+  box-shadow: var(--bottom-box-shadow-hover);
+  border-color: var(--color-dark-purple);
+}
+
 /* tablet */
 /* desktop */

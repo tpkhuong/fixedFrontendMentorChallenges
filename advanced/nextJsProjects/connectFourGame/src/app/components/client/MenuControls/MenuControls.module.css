@@ -1,5 +1,10 @@
 /* mobile */
 
+.menu-controls-container button:hover,
+.menu-controls-container button:focus {
+  background-color: var(--color-red);
+}
+
 .menu-controls-container {
   display: flex;
   justify-content: space-between;

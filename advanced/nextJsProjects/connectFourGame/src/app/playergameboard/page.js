@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./PlayerGameBoard.module.css";
 import ConnectFourBoard from "../components/client/ConnectFourBoard";
 import MenuPlayerDisplayBoard from "../components/server/MenuPlayerDisplayBoard";
+import PauseGame from "../components/client/PauseModal";
 // import { GameContext } from "../components/context/index";
 
 export default function PlayerGameBoard({ children }) {
@@ -40,6 +41,7 @@ export default function PlayerGameBoard({ children }) {
 
       {/* game board */}
       {/* pause modal */}
+      <PauseGame />
     </main>
   );
 }

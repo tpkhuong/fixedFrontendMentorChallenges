@@ -1,5 +1,10 @@
 /* mobile */
 
+.play-again-btn:hover,
+.play-again-btn:focus {
+  background-color: var(--color-red);
+}
+
 [data-result="null"] .results-container {
   display: none;
 }

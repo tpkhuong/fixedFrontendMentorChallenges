@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./GameOptions.module.css";
 import RulesButton from "../../client/RulesButton";
 import BackToGameMenu from "../../client/BackToGameMenu";
-import PauseGame from "../../client/PauseModal/index";
 
 export default function GameOptions({ children }) {
   return (
@@ -92,7 +91,6 @@ export default function GameOptions({ children }) {
           /> */}
         </div>
       </div>
-      <PauseGame />
     </main>
   );
 }

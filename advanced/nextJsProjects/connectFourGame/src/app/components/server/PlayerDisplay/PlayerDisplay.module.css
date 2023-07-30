@@ -76,12 +76,16 @@
   .player-display-container[data-isdesktop="true"] {
     display: revert;
   }
+
   .player-display-container[data-firstorsecondplayer="second"] {
     flex-direction: column;
     padding-inline-start: revert;
     padding-inline-end: revert;
     padding-inline: 20px;
+
+    right: 200px;
   }
+
   .player-display-container {
     flex-direction: column;
     gap: 0;
@@ -94,6 +98,8 @@
     bottom: 0;
     margin-block: auto;
     height: min-content;
+
+    left: 200px;
   }
   [data-firstorsecondplayer="second"] .image {
     left: 0;
