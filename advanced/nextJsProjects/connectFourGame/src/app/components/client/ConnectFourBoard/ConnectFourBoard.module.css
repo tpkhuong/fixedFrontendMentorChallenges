@@ -1,5 +1,9 @@
 /* mobile */
 
+.row[id="first-row"] [data-droppedposition="last"]span:first-child {
+  animation: DroppedPositionLast 1000ms ease-out;
+}
+
 .connect-four-board-container {
   width: max-content;
   position: relative;
@@ -9,7 +13,7 @@
   position: absolute;
   transform: translateY(-320px);
 }
-
+/* span:first-child */
 /* one option */
 /* .chips-container {
   display: grid;
@@ -81,3 +85,12 @@
 }
 
 /* desktop */
+@keyframes DroppedPositionLast {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(234px);
+  }
+}

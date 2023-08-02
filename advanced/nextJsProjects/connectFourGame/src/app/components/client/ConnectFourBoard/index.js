@@ -25,7 +25,7 @@ export default function ConnectFourBoard({ children }) {
       {/* rows/columns of chips */}
       <div className={styles[`chips-container`]}>
         <div id="first-row" className={styles[`row`]}>
-          <span></span>
+          <span data-droppedposition="" onClick={(event) => {}}></span>
           <span></span>
           <span></span>
           <span></span>
