@@ -1,13 +1,16 @@
 /* mobile */
 
-.row[id="first-row"] [data-droppedposition="last"]span:first-child {
-  animation: DroppedPositionLast 1000ms ease-out;
+.row[id="first-row"] [data-droppedposition="last"] {
+  animation: DroppedPositionLast 1500ms ease-out forwards;
 }
 
 .connect-four-board-container {
   width: max-content;
   position: relative;
 }
+
+/* declare pointer-events: none for div with class front-game-board
+we can click on connect for chips */
 
 .front-game-board {
   position: absolute;
@@ -36,6 +39,10 @@
 
 .chips-container > * + * {
   margin-block-start: 7px;
+}
+
+.click-row {
+  position: absolute;
 }
 
 .row {

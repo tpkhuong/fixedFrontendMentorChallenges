@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./ConnectFourBoard.module.css";
 import PlayerTurnTimer from "../PlayerTurnTimer";
@@ -24,8 +25,32 @@ export default function ConnectFourBoard({ children }) {
       </div>
       {/* rows/columns of chips */}
       <div className={styles[`chips-container`]}>
+        {/* <div className={`${styles[`row`]} ${styles[`click-row`]}`}>
+          <span
+            onClick={(event) => {
+              console.log(event);
+              document
+                .getElementById("first-row")
+                .firstElementChild.setAttribute("data-droppedposition", "last");
+            }}
+          ></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div> */}
         <div id="first-row" className={styles[`row`]}>
-          <span data-droppedposition="" onClick={(event) => {}}></span>
+          <span
+            data-droppedposition=""
+            onClick={(event) => {
+              console.log(event);
+              document
+                .getElementById("first-row")
+                .firstElementChild.setAttribute("data-droppedposition", "last");
+            }}
+          ></span>
           <span></span>
           <span></span>
           <span></span>
@@ -124,6 +149,8 @@ export default function ConnectFourBoard({ children }) {
         <span></span>
       </div> */}
       {/* front img */}
+      {/* declare pointer-events: none for div with class front-game-board */}
+      {/* we can click on connect for chips */}
       <div className={styles[`front-game-board`]}>
         <picture>
           <source
