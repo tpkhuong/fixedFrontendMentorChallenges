@@ -1,7 +1,7 @@
 /* mobile */
 
 .row[id="first-row"] [data-droppedposition="last"] {
-  animation: DroppedPositionLast 1500ms ease-out forwards;
+  animation: TabletScreenDroppedPositionSixthRow 1500ms ease-out forwards;
 }
 
 .connect-four-board-container {
@@ -52,6 +52,7 @@ we can click on connect for chips */
 
 .row[id="first-row"] span {
   background-color: var(--color-neutral-black);
+  /* background-color: transparent; */
 }
 
 .chips-container span {
@@ -92,12 +93,175 @@ we can click on connect for chips */
 }
 
 /* desktop */
-@keyframes DroppedPositionLast {
+
+/* chip animation */
+
+/* mobile */
+
+/* first row */
+
+@keyframes MobileDroppedPositionFirstRow {
+  0% {
+    background-color: var(--color-neutral-black);
+  }
+
+  100% {
+    background-color: var(--color-neutral-black);
+  }
+}
+
+/* second row */
+
+@keyframes MobileDroppedPositionSecondRow {
   0% {
     transform: translateY(0px);
+    background-color: var(--color-neutral-black);
+  }
+
+  100% {
+    transform: translateY(47px);
+    background-color: var(--color-neutral-black);
+  }
+}
+
+/* third row */
+
+@keyframes MobileDroppedPositionThirdRow {
+  0% {
+    transform: translateY(0px);
+    background-color: var(--color-neutral-black);
+  }
+
+  100% {
+    transform: translateY(94px);
+    background-color: var(--color-neutral-black);
+  }
+}
+
+/* fourth row */
+
+@keyframes MobileDroppedPositionFourthRow {
+  0% {
+    transform: translateY(0px);
+    background-color: var(--color-neutral-black);
+  }
+
+  100% {
+    transform: translateY(141px);
+    background-color: var(--color-neutral-black);
+  }
+}
+
+/* fifth row */
+
+@keyframes MobileDroppedPositionFifthRow {
+  0% {
+    transform: translateY(0px);
+    background-color: var(--color-neutral-black);
+  }
+
+  100% {
+    transform: translateY(188px);
+    background-color: var(--color-neutral-black);
+  }
+}
+
+/* sixth row */
+
+@keyframes MobileDroppedPositionSixthRow {
+  0% {
+    transform: translateY(0px);
+    background-color: var(--color-neutral-black);
   }
 
   100% {
     transform: translateY(234px);
+    background-color: var(--color-neutral-black);
+  }
+}
+
+/* tablet */
+
+@media screen and (min-width: 48rem) {
+  /* first row */
+
+  @keyframes TabletScreenDroppedPositionFirstRow {
+    0% {
+      background-color: var(--color-neutral-black);
+    }
+
+    100% {
+      background-color: var(--color-neutral-black);
+    }
+  }
+
+  /* second row */
+
+  @keyframes TabletScreenDroppedPositionSecondRow {
+    0% {
+      transform: translateY(0px);
+      background-color: var(--color-neutral-black);
+    }
+
+    100% {
+      transform: translateY(89px);
+      background-color: var(--color-neutral-black);
+    }
+  }
+
+  /* third row */
+
+  @keyframes TabletScreenDroppedPositionThirdRow {
+    0% {
+      transform: translateY(0px);
+      background-color: var(--color-neutral-black);
+    }
+
+    100% {
+      transform: translateY(177px);
+      background-color: var(--color-neutral-black);
+    }
+  }
+
+  /* fourth row */
+
+  @keyframes TabletScreenDroppedPositionFourthRow {
+    0% {
+      transform: translateY(0px);
+      background-color: var(--color-neutral-black);
+    }
+
+    100% {
+      transform: translateY(265px);
+      background-color: var(--color-neutral-black);
+    }
+  }
+
+  /* fifth row */
+
+  @keyframes TabletScreenDroppedPositionFifthRow {
+    0% {
+      transform: translateY(0px);
+      background-color: var(--color-neutral-black);
+    }
+
+    100% {
+      transform: translateY(352px);
+      background-color: var(--color-neutral-black);
+    }
+  }
+
+  /* sixth row */
+
+  @keyframes TabletScreenDroppedPositionSixthRow {
+    0% {
+      transform: translateY(0px);
+      background-color: var(--color-neutral-black);
+    }
+
+    100% {
+      transform: translateY(441px);
+      background-color: var(--color-neutral-black);
+    }
   }
 }

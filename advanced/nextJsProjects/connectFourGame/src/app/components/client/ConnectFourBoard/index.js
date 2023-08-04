@@ -48,7 +48,10 @@ export default function ConnectFourBoard({ children }) {
               console.log(event);
               document
                 .getElementById("first-row")
-                .firstElementChild.setAttribute("data-droppedposition", "last");
+                .firstElementChild.setAttribute(
+                  "data-droppedposition",
+                  "MobileDroppedPositionFirstRow"
+                );
             }}
           ></span>
           <span></span>

@@ -84,6 +84,7 @@
     padding-inline: 20px;
 
     right: 200px;
+    left: revert;
   }
 
   .player-display-container {
@@ -101,10 +102,12 @@
 
     left: 200px;
   }
+
   [data-firstorsecondplayer="second"] .image {
     left: 0;
     right: 0;
   }
+
   .image {
     top: -26px;
     left: 0;
@@ -113,6 +116,7 @@
     margin-block: revert;
     margin-inline: auto;
   }
+
   .score {
     margin-block-start: -12px;
   }
