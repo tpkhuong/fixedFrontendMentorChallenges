@@ -64,6 +64,21 @@ we can click on connect for chips */
   border-radius: 50%;
 }
 
+.clicking-container {
+  width: 328px;
+  height: 282px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  gap: 7px;
+  padding-block-start: 7px;
+  padding-inline-start: 6px;
+}
+
+.clicking-container span {
+  flex-basis: 40px;
+}
+
 /* tablet */
 
 @media screen and (min-width: 48rem) {

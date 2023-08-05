@@ -41,7 +41,13 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div> */}
-        <div id="first-row" className={styles[`row`]}>
+        <div
+          id="first-row"
+          className={styles[`row`]}
+          onClick={(event) => {
+            console.log(event);
+          }}
+        >
           <span
             data-droppedposition=""
             onClick={(event) => {
@@ -154,7 +160,12 @@ export default function ConnectFourBoard({ children }) {
       {/* front img */}
       {/* declare pointer-events: none for div with class front-game-board */}
       {/* we can click on connect for chips */}
-      <div className={styles[`front-game-board`]}>
+      <div
+        className={styles[`front-game-board`]}
+        onClick={(event) => {
+          console.log(event);
+        }}
+      >
         <picture>
           <source
             media="(min-width: 768px)"
@@ -166,6 +177,20 @@ export default function ConnectFourBoard({ children }) {
             aria-hidden="true"
           />
         </picture>
+      </div>
+      <div
+        className={styles[`clicking-container`]}
+        onClick={(event) => {
+          console.log(event);
+        }}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );
