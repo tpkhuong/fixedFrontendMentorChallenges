@@ -25,6 +25,9 @@ export default function ConnectFourBoard({ children }) {
       </div>
       {/* rows/columns of chips */}
       <div className={styles[`chips-container`]}>
+        <div className={styles[`drop-selection-pointer-container`]}>
+          <div className={styles[`pointer-container`]}></div>
+        </div>
         {/* <div className={`${styles[`row`]} ${styles[`click-row`]}`}>
           <span
             onClick={(event) => {
@@ -49,7 +52,6 @@ export default function ConnectFourBoard({ children }) {
           }}
         >
           <span
-            data-droppedposition=""
             onClick={(event) => {
               console.log(event);
               document
@@ -112,6 +114,33 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div>
+        {/* animation row */}
+        <div
+          id="animation-row"
+          className={styles[`row`]}
+          onClick={(event) => {
+            console.log(event);
+          }}
+        >
+          <span
+            data-droppedposition=""
+            onClick={(event) => {
+              console.log(event);
+              document
+                .getElementById("first-row")
+                .firstElementChild.setAttribute(
+                  "data-droppedposition",
+                  "MobileDroppedPositionFirstRow"
+                );
+            }}
+          ></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
       {/* <div className={styles[`chips-container`]}>
         <span></span>
@@ -160,12 +189,7 @@ export default function ConnectFourBoard({ children }) {
       {/* front img */}
       {/* declare pointer-events: none for div with class front-game-board */}
       {/* we can click on connect for chips */}
-      <div
-        className={styles[`front-game-board`]}
-        onClick={(event) => {
-          console.log(event);
-        }}
-      >
+      <div className={styles[`front-game-board`]}>
         <picture>
           <source
             media="(min-width: 768px)"
@@ -184,13 +208,13 @@ export default function ConnectFourBoard({ children }) {
           console.log(event);
         }}
       >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span data-column="one"></span>
+        <span data-column="two"></span>
+        <span data-column="three"></span>
+        <span data-column="four"></span>
+        <span data-column="five"></span>
+        <span data-column="six"></span>
+        <span data-column="seven"></span>
       </div>
     </div>
   );

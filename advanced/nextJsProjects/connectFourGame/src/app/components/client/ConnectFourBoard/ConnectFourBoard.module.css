@@ -1,7 +1,7 @@
 /* mobile */
 
-.row[id="first-row"] [data-droppedposition="last"] {
-  animation: TabletScreenDroppedPositionSixthRow 1500ms ease-out forwards;
+.row[id="animation-row"] [data-droppedposition="last"] {
+  animation: MobileDroppedPositionSixthRow 1500ms ease-out forwards;
 }
 
 .connect-four-board-container {
@@ -50,9 +50,14 @@ we can click on connect for chips */
   gap: 7px;
 }
 
+.row[id="animation-row"] {
+  position: absolute;
+  top: 7px;
+  margin-block-start: 0px;
+}
+
 .row[id="first-row"] span {
-  background-color: var(--color-neutral-black);
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 
 .chips-container span {
@@ -117,6 +122,10 @@ we can click on connect for chips */
 
 @keyframes MobileDroppedPositionFirstRow {
   0% {
+    background-color: transparent;
+  }
+
+  2% {
     background-color: var(--color-neutral-black);
   }
 
@@ -129,6 +138,11 @@ we can click on connect for chips */
 
 @keyframes MobileDroppedPositionSecondRow {
   0% {
+    transform: translateY(0px);
+    background-color: transparent;
+  }
+
+  2% {
     transform: translateY(0px);
     background-color: var(--color-neutral-black);
   }
@@ -144,6 +158,11 @@ we can click on connect for chips */
 @keyframes MobileDroppedPositionThirdRow {
   0% {
     transform: translateY(0px);
+    background-color: transparent;
+  }
+
+  2% {
+    transform: translateY(0px);
     background-color: var(--color-neutral-black);
   }
 
@@ -157,6 +176,11 @@ we can click on connect for chips */
 
 @keyframes MobileDroppedPositionFourthRow {
   0% {
+    transform: translateY(0px);
+    background-color: transparent;
+  }
+
+  2% {
     transform: translateY(0px);
     background-color: var(--color-neutral-black);
   }
@@ -172,6 +196,11 @@ we can click on connect for chips */
 @keyframes MobileDroppedPositionFifthRow {
   0% {
     transform: translateY(0px);
+    background-color: transparent;
+  }
+
+  2% {
+    transform: translateY(0px);
     background-color: var(--color-neutral-black);
   }
 
@@ -185,6 +214,11 @@ we can click on connect for chips */
 
 @keyframes MobileDroppedPositionSixthRow {
   0% {
+    transform: translateY(0px);
+    background-color: transparent;
+  }
+
+  2% {
     transform: translateY(0px);
     background-color: var(--color-neutral-black);
   }
@@ -202,6 +236,12 @@ we can click on connect for chips */
 
   @keyframes TabletScreenDroppedPositionFirstRow {
     0% {
+      transform: translateY(0px);
+      background-color: transparent;
+    }
+
+    2% {
+      transform: translateY(0px);
       background-color: var(--color-neutral-black);
     }
 
@@ -214,6 +254,11 @@ we can click on connect for chips */
 
   @keyframes TabletScreenDroppedPositionSecondRow {
     0% {
+      transform: translateY(0px);
+      background-color: transparent;
+    }
+
+    2% {
       transform: translateY(0px);
       background-color: var(--color-neutral-black);
     }
@@ -229,6 +274,11 @@ we can click on connect for chips */
   @keyframes TabletScreenDroppedPositionThirdRow {
     0% {
       transform: translateY(0px);
+      background-color: transparent;
+    }
+
+    2% {
+      transform: translateY(0px);
       background-color: var(--color-neutral-black);
     }
 
@@ -242,6 +292,11 @@ we can click on connect for chips */
 
   @keyframes TabletScreenDroppedPositionFourthRow {
     0% {
+      transform: translateY(0px);
+      background-color: transparent;
+    }
+
+    2% {
       transform: translateY(0px);
       background-color: var(--color-neutral-black);
     }
@@ -257,6 +312,11 @@ we can click on connect for chips */
   @keyframes TabletScreenDroppedPositionFifthRow {
     0% {
       transform: translateY(0px);
+      background-color: transparent;
+    }
+
+    2% {
+      transform: translateY(0px);
       background-color: var(--color-neutral-black);
     }
 
@@ -271,6 +331,11 @@ we can click on connect for chips */
   @keyframes TabletScreenDroppedPositionSixthRow {
     0% {
       transform: translateY(0px);
+      background-color: transparent;
+    }
+
+    2% {
+      transform: translateY(0px);
       background-color: var(--color-neutral-black);
     }
 
@@ -278,5 +343,23 @@ we can click on connect for chips */
       transform: translateY(441px);
       background-color: var(--color-neutral-black);
     }
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  /* chips container */
+  /* pointer */
+
+  .pointer-container {
+    width: 38px;
+    height: 36px;
+  }
+
+  [data-playerturn="one"] .pointer-container {
+    background-image: url("/images/marker-red.svg");
+  }
+
+  [data-playerturn="two"] .pointer-container {
+    background-image: url("/images/marker-yellow.svg");
   }
 }
