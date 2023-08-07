@@ -26,7 +26,10 @@ export default function ConnectFourBoard({ children }) {
       {/* rows/columns of chips */}
       <div className={styles[`chips-container`]}>
         <div className={styles[`drop-selection-pointer-container`]}>
-          <div className={styles[`pointer-container`]}></div>
+          <div className={styles[`pointer-container`]}>
+            <div></div>
+            {/* <img src="/images/marker-red.svg" alt="" /> */}
+          </div>
         </div>
         {/* <div className={`${styles[`row`]} ${styles[`click-row`]}`}>
           <span

@@ -350,16 +350,21 @@ we can click on connect for chips */
   /* chips container */
   /* pointer */
 
+  .drop-selection-pointer-container {
+    position: absolute;
+    width: 599px;
+  }
+
   .pointer-container {
     width: 38px;
     height: 36px;
   }
 
-  [data-playerturn="one"] .pointer-container {
+  /* [data-playerturn="one"] .pointer-container {
     background-image: url("/images/marker-red.svg");
   }
 
   [data-playerturn="two"] .pointer-container {
     background-image: url("/images/marker-yellow.svg");
-  }
+  } */
 }
