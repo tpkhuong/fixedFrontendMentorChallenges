@@ -74,7 +74,7 @@
 
 @media screen and (min-width: 90rem) {
   .player-display-container[data-isdesktop="true"] {
-    display: revert;
+    display: flex;
   }
 
   .player-display-container[data-firstorsecondplayer="second"] {

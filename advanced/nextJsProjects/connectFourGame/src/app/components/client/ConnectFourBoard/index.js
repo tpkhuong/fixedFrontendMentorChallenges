@@ -25,12 +25,6 @@ export default function ConnectFourBoard({ children }) {
       </div>
       {/* rows/columns of chips */}
       <div className={styles[`chips-container`]}>
-        <div className={styles[`drop-selection-pointer-container`]}>
-          <div className={styles[`pointer-container`]}>
-            <div></div>
-            {/* <img src="/images/marker-red.svg" alt="" /> */}
-          </div>
-        </div>
         {/* <div className={`${styles[`row`]} ${styles[`click-row`]}`}>
           <span
             onClick={(event) => {
@@ -144,6 +138,15 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div>
+        {/* drop pointer container */}
+        <div
+          data-chipdroplocation=""
+          className={styles[`drop-selection-pointer-container`]}
+        >
+          <div className={styles[`pointer-container`]}>
+            {/* <img src="/images/marker-red.svg" alt="" /> */}
+          </div>
+        </div>
       </div>
       {/* <div className={styles[`chips-container`]}>
         <span></span>
@@ -211,13 +214,13 @@ export default function ConnectFourBoard({ children }) {
           console.log(event);
         }}
       >
-        <span data-column="one"></span>
-        <span data-column="two"></span>
-        <span data-column="three"></span>
-        <span data-column="four"></span>
-        <span data-column="five"></span>
-        <span data-column="six"></span>
-        <span data-column="seven"></span>
+        <span data-column="first"></span>
+        <span data-column="second"></span>
+        <span data-column="third"></span>
+        <span data-column="fourth"></span>
+        <span data-column="fifth"></span>
+        <span data-column="sixth"></span>
+        <span data-column="seventh"></span>
       </div>
     </div>
   );

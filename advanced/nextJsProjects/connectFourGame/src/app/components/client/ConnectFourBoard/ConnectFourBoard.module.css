@@ -350,21 +350,62 @@ we can click on connect for chips */
   /* chips container */
   /* pointer */
 
+  /* column 1 */
+
+  [data-chipdroplocation="first"] .pointer-container {
+    left: 17px;
+  }
+
+  /* column 2 */
+  [data-chipdroplocation="second"] .pointer-container {
+    left: 105px;
+  }
+
+  /* column 3 */
+  [data-chipdroplocation="third"] .pointer-container {
+    left: 193px;
+  }
+
+  /* column 4 */
+  [data-chipdroplocation="fourth"] .pointer-container {
+    left: 281px;
+  }
+
+  /* column 5 */
+  [data-chipdroplocation="fifth"] .pointer-container {
+    left: 370px;
+  }
+
+  /* column 6 */
+  [data-chipdroplocation="sixth"] .pointer-container {
+    left: 458px;
+  }
+
+  /* column 7 */
+  [data-chipdroplocation="seventh"] .pointer-container {
+    left: 545px;
+  }
+
   .drop-selection-pointer-container {
     position: absolute;
     width: 599px;
+    top: -38px;
+
+    margin-block-start: 0px;
   }
 
   .pointer-container {
     width: 38px;
     height: 36px;
+
+    position: absolute;
   }
 
-  /* [data-playerturn="one"] .pointer-container {
+  [data-playerturn="one"] .pointer-container {
     background-image: url("/images/marker-red.svg");
   }
 
   [data-playerturn="two"] .pointer-container {
     background-image: url("/images/marker-yellow.svg");
-  } */
+  }
 }
