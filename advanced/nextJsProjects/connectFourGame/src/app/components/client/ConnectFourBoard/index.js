@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./ConnectFourBoard.module.css";
 import PlayerTurnTimer from "../PlayerTurnTimer";
 import ResultsDisplay from "../Result/index";
+import { checking } from "./connectFourBoardHelpers";
 
 export default function ConnectFourBoard({ children }) {
   return (
@@ -42,7 +43,7 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
         </div> */}
         <div
-          id="first-row"
+          id="row-6"
           className={styles[`row`]}
           onClick={(event) => {
             console.log(event);
@@ -52,7 +53,7 @@ export default function ConnectFourBoard({ children }) {
             onClick={(event) => {
               console.log(event);
               document
-                .getElementById("first-row")
+                .getElementById("row-1")
                 .firstElementChild.setAttribute(
                   "data-droppedposition",
                   "MobileDroppedPositionFirstRow"
@@ -66,7 +67,7 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div>
-        <div className={styles[`row`]}>
+        <div id="row-5" className={styles[`row`]}>
           <span></span>
           <span></span>
           <span></span>
@@ -75,7 +76,7 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div>
-        <div className={styles[`row`]}>
+        <div id="row-4" className={styles[`row`]}>
           <span></span>
           <span></span>
           <span></span>
@@ -84,7 +85,7 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div>
-        <div className={styles[`row`]}>
+        <div id="row-3" className={styles[`row`]}>
           <span></span>
           <span></span>
           <span></span>
@@ -93,7 +94,7 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div>
-        <div className={styles[`row`]}>
+        <div id="row-2" className={styles[`row`]}>
           <span></span>
           <span></span>
           <span></span>
@@ -102,7 +103,7 @@ export default function ConnectFourBoard({ children }) {
           <span></span>
           <span></span>
         </div>
-        <div className={styles[`row`]}>
+        <div id="row-1" className={styles[`row`]}>
           <span></span>
           <span></span>
           <span></span>
@@ -120,6 +121,7 @@ export default function ConnectFourBoard({ children }) {
           }}
         >
           <span
+            id="animation-column-first"
             data-droppedposition=""
             onClick={(event) => {
               console.log(event);
@@ -131,12 +133,12 @@ export default function ConnectFourBoard({ children }) {
                 );
             }}
           ></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span id="animation-column-second" data-droppedposition=""></span>
+          <span id="animation-column-third" data-droppedposition=""></span>
+          <span id="animation-column-fourth" data-droppedposition=""></span>
+          <span id="animation-column-fifth" data-droppedposition=""></span>
+          <span id="animation-column-sixth" data-droppedposition=""></span>
+          <span id="animation-column-seventh" data-droppedposition=""></span>
         </div>
         {/* drop pointer container */}
         <div
@@ -211,7 +213,7 @@ export default function ConnectFourBoard({ children }) {
       <div
         className={styles[`clicking-container`]}
         onClick={(event) => {
-          console.log(event);
+          checking(event);
         }}
       >
         <span data-column="first"></span>

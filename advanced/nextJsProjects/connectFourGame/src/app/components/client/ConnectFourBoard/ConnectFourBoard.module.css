@@ -56,7 +56,7 @@ we can click on connect for chips */
   margin-block-start: 0px;
 }
 
-.row[id="first-row"] span {
+.row[id="row-1"] span {
   background-color: transparent;
 }
 
@@ -110,17 +110,112 @@ we can click on connect for chips */
     width: 71px;
     height: 71px;
   }
+
+  .clicking-container {
+    width: 625px;
+    height: 545px;
+    padding-block-start: 17px;
+    padding-inline-start: 16px;
+
+    gap: 17px;
+  }
+
+  .clicking-container span {
+    flex-basis: 71px;
+  }
 }
 
 /* desktop */
 
 /* chip animation */
 
+/* first column */
+
+.row[id="animation-row"] [data-droppedposition="6"] {
+  animation: MobileDroppedPositionSixthRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="5"] {
+  animation: MobileDroppedPositionFifthRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="4"] {
+  animation: MobileDroppedPositionFourthRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="3"] {
+  animation: MobileDroppedPositionThirdRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="2"] {
+  animation: MobileDroppedPositionSecondRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="1"] {
+  animation: MobileDroppedPositionFirstRow 1500ms ease-out forwards;
+}
+
+/* second column */
+
+/* .row[id="animation-row"] [data-droppedposition="1"] {
+  animation: MobileDroppedPositionFirstRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="2"] {
+  animation: MobileDroppedPositionSecondRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="3"] {
+  animation: MobileDroppedPositionThirdRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="4"] {
+  animation: MobileDroppedPositionFourthRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="5"] {
+  animation: MobileDroppedPositionFifthRow 1500ms ease-out forwards;
+}
+
+.row[id="animation-row"] [data-droppedposition="6"] {
+  animation: MobileDroppedPositionSixthRow 1500ms ease-out forwards;
+} */
+
+/* third column */
+
+.row[id="animation-row"]
+  [data-animationColumn="third"][data-droppedposition=""] {
+}
+
+/* fourth column */
+
+.row[id="animation-row"]
+  [data-animationColumn="fourth"][data-droppedposition=""] {
+}
+
+/* fifth column */
+
+.row[id="animation-row"]
+  [data-animationColumn="fifth"][data-droppedposition=""] {
+}
+
+/* sixth column */
+
+.row[id="animation-row"]
+  [data-animationColumn="sixth"][data-droppedposition=""] {
+}
+
+/* seventh column */
+
+.row[id="animation-row"]
+  [data-animationColumn="seventh"][data-droppedposition=""] {
+}
+
 /* mobile */
 
-/* first row */
+/* Sixth row */
 
-@keyframes MobileDroppedPositionFirstRow {
+@keyframes MobileDroppedPositionSixthRow {
   0% {
     background-color: transparent;
   }
@@ -134,9 +229,9 @@ we can click on connect for chips */
   }
 }
 
-/* second row */
+/* Fifth row */
 
-@keyframes MobileDroppedPositionSecondRow {
+@keyframes MobileDroppedPositionFifthRow {
   0% {
     transform: translateY(0px);
     background-color: transparent;
@@ -153,9 +248,9 @@ we can click on connect for chips */
   }
 }
 
-/* third row */
+/* Fourth row */
 
-@keyframes MobileDroppedPositionThirdRow {
+@keyframes MobileDroppedPositionFourthRow {
   0% {
     transform: translateY(0px);
     background-color: transparent;
@@ -172,9 +267,9 @@ we can click on connect for chips */
   }
 }
 
-/* fourth row */
+/* Third row */
 
-@keyframes MobileDroppedPositionFourthRow {
+@keyframes MobileDroppedPositionThirdRow {
   0% {
     transform: translateY(0px);
     background-color: transparent;
@@ -191,9 +286,9 @@ we can click on connect for chips */
   }
 }
 
-/* fifth row */
+/* Second row */
 
-@keyframes MobileDroppedPositionFifthRow {
+@keyframes MobileDroppedPositionSecondRow {
   0% {
     transform: translateY(0px);
     background-color: transparent;
@@ -210,9 +305,9 @@ we can click on connect for chips */
   }
 }
 
-/* sixth row */
+/* First row */
 
-@keyframes MobileDroppedPositionSixthRow {
+@keyframes MobileDroppedPositionFirstRow {
   0% {
     transform: translateY(0px);
     background-color: transparent;
@@ -232,9 +327,9 @@ we can click on connect for chips */
 /* tablet */
 
 @media screen and (min-width: 48rem) {
-  /* first row */
+  /* Sixth row */
 
-  @keyframes TabletScreenDroppedPositionFirstRow {
+  @keyframes TabletScreenDroppedPositionSixthRow {
     0% {
       transform: translateY(0px);
       background-color: transparent;
@@ -250,9 +345,9 @@ we can click on connect for chips */
     }
   }
 
-  /* second row */
+  /* Fifth row */
 
-  @keyframes TabletScreenDroppedPositionSecondRow {
+  @keyframes TabletScreenDroppedPositionFifthRow {
     0% {
       transform: translateY(0px);
       background-color: transparent;
@@ -269,9 +364,9 @@ we can click on connect for chips */
     }
   }
 
-  /* third row */
+  /* Fourth row */
 
-  @keyframes TabletScreenDroppedPositionThirdRow {
+  @keyframes TabletScreenDroppedPositionFourthRow {
     0% {
       transform: translateY(0px);
       background-color: transparent;
@@ -288,9 +383,9 @@ we can click on connect for chips */
     }
   }
 
-  /* fourth row */
+  /* Third row */
 
-  @keyframes TabletScreenDroppedPositionFourthRow {
+  @keyframes TabletScreenDroppedPositionThirdRow {
     0% {
       transform: translateY(0px);
       background-color: transparent;
@@ -307,9 +402,9 @@ we can click on connect for chips */
     }
   }
 
-  /* fifth row */
+  /* Second row */
 
-  @keyframes TabletScreenDroppedPositionFifthRow {
+  @keyframes TabletScreenDroppedPositionSecondRow {
     0% {
       transform: translateY(0px);
       background-color: transparent;
@@ -326,9 +421,9 @@ we can click on connect for chips */
     }
   }
 
-  /* sixth row */
+  /* First row */
 
-  @keyframes TabletScreenDroppedPositionSixthRow {
+  @keyframes TabletScreenDroppedPositionFirstRow {
     0% {
       transform: translateY(0px);
       background-color: transparent;
