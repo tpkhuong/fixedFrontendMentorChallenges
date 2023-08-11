@@ -1,5 +1,7 @@
 /* mobile */
 
+/* use custom properties */
+
 .row[id="animation-row"] [data-droppedposition="last"] {
   animation: MobileDroppedPositionSixthRow 1500ms ease-out forwards;
 }
@@ -221,11 +223,11 @@ we can click on connect for chips */
   }
 
   2% {
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 
   100% {
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 }
 
@@ -239,12 +241,12 @@ we can click on connect for chips */
 
   2% {
     transform: translateY(0px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 
   100% {
     transform: translateY(47px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 }
 
@@ -258,12 +260,12 @@ we can click on connect for chips */
 
   2% {
     transform: translateY(0px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 
   100% {
     transform: translateY(94px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 }
 
@@ -277,12 +279,12 @@ we can click on connect for chips */
 
   2% {
     transform: translateY(0px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 
   100% {
     transform: translateY(141px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 }
 
@@ -296,12 +298,12 @@ we can click on connect for chips */
 
   2% {
     transform: translateY(0px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 
   100% {
     transform: translateY(188px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 }
 
@@ -315,12 +317,12 @@ we can click on connect for chips */
 
   2% {
     transform: translateY(0px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 
   100% {
     transform: translateY(234px);
-    background-color: var(--color-neutral-black);
+    background-color: var(--playerchipcolor);
   }
 }
 

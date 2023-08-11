@@ -1,5 +1,13 @@
 /* mobile */
 
+.game-board-bg-container[data-playerturn="one"] {
+  --playerchipcolor: var(--color-red);
+}
+
+.game-board-bg-container[data-playerturn="two"] {
+  --playerchipcolor: var(--color-yellow);
+}
+
 .circle-container,
 .dropped-circle-container {
   --circle-size: 80px;

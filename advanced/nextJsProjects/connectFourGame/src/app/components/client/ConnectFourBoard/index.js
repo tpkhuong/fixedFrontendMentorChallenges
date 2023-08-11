@@ -50,6 +50,8 @@ export default function ConnectFourBoard({ children }) {
           }}
         >
           <span
+            data-playerchip=""
+            className={styles[`col-1`]}
             onClick={(event) => {
               console.log(event);
               document
@@ -60,57 +62,57 @@ export default function ConnectFourBoard({ children }) {
                 );
             }}
           ></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span data-playerchip="" className={styles[`col-2`]}></span>
+          <span data-playerchip="" className={styles[`col-3`]}></span>
+          <span data-playerchip="" className={styles[`col-4`]}></span>
+          <span data-playerchip="" className={styles[`col-5`]}></span>
+          <span data-playerchip="" className={styles[`col-6`]}></span>
+          <span data-playerchip="" className={styles[`col-7`]}></span>
         </div>
         <div id="row-5" className={styles[`row`]}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span data-playerchip="" className={styles[`col-1`]}></span>
+          <span data-playerchip="" className={styles[`col-2`]}></span>
+          <span data-playerchip="" className={styles[`col-3`]}></span>
+          <span data-playerchip="" className={styles[`col-4`]}></span>
+          <span data-playerchip="" className={styles[`col-5`]}></span>
+          <span data-playerchip="" className={styles[`col-6`]}></span>
+          <span data-playerchip="" className={styles[`col-7`]}></span>
         </div>
         <div id="row-4" className={styles[`row`]}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span data-playerchip="" className={styles[`col-1`]}></span>
+          <span data-playerchip="" className={styles[`col-2`]}></span>
+          <span data-playerchip="" className={styles[`col-3`]}></span>
+          <span data-playerchip="" className={styles[`col-4`]}></span>
+          <span data-playerchip="" className={styles[`col-5`]}></span>
+          <span data-playerchip="" className={styles[`col-6`]}></span>
+          <span data-playerchip="" className={styles[`col-7`]}></span>
         </div>
         <div id="row-3" className={styles[`row`]}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span data-playerchip="" className={styles[`col-1`]}></span>
+          <span data-playerchip="" className={styles[`col-2`]}></span>
+          <span data-playerchip="" className={styles[`col-3`]}></span>
+          <span data-playerchip="" className={styles[`col-4`]}></span>
+          <span data-playerchip="" className={styles[`col-5`]}></span>
+          <span data-playerchip="" className={styles[`col-6`]}></span>
+          <span data-playerchip="" className={styles[`col-7`]}></span>
         </div>
         <div id="row-2" className={styles[`row`]}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span data-playerchip="" className={styles[`col-1`]}></span>
+          <span data-playerchip="" className={styles[`col-2`]}></span>
+          <span data-playerchip="" className={styles[`col-3`]}></span>
+          <span data-playerchip="" className={styles[`col-4`]}></span>
+          <span data-playerchip="" className={styles[`col-5`]}></span>
+          <span data-playerchip="" className={styles[`col-6`]}></span>
+          <span data-playerchip="" className={styles[`col-7`]}></span>
         </div>
         <div id="row-1" className={styles[`row`]}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span data-playerchip="" className={styles[`col-1`]}></span>
+          <span data-playerchip="" className={styles[`col-2`]}></span>
+          <span data-playerchip="" className={styles[`col-3`]}></span>
+          <span data-playerchip="" className={styles[`col-4`]}></span>
+          <span data-playerchip="" className={styles[`col-5`]}></span>
+          <span data-playerchip="" className={styles[`col-6`]}></span>
+          <span data-playerchip="" className={styles[`col-7`]}></span>
         </div>
         {/* animation row */}
         <div
