@@ -71,6 +71,33 @@ we can click on connect for chips */
   border-radius: 50%;
 }
 
+/* row 6 */
+.chips-container [row-6] [data-playerchip] {
+}
+/* row 5 */
+.chips-container [row-5] [data-playerchip] {
+}
+/* row 4 */
+.chips-container [row-4] [data-playerchip] {
+}
+/* row 3 */
+.chips-container [row-3] [data-playerchip] {
+}
+/* row 2 */
+.chips-container [row-2] [data-playerchip] {
+}
+/* row 1 */
+.chips-container [row-1] [data-playerchip] {
+}
+
+.chips-container span[data-playerchip="one"] {
+  background-color: var(--color-red);
+}
+
+.chips-container span[data-playerchip="two"] {
+  background-color: var(--color-yellow);
+}
+
 .clicking-container {
   width: 328px;
   height: 282px;
@@ -131,7 +158,7 @@ we can click on connect for chips */
 
 /* chip animation */
 
-/* first column */
+/* mobile */
 
 .row[id="animation-row"] [data-droppedposition="6"] {
   animation: MobileDroppedPositionSixthRow 1500ms ease-out forwards;
@@ -156,64 +183,6 @@ we can click on connect for chips */
 .row[id="animation-row"] [data-droppedposition="1"] {
   animation: MobileDroppedPositionFirstRow 1500ms ease-out forwards;
 }
-
-/* second column */
-
-/* .row[id="animation-row"] [data-droppedposition="1"] {
-  animation: MobileDroppedPositionFirstRow 1500ms ease-out forwards;
-}
-
-.row[id="animation-row"] [data-droppedposition="2"] {
-  animation: MobileDroppedPositionSecondRow 1500ms ease-out forwards;
-}
-
-.row[id="animation-row"] [data-droppedposition="3"] {
-  animation: MobileDroppedPositionThirdRow 1500ms ease-out forwards;
-}
-
-.row[id="animation-row"] [data-droppedposition="4"] {
-  animation: MobileDroppedPositionFourthRow 1500ms ease-out forwards;
-}
-
-.row[id="animation-row"] [data-droppedposition="5"] {
-  animation: MobileDroppedPositionFifthRow 1500ms ease-out forwards;
-}
-
-.row[id="animation-row"] [data-droppedposition="6"] {
-  animation: MobileDroppedPositionSixthRow 1500ms ease-out forwards;
-} */
-
-/* third column */
-
-.row[id="animation-row"]
-  [data-animationColumn="third"][data-droppedposition=""] {
-}
-
-/* fourth column */
-
-.row[id="animation-row"]
-  [data-animationColumn="fourth"][data-droppedposition=""] {
-}
-
-/* fifth column */
-
-.row[id="animation-row"]
-  [data-animationColumn="fifth"][data-droppedposition=""] {
-}
-
-/* sixth column */
-
-.row[id="animation-row"]
-  [data-animationColumn="sixth"][data-droppedposition=""] {
-}
-
-/* seventh column */
-
-.row[id="animation-row"]
-  [data-animationColumn="seventh"][data-droppedposition=""] {
-}
-
-/* mobile */
 
 /* Sixth row */
 
@@ -329,21 +298,46 @@ we can click on connect for chips */
 /* tablet */
 
 @media screen and (min-width: 48rem) {
+  /* animation */
+  .row[id="animation-row"] [data-droppedposition="6"] {
+    animation: TabletScreenDroppedPositionSixthRow 1500ms ease-out forwards;
+  }
+
+  .row[id="animation-row"] [data-droppedposition="5"] {
+    animation: TabletScreenDroppedPositionFifthRow 1500ms ease-out forwards;
+  }
+
+  .row[id="animation-row"] [data-droppedposition="4"] {
+    animation: TabletScreenDroppedPositionFourthRow 1500ms ease-out forwards;
+  }
+
+  .row[id="animation-row"] [data-droppedposition="3"] {
+    animation: TabletScreenDroppedPositionThirdRow 1500ms ease-out forwards;
+  }
+
+  .row[id="animation-row"] [data-droppedposition="2"] {
+    animation: TabletScreenDroppedPositionSecondRow 1500ms ease-out forwards;
+  }
+
+  .row[id="animation-row"] [data-droppedposition="1"] {
+    animation: TabletScreenDroppedPositionFirstRow 1500ms ease-out forwards;
+  }
+
   /* Sixth row */
 
   @keyframes TabletScreenDroppedPositionSixthRow {
     0% {
-      transform: translateY(0px);
+      transform: translateY(10px);
       background-color: transparent;
     }
 
     2% {
-      transform: translateY(0px);
-      background-color: var(--color-neutral-black);
+      background-color: var(--playerchipcolor);
     }
 
     100% {
-      background-color: var(--color-neutral-black);
+      transform: translateY(10px);
+      background-color: var(--playerchipcolor);
     }
   }
 
@@ -357,12 +351,12 @@ we can click on connect for chips */
 
     2% {
       transform: translateY(0px);
-      background-color: var(--color-neutral-black);
+      background-color: var(--playerchipcolor);
     }
 
     100% {
-      transform: translateY(89px);
-      background-color: var(--color-neutral-black);
+      transform: translateY(99px);
+      background-color: var(--playerchipcolor);
     }
   }
 
@@ -376,12 +370,12 @@ we can click on connect for chips */
 
     2% {
       transform: translateY(0px);
-      background-color: var(--color-neutral-black);
+      background-color: var(--playerchipcolor);
     }
 
     100% {
-      transform: translateY(177px);
-      background-color: var(--color-neutral-black);
+      transform: translateY(187px);
+      background-color: var(--playerchipcolor);
     }
   }
 
@@ -395,12 +389,12 @@ we can click on connect for chips */
 
     2% {
       transform: translateY(0px);
-      background-color: var(--color-neutral-black);
+      background-color: var(--playerchipcolor);
     }
 
     100% {
-      transform: translateY(265px);
-      background-color: var(--color-neutral-black);
+      transform: translateY(275px);
+      background-color: var(--playerchipcolor);
     }
   }
 
@@ -414,12 +408,12 @@ we can click on connect for chips */
 
     2% {
       transform: translateY(0px);
-      background-color: var(--color-neutral-black);
+      background-color: var(--playerchipcolor);
     }
 
     100% {
-      transform: translateY(352px);
-      background-color: var(--color-neutral-black);
+      transform: translateY(362px);
+      background-color: var(--playerchipcolor);
     }
   }
 
@@ -433,12 +427,12 @@ we can click on connect for chips */
 
     2% {
       transform: translateY(0px);
-      background-color: var(--color-neutral-black);
+      background-color: var(--playerchipcolor);
     }
 
     100% {
-      transform: translateY(441px);
-      background-color: var(--color-neutral-black);
+      transform: translateY(450px);
+      background-color: var(--playerchipcolor);
     }
   }
 }
