@@ -123,3 +123,15 @@ function rowCounter() {
 }
 
 export const checking = rowCounter();
+
+// obj for each node in our matrix
+const objForNode = {
+  // each direction should be an array
+  // we can loop while player matches, the data-playerturn
+  // of main element with id "game-board-bg-selector"
+  direction: {
+    left: {},
+    topLeft: {},
+    up: {},
+  },
+};
