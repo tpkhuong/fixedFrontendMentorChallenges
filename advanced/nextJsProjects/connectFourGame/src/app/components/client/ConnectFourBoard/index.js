@@ -51,6 +51,7 @@ export default function ConnectFourBoard({ children }) {
         >
           <span
             data-playerchip=""
+            data-chipselector="6-1"
             className={styles[`col-1`]}
             onClick={(event) => {
               console.log(event);
@@ -62,57 +63,221 @@ export default function ConnectFourBoard({ children }) {
                 );
             }}
           ></span>
-          <span data-playerchip="" className={styles[`col-2`]}></span>
-          <span data-playerchip="" className={styles[`col-3`]}></span>
-          <span data-playerchip="" className={styles[`col-4`]}></span>
-          <span data-playerchip="" className={styles[`col-5`]}></span>
-          <span data-playerchip="" className={styles[`col-6`]}></span>
-          <span data-playerchip="" className={styles[`col-7`]}></span>
+          <span
+            data-chipselector="6-2"
+            data-playerchip=""
+            className={styles[`col-2`]}
+          ></span>
+          <span
+            data-chipselector="6-3"
+            data-playerchip=""
+            className={styles[`col-3`]}
+          ></span>
+          <span
+            data-chipselector="6-4"
+            data-playerchip=""
+            className={styles[`col-4`]}
+          ></span>
+          <span
+            data-chipselector="6-5"
+            data-playerchip=""
+            className={styles[`col-5`]}
+          ></span>
+          <span
+            data-chipselector="6-6"
+            data-playerchip=""
+            className={styles[`col-6`]}
+          ></span>
+          <span
+            data-chipselector="6-7"
+            data-playerchip=""
+            className={styles[`col-7`]}
+          ></span>
         </div>
         <div id="row-5" className={styles[`row`]}>
-          <span data-playerchip="" className={styles[`col-1`]}></span>
-          <span data-playerchip="" className={styles[`col-2`]}></span>
-          <span data-playerchip="" className={styles[`col-3`]}></span>
-          <span data-playerchip="" className={styles[`col-4`]}></span>
-          <span data-playerchip="" className={styles[`col-5`]}></span>
-          <span data-playerchip="" className={styles[`col-6`]}></span>
-          <span data-playerchip="" className={styles[`col-7`]}></span>
+          <span
+            data-chipselector="5-1"
+            data-playerchip=""
+            className={styles[`col-1`]}
+          ></span>
+          <span
+            data-chipselector="5-2"
+            data-playerchip=""
+            className={styles[`col-2`]}
+          ></span>
+          <span
+            data-chipselector="5-3"
+            data-playerchip=""
+            className={styles[`col-3`]}
+          ></span>
+          <span
+            data-chipselector="5-4"
+            data-playerchip=""
+            className={styles[`col-4`]}
+          ></span>
+          <span
+            data-chipselector="5-5"
+            data-playerchip=""
+            className={styles[`col-5`]}
+          ></span>
+          <span
+            data-chipselector="5-6"
+            data-playerchip=""
+            className={styles[`col-6`]}
+          ></span>
+          <span
+            data-chipselector="5-7"
+            data-playerchip=""
+            className={styles[`col-7`]}
+          ></span>
         </div>
         <div id="row-4" className={styles[`row`]}>
-          <span data-playerchip="" className={styles[`col-1`]}></span>
-          <span data-playerchip="" className={styles[`col-2`]}></span>
-          <span data-playerchip="" className={styles[`col-3`]}></span>
-          <span data-playerchip="" className={styles[`col-4`]}></span>
-          <span data-playerchip="" className={styles[`col-5`]}></span>
-          <span data-playerchip="" className={styles[`col-6`]}></span>
-          <span data-playerchip="" className={styles[`col-7`]}></span>
+          <span
+            data-chipselector="4-1"
+            data-playerchip=""
+            className={styles[`col-1`]}
+          ></span>
+          <span
+            data-chipselector="4-2"
+            data-playerchip=""
+            className={styles[`col-2`]}
+          ></span>
+          <span
+            data-chipselector="4-3"
+            data-playerchip=""
+            className={styles[`col-3`]}
+          ></span>
+          <span
+            data-chipselector="4-4"
+            data-playerchip=""
+            className={styles[`col-4`]}
+          ></span>
+          <span
+            data-chipselector="4-5"
+            data-playerchip=""
+            className={styles[`col-5`]}
+          ></span>
+          <span
+            data-chipselector="4-6"
+            data-playerchip=""
+            className={styles[`col-6`]}
+          ></span>
+          <span
+            data-chipselector="4-7"
+            data-playerchip=""
+            className={styles[`col-7`]}
+          ></span>
         </div>
         <div id="row-3" className={styles[`row`]}>
-          <span data-playerchip="" className={styles[`col-1`]}></span>
-          <span data-playerchip="" className={styles[`col-2`]}></span>
-          <span data-playerchip="" className={styles[`col-3`]}></span>
-          <span data-playerchip="" className={styles[`col-4`]}></span>
-          <span data-playerchip="" className={styles[`col-5`]}></span>
-          <span data-playerchip="" className={styles[`col-6`]}></span>
-          <span data-playerchip="" className={styles[`col-7`]}></span>
+          <span
+            data-chipselector="3-1"
+            data-playerchip=""
+            className={styles[`col-1`]}
+          ></span>
+          <span
+            data-chipselector="3-2"
+            data-playerchip=""
+            className={styles[`col-2`]}
+          ></span>
+          <span
+            data-chipselector="3-3"
+            data-playerchip=""
+            className={styles[`col-3`]}
+          ></span>
+          <span
+            data-chipselector="3-4"
+            data-playerchip=""
+            className={styles[`col-4`]}
+          ></span>
+          <span
+            data-chipselector="3-5"
+            data-playerchip=""
+            className={styles[`col-5`]}
+          ></span>
+          <span
+            data-chipselector="3-6"
+            data-playerchip=""
+            className={styles[`col-6`]}
+          ></span>
+          <span
+            data-chipselector="3-7"
+            data-playerchip=""
+            className={styles[`col-7`]}
+          ></span>
         </div>
         <div id="row-2" className={styles[`row`]}>
-          <span data-playerchip="" className={styles[`col-1`]}></span>
-          <span data-playerchip="" className={styles[`col-2`]}></span>
-          <span data-playerchip="" className={styles[`col-3`]}></span>
-          <span data-playerchip="" className={styles[`col-4`]}></span>
-          <span data-playerchip="" className={styles[`col-5`]}></span>
-          <span data-playerchip="" className={styles[`col-6`]}></span>
-          <span data-playerchip="" className={styles[`col-7`]}></span>
+          <span
+            data-chipselector="2-1"
+            data-playerchip=""
+            className={styles[`col-1`]}
+          ></span>
+          <span
+            data-chipselector="2-2"
+            data-playerchip=""
+            className={styles[`col-2`]}
+          ></span>
+          <span
+            data-chipselector="2-3"
+            data-playerchip=""
+            className={styles[`col-3`]}
+          ></span>
+          <span
+            data-chipselector="2-4"
+            data-playerchip=""
+            className={styles[`col-4`]}
+          ></span>
+          <span
+            data-chipselector="2-5"
+            data-playerchip=""
+            className={styles[`col-5`]}
+          ></span>
+          <span
+            data-chipselector="2-6"
+            data-playerchip=""
+            className={styles[`col-6`]}
+          ></span>
+          <span
+            data-chipselector="2-7"
+            data-playerchip=""
+            className={styles[`col-7`]}
+          ></span>
         </div>
         <div id="row-1" className={styles[`row`]}>
-          <span data-playerchip="" className={styles[`col-1`]}></span>
-          <span data-playerchip="" className={styles[`col-2`]}></span>
-          <span data-playerchip="" className={styles[`col-3`]}></span>
-          <span data-playerchip="" className={styles[`col-4`]}></span>
-          <span data-playerchip="" className={styles[`col-5`]}></span>
-          <span data-playerchip="" className={styles[`col-6`]}></span>
-          <span data-playerchip="" className={styles[`col-7`]}></span>
+          <span
+            data-chipselector="1-1"
+            data-playerchip=""
+            className={styles[`col-1`]}
+          ></span>
+          <span
+            data-chipselector="1-2"
+            data-playerchip=""
+            className={styles[`col-2`]}
+          ></span>
+          <span
+            data-chipselector="1-3"
+            data-playerchip=""
+            className={styles[`col-3`]}
+          ></span>
+          <span
+            data-chipselector="1-4"
+            data-playerchip=""
+            className={styles[`col-4`]}
+          ></span>
+          <span
+            data-chipselector="1-5"
+            data-playerchip=""
+            className={styles[`col-5`]}
+          ></span>
+          <span
+            data-chipselector="1-6"
+            data-playerchip=""
+            className={styles[`col-6`]}
+          ></span>
+          <span
+            data-chipselector="1-7"
+            data-playerchip=""
+            className={styles[`col-7`]}
+          ></span>
         </div>
         {/* animation row */}
         <div

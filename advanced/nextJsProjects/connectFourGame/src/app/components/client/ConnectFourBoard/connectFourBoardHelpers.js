@@ -9,8 +9,31 @@ function rowCounter() {
     columnSeven: 0,
   };
 
+  const obj = {
+    first: 1,
+    second: 2,
+    third: 3,
+    fourth: 4,
+    fifth: 5,
+    sixth: 6,
+    seventh: 7,
+  };
+
+  function testing({ first, second, third, fourth, fifth, sixth, seventh }) {
+    console.log(first);
+    console.log(second);
+    console.log(third);
+    console.log(fourth);
+    console.log(fifth);
+    console.log(sixth);
+    console.log(seventh);
+  }
+
   const objOfMethods = {
-    first: () => {
+    // use objOfCounter and value of property of obj passed into
+    // objOfMethods func call. For example {first,second, third etc}
+    first: ({ first }) => {
+      console.log(first);
       // there is no seventh row, return
       console.log(objOfCounter);
       if (objOfCounter.columnOne == 7) return;
@@ -83,7 +106,8 @@ function rowCounter() {
         }, time);
       }
     },
-    second: () => {
+    second: ({ second }) => {
+      console.log(second);
       // there is no seventh row, return
       if (objOfCounter.columnOne == 7) return;
       // add 1 to column counter
@@ -96,19 +120,27 @@ function rowCounter() {
         `${objOfCounter.columnTwo}`
       );
     },
-    third: () => {
+    third: ({ third }) => {
+      console.log(third);
       objOfCounter.columnThree += 1;
     },
-    fourth: () => {
+    fourth: ({ fourth }) => {
+      console.log(fourth);
+
       objOfCounter.columnFour += 1;
     },
-    fifth: () => {
+    fifth: ({ fifth }) => {
+      console.log(fifth);
       objOfCounter.columnFive += 1;
     },
-    sixth: () => {
+    sixth: ({ sixth }) => {
+      console.log(sixth);
+
       objOfCounter.columnSix += 1;
     },
-    seventh: () => {
+    seventh: ({ seventh }) => {
+      console.log(seventh);
+
       objOfCounter.columnOne += 1;
     },
   };
@@ -117,7 +149,15 @@ function rowCounter() {
     const columnClicked = event.target.getAttribute("data-column");
 
     if (columnClicked && objOfMethods[columnClicked]) {
-      objOfMethods[columnClicked]();
+      objOfMethods[columnClicked]({
+        first: 1,
+        second: 2,
+        third: 3,
+        fourth: 4,
+        fifth: 5,
+        sixth: 6,
+        seventh: 7,
+      });
     }
   };
 }
