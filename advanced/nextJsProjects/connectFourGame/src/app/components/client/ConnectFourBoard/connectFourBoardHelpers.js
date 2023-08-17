@@ -1,4 +1,24 @@
 function rowCounter() {
+  const arrayOfChipNodes = [
+    // row 6 - 6
+    // index 0
+    [],
+    // row 5 - 4
+    // index 1
+    [],
+    // row 4 - 2
+    // index 2
+    [],
+    // row 3
+    // index 3
+    [],
+    // row 2 + 2
+    // index 4
+    [],
+    // row 1 + 4
+    // index 5
+    [],
+  ];
   const objOfCounter = {
     columnOne: 0,
     columnTwo: 0,
@@ -41,6 +61,18 @@ function rowCounter() {
       objOfCounter.columnOne += 1;
       // select first column
       const firstColumn = document.getElementById("animation-column-first");
+      // access position in arrayOfChipNodes here
+      console.log(
+        document.querySelector(
+          `#row-${objOfCounter.columnOne} [data-chipselector='${objOfCounter.columnOne}-${first}']`
+        )
+      );
+
+      const chipNodeElement = document.querySelector(
+        `#row-${objOfCounter.columnOne} [data-chipselector='${objOfCounter.columnOne}-${first}']`
+      );
+
+      // console.log(chipNodeElement.);
       // set value of data-droppedposition attr based on current counter
       firstColumn.setAttribute(
         "data-droppedposition",
@@ -49,6 +81,7 @@ function rowCounter() {
       // show player chip
       // row 6
       if (objOfCounter.columnOne == 6) {
+        // row 6 - 6
         setTimeout(() => {
           document
             .getElementById("row-6")
@@ -58,6 +91,7 @@ function rowCounter() {
 
       // row 5
       if (objOfCounter.columnOne == 5) {
+        // row 5 - 4
         const time = window.innerWidth <= 378 ? 1260 : 1310;
         setTimeout(() => {
           document
@@ -68,6 +102,7 @@ function rowCounter() {
 
       // row 4
       if (objOfCounter.columnOne == 4) {
+        // row 4 - 2
         const time = window.innerWidth <= 378 ? 1290 : 1340;
         setTimeout(() => {
           document
@@ -78,6 +113,7 @@ function rowCounter() {
 
       // row 3
       if (objOfCounter.columnOne == 3) {
+        // row 3
         const time = window.innerWidth <= 378 ? 1320 : 1370;
         setTimeout(() => {
           document
@@ -88,6 +124,7 @@ function rowCounter() {
 
       // row 2
       if (objOfCounter.columnOne == 2) {
+        // row 2 + 2
         const time = window.innerWidth <= 378 ? 1350 : 1400;
         setTimeout(() => {
           document
@@ -98,6 +135,7 @@ function rowCounter() {
 
       // row 1
       if (objOfCounter.columnOne == 1) {
+        // row 1 + 4
         const time = window.innerWidth <= 378 ? 1370 : 1420;
         setTimeout(() => {
           document
