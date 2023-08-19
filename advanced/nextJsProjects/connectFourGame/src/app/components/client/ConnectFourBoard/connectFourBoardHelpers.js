@@ -89,7 +89,7 @@ function rowCounter() {
         console.log(column, "column");
         // row 6 - 6
         console.log(
-          arrayOfChipNodes[Number(row) - 6][Number(column)],
+          arrayOfChipNodes[Number(row) - 6][Number(column) - 1],
           "array node"
         );
         setTimeout(() => {
@@ -109,7 +109,7 @@ function rowCounter() {
         console.log(column, "column");
         // row 5 - 4
         console.log(
-          arrayOfChipNodes[Number(row) - 4][Number(column)],
+          arrayOfChipNodes[Number(row) - 4][Number(column) - 1],
           "array node"
         );
         const time = window.innerWidth <= 378 ? 1260 : 1310;
@@ -130,7 +130,7 @@ function rowCounter() {
         console.log(column, "column");
         // row 4 - 2
         console.log(
-          arrayOfChipNodes[Number(row) - 2][Number(column)],
+          arrayOfChipNodes[Number(row) - 2][Number(column) - 1],
           "array node"
         );
         const time = window.innerWidth <= 378 ? 1290 : 1340;
@@ -151,7 +151,7 @@ function rowCounter() {
         console.log(column, "column");
         // row 3
         console.log(
-          arrayOfChipNodes[Number(row)][Number(column)],
+          arrayOfChipNodes[Number(row)][Number(column) - 1],
           "array node"
         );
         const time = window.innerWidth <= 378 ? 1320 : 1370;
@@ -172,7 +172,7 @@ function rowCounter() {
         console.log(column, "column");
         // row 2 + 2
         console.log(
-          arrayOfChipNodes[Number(row) + 2][Number(column)],
+          arrayOfChipNodes[Number(row) + 2][Number(column) - 1],
           "array node"
         );
         const time = window.innerWidth <= 378 ? 1350 : 1400;
@@ -193,7 +193,7 @@ function rowCounter() {
         console.log(column, "column");
         // row 1 + 4
         console.log(
-          arrayOfChipNodes[Number(row) + 4][Number(column)],
+          arrayOfChipNodes[Number(row) + 4][Number(column) - 1],
           "array node"
         );
         const time = window.innerWidth <= 378 ? 1370 : 1420;
