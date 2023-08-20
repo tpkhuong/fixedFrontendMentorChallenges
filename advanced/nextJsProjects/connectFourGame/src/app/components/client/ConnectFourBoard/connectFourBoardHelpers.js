@@ -96,6 +96,8 @@ function rowCounter() {
           document
             .getElementById("row-6")
             .firstElementChild.setAttribute("data-playerchip", "two");
+          // set "data-droppedposition" as empty string
+          firstColumn.setAttribute("data-droppedposition", "");
         }, 100);
       }
 
@@ -117,6 +119,8 @@ function rowCounter() {
           document
             .getElementById("row-5")
             .firstElementChild.setAttribute("data-playerchip", "two");
+          // set "data-droppedposition" as empty string
+          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
       }
 
@@ -138,6 +142,8 @@ function rowCounter() {
           document
             .getElementById("row-4")
             .firstElementChild.setAttribute("data-playerchip", "two");
+          // set "data-droppedposition" as empty string
+          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
       }
 
@@ -159,6 +165,8 @@ function rowCounter() {
           document
             .getElementById("row-3")
             .firstElementChild.setAttribute("data-playerchip", "two");
+          // set "data-droppedposition" as empty string
+          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
       }
 
@@ -180,6 +188,8 @@ function rowCounter() {
           document
             .getElementById("row-2")
             .firstElementChild.setAttribute("data-playerchip", "two");
+          // set "data-droppedposition" as empty string
+          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
       }
 
@@ -201,6 +211,8 @@ function rowCounter() {
           document
             .getElementById("row-1")
             .firstElementChild.setAttribute("data-playerchip", "two");
+          // set "data-droppedposition" as empty string
+          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
       }
     },
