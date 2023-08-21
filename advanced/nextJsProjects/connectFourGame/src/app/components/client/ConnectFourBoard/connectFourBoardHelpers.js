@@ -96,9 +96,11 @@ function rowCounter() {
           document
             .getElementById("row-6")
             .firstElementChild.setAttribute("data-playerchip", "two");
-          // set "data-droppedposition" as empty string
-          firstColumn.setAttribute("data-droppedposition", "");
         }, 100);
+        // set "data-droppedposition" as empty string
+        setTimeout(() => {
+          firstColumn.setAttribute("data-droppedposition", "");
+        }, 150);
       }
 
       // row 5
@@ -119,9 +121,15 @@ function rowCounter() {
           document
             .getElementById("row-5")
             .firstElementChild.setAttribute("data-playerchip", "two");
-          // set "data-droppedposition" as empty string
-          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
+
+        // set "data-droppedposition" as empty string
+        const removeDroppedPositionTimer =
+          window.innerWidth <= 378 ? 1360 : 1410;
+
+        setTimeout(() => {
+          firstColumn.setAttribute("data-droppedposition", "");
+        }, removeDroppedPositionTimer);
       }
 
       // row 4
@@ -142,9 +150,15 @@ function rowCounter() {
           document
             .getElementById("row-4")
             .firstElementChild.setAttribute("data-playerchip", "two");
-          // set "data-droppedposition" as empty string
-          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
+
+        // set "data-droppedposition" as empty string
+        const removeDroppedPositionTimer =
+          window.innerWidth <= 378 ? 1390 : 1440;
+
+        setTimeout(() => {
+          firstColumn.setAttribute("data-droppedposition", "");
+        }, removeDroppedPositionTimer);
       }
 
       // row 3
@@ -165,9 +179,15 @@ function rowCounter() {
           document
             .getElementById("row-3")
             .firstElementChild.setAttribute("data-playerchip", "two");
-          // set "data-droppedposition" as empty string
-          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
+
+        // set "data-droppedposition" as empty string
+        const removeDroppedPositionTimer =
+          window.innerWidth <= 378 ? 1420 : 1470;
+
+        setTimeout(() => {
+          firstColumn.setAttribute("data-droppedposition", "");
+        }, removeDroppedPositionTimer);
       }
 
       // row 2
@@ -188,9 +208,15 @@ function rowCounter() {
           document
             .getElementById("row-2")
             .firstElementChild.setAttribute("data-playerchip", "two");
-          // set "data-droppedposition" as empty string
-          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
+
+        // set "data-droppedposition" as empty string
+        const removeDroppedPositionTimer =
+          window.innerWidth <= 378 ? 1450 : 1500;
+
+        setTimeout(() => {
+          firstColumn.setAttribute("data-droppedposition", "");
+        }, removeDroppedPositionTimer);
       }
 
       // row 1
@@ -211,9 +237,14 @@ function rowCounter() {
           document
             .getElementById("row-1")
             .firstElementChild.setAttribute("data-playerchip", "two");
-          // set "data-droppedposition" as empty string
-          firstColumn.setAttribute("data-droppedposition", "");
         }, time);
+        // set "data-droppedposition" as empty string
+        const removeDroppedPositionTimer =
+          window.innerWidth <= 378 ? 1520 : 1570;
+
+        setTimeout(() => {
+          firstColumn.setAttribute("data-droppedposition", "");
+        }, removeDroppedPositionTimer);
       }
     },
     second: ({ second }) => {
