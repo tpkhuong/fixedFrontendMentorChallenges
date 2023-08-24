@@ -96,7 +96,7 @@ function rowCounter() {
           alert("make this dynamic");
           document
             .getElementById("row-6")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[0].setAttribute("data-playerchip", "two");
         }, 100);
         // set "data-droppedposition" as empty string
         setTimeout(() => {
@@ -121,7 +121,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-5")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[0].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -150,7 +150,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-4")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[0].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -179,7 +179,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-3")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[0].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -208,7 +208,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-2")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[0].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -237,7 +237,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-1")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[0].setAttribute("data-playerchip", "two");
         }, time);
         // set "data-droppedposition" as empty string
         const removeDroppedPositionTimer =
@@ -283,7 +283,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-6")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[1].setAttribute("data-playerchip", "two");
         }, 100);
         // set "data-droppedposition" as empty string
         setTimeout(() => {
@@ -308,7 +308,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-5")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[1].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -337,7 +337,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-4")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[1].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -366,7 +366,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-3")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[1].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -395,7 +395,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-2")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[1].setAttribute("data-playerchip", "two");
         }, time);
 
         // set "data-droppedposition" as empty string
@@ -424,7 +424,7 @@ function rowCounter() {
         setTimeout(() => {
           document
             .getElementById("row-1")
-            .firstElementChild.setAttribute("data-playerchip", "two");
+            .childNodes[1].setAttribute("data-playerchip", "two");
         }, time);
         // set "data-droppedposition" as empty string
         const removeDroppedPositionTimer =
