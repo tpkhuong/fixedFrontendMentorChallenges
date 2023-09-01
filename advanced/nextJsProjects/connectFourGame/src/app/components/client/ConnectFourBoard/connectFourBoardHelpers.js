@@ -448,188 +448,196 @@ function rowCounter(func) {
       console.log(third);
       // there is no seventh row, return
       if (objOfCounter.columnThree == 7) return;
-      objOfCounter.columnThree += 1;
+      func({
+        animateColumn: "animation-column-third",
+        columnObj: objOfCounter,
+        columnCounter: "columnOne",
+        chipNodeColumnValue: third,
+        childNodeValue: 2,
+        arrayNodes: arrayOfChipNodes,
+      });
+      // objOfCounter.columnThree += 1;
 
-      // select third column
-      const thirdColumn = document.getElementById("animation-column-third");
+      // // select third column
+      // const thirdColumn = document.getElementById("animation-column-third");
 
-      const chipNodeElement = document.querySelector(
-        `#row-${objOfCounter.columnThree} [data-chipselector='${objOfCounter.columnThree}-${third}']`
-      );
+      // const chipNodeElement = document.querySelector(
+      //   `#row-${objOfCounter.columnThree} [data-chipselector='${objOfCounter.columnThree}-${third}']`
+      // );
 
-      // set value of data-droppedposition attr based on current counter
-      thirdColumn.setAttribute(
-        "data-droppedposition",
-        `${objOfCounter.columnThree}`
-      );
-      // show player chip
-      // row 6
-      if (objOfCounter.columnThree == 6) {
-        console.log(chipNodeElement, "row 6");
-        const [row, column] = chipNodeElement
-          .getAttribute("data-chipselector")
-          .split("-");
-        console.log(row, "row");
-        console.log(column, "column");
-        // row 6 - 6
-        console.log(
-          arrayOfChipNodes[Number(row) - 6][Number(column) - 1],
-          "array node"
-        );
-        setTimeout(() => {
-          document
-            .getElementById("row-6")
-            .childNodes[2].setAttribute("data-playerchip", "two");
-        }, 100);
-        // set "data-droppedposition" as empty string
-        setTimeout(() => {
-          thirdColumn.setAttribute("data-droppedposition", "");
-        }, 150);
-      }
+      // // set value of data-droppedposition attr based on current counter
+      // thirdColumn.setAttribute(
+      //   "data-droppedposition",
+      //   `${objOfCounter.columnThree}`
+      // );
+      // // show player chip
+      // // row 6
+      // if (objOfCounter.columnThree == 6) {
+      //   console.log(chipNodeElement, "row 6");
+      //   const [row, column] = chipNodeElement
+      //     .getAttribute("data-chipselector")
+      //     .split("-");
+      //   console.log(row, "row");
+      //   console.log(column, "column");
+      //   // row 6 - 6
+      //   console.log(
+      //     arrayOfChipNodes[Number(row) - 6][Number(column) - 1],
+      //     "array node"
+      //   );
+      //   setTimeout(() => {
+      //     document
+      //       .getElementById("row-6")
+      //       .childNodes[2].setAttribute("data-playerchip", "two");
+      //   }, 100);
+      //   // set "data-droppedposition" as empty string
+      //   setTimeout(() => {
+      //     thirdColumn.setAttribute("data-droppedposition", "");
+      //   }, 150);
+      // }
 
-      // row 5
-      if (objOfCounter.columnThree == 5) {
-        console.log(chipNodeElement, "row 5");
-        const [row, column] = chipNodeElement
-          .getAttribute("data-chipselector")
-          .split("-");
-        console.log(row, "row");
-        console.log(column, "column");
-        // row 5 - 4
-        console.log(
-          arrayOfChipNodes[Number(row) - 4][Number(column) - 1],
-          "array node"
-        );
-        const time = window.innerWidth <= 378 ? 1260 : 1310;
-        setTimeout(() => {
-          document
-            .getElementById("row-5")
-            .childNodes[2].setAttribute("data-playerchip", "two");
-        }, time);
+      // // row 5
+      // if (objOfCounter.columnThree == 5) {
+      //   console.log(chipNodeElement, "row 5");
+      //   const [row, column] = chipNodeElement
+      //     .getAttribute("data-chipselector")
+      //     .split("-");
+      //   console.log(row, "row");
+      //   console.log(column, "column");
+      //   // row 5 - 4
+      //   console.log(
+      //     arrayOfChipNodes[Number(row) - 4][Number(column) - 1],
+      //     "array node"
+      //   );
+      //   const time = window.innerWidth <= 378 ? 1260 : 1310;
+      //   setTimeout(() => {
+      //     document
+      //       .getElementById("row-5")
+      //       .childNodes[2].setAttribute("data-playerchip", "two");
+      //   }, time);
 
-        // set "data-droppedposition" as empty string
-        const removeDroppedPositionTimer =
-          window.innerWidth <= 378 ? 1360 : 1410;
+      //   // set "data-droppedposition" as empty string
+      //   const removeDroppedPositionTimer =
+      //     window.innerWidth <= 378 ? 1360 : 1410;
 
-        setTimeout(() => {
-          thirdColumn.setAttribute("data-droppedposition", "");
-        }, removeDroppedPositionTimer);
-      }
+      //   setTimeout(() => {
+      //     thirdColumn.setAttribute("data-droppedposition", "");
+      //   }, removeDroppedPositionTimer);
+      // }
 
-      // row 4
-      if (objOfCounter.columnThree == 4) {
-        console.log(chipNodeElement, "row 4");
-        const [row, column] = chipNodeElement
-          .getAttribute("data-chipselector")
-          .split("-");
-        console.log(row, "row");
-        console.log(column, "column");
-        // row 4 - 2
-        console.log(
-          arrayOfChipNodes[Number(row) - 2][Number(column) - 1],
-          "array node"
-        );
-        const time = window.innerWidth <= 378 ? 1290 : 1340;
-        setTimeout(() => {
-          document
-            .getElementById("row-4")
-            .childNodes[2].setAttribute("data-playerchip", "two");
-        }, time);
+      // // row 4
+      // if (objOfCounter.columnThree == 4) {
+      //   console.log(chipNodeElement, "row 4");
+      //   const [row, column] = chipNodeElement
+      //     .getAttribute("data-chipselector")
+      //     .split("-");
+      //   console.log(row, "row");
+      //   console.log(column, "column");
+      //   // row 4 - 2
+      //   console.log(
+      //     arrayOfChipNodes[Number(row) - 2][Number(column) - 1],
+      //     "array node"
+      //   );
+      //   const time = window.innerWidth <= 378 ? 1290 : 1340;
+      //   setTimeout(() => {
+      //     document
+      //       .getElementById("row-4")
+      //       .childNodes[2].setAttribute("data-playerchip", "two");
+      //   }, time);
 
-        // set "data-droppedposition" as empty string
-        const removeDroppedPositionTimer =
-          window.innerWidth <= 378 ? 1390 : 1440;
+      //   // set "data-droppedposition" as empty string
+      //   const removeDroppedPositionTimer =
+      //     window.innerWidth <= 378 ? 1390 : 1440;
 
-        setTimeout(() => {
-          thirdColumn.setAttribute("data-droppedposition", "");
-        }, removeDroppedPositionTimer);
-      }
+      //   setTimeout(() => {
+      //     thirdColumn.setAttribute("data-droppedposition", "");
+      //   }, removeDroppedPositionTimer);
+      // }
 
-      // row 3
-      if (objOfCounter.columnThree == 3) {
-        console.log(chipNodeElement, "row 3");
-        const [row, column] = chipNodeElement
-          .getAttribute("data-chipselector")
-          .split("-");
-        console.log(row, "row");
-        console.log(column, "column");
-        // row 3
-        console.log(
-          arrayOfChipNodes[Number(row)][Number(column) - 1],
-          "array node"
-        );
-        const time = window.innerWidth <= 378 ? 1320 : 1370;
-        setTimeout(() => {
-          document
-            .getElementById("row-3")
-            .childNodes[2].setAttribute("data-playerchip", "two");
-        }, time);
+      // // row 3
+      // if (objOfCounter.columnThree == 3) {
+      //   console.log(chipNodeElement, "row 3");
+      //   const [row, column] = chipNodeElement
+      //     .getAttribute("data-chipselector")
+      //     .split("-");
+      //   console.log(row, "row");
+      //   console.log(column, "column");
+      //   // row 3
+      //   console.log(
+      //     arrayOfChipNodes[Number(row)][Number(column) - 1],
+      //     "array node"
+      //   );
+      //   const time = window.innerWidth <= 378 ? 1320 : 1370;
+      //   setTimeout(() => {
+      //     document
+      //       .getElementById("row-3")
+      //       .childNodes[2].setAttribute("data-playerchip", "two");
+      //   }, time);
 
-        // set "data-droppedposition" as empty string
-        const removeDroppedPositionTimer =
-          window.innerWidth <= 378 ? 1420 : 1470;
+      //   // set "data-droppedposition" as empty string
+      //   const removeDroppedPositionTimer =
+      //     window.innerWidth <= 378 ? 1420 : 1470;
 
-        setTimeout(() => {
-          thirdColumn.setAttribute("data-droppedposition", "");
-        }, removeDroppedPositionTimer);
-      }
+      //   setTimeout(() => {
+      //     thirdColumn.setAttribute("data-droppedposition", "");
+      //   }, removeDroppedPositionTimer);
+      // }
 
-      // row 2
-      if (objOfCounter.columnThree == 2) {
-        console.log(chipNodeElement, "row 2");
-        const [row, column] = chipNodeElement
-          .getAttribute("data-chipselector")
-          .split("-");
-        console.log(row, "row");
-        console.log(column, "column");
-        // row 2 + 2
-        console.log(
-          arrayOfChipNodes[Number(row) + 2][Number(column) - 1],
-          "array node"
-        );
-        const time = window.innerWidth <= 378 ? 1350 : 1400;
-        setTimeout(() => {
-          document
-            .getElementById("row-2")
-            .childNodes[2].setAttribute("data-playerchip", "two");
-        }, time);
+      // // row 2
+      // if (objOfCounter.columnThree == 2) {
+      //   console.log(chipNodeElement, "row 2");
+      //   const [row, column] = chipNodeElement
+      //     .getAttribute("data-chipselector")
+      //     .split("-");
+      //   console.log(row, "row");
+      //   console.log(column, "column");
+      //   // row 2 + 2
+      //   console.log(
+      //     arrayOfChipNodes[Number(row) + 2][Number(column) - 1],
+      //     "array node"
+      //   );
+      //   const time = window.innerWidth <= 378 ? 1350 : 1400;
+      //   setTimeout(() => {
+      //     document
+      //       .getElementById("row-2")
+      //       .childNodes[2].setAttribute("data-playerchip", "two");
+      //   }, time);
 
-        // set "data-droppedposition" as empty string
-        const removeDroppedPositionTimer =
-          window.innerWidth <= 378 ? 1450 : 1500;
+      //   // set "data-droppedposition" as empty string
+      //   const removeDroppedPositionTimer =
+      //     window.innerWidth <= 378 ? 1450 : 1500;
 
-        setTimeout(() => {
-          thirdColumn.setAttribute("data-droppedposition", "");
-        }, removeDroppedPositionTimer);
-      }
+      //   setTimeout(() => {
+      //     thirdColumn.setAttribute("data-droppedposition", "");
+      //   }, removeDroppedPositionTimer);
+      // }
 
-      // row 1
-      if (objOfCounter.columnThree == 1) {
-        console.log(chipNodeElement, "row 1");
-        const [row, column] = chipNodeElement
-          .getAttribute("data-chipselector")
-          .split("-");
-        console.log(row, "row");
-        console.log(column, "column");
-        // row 1 + 4
-        console.log(
-          arrayOfChipNodes[Number(row) + 4][Number(column) - 1],
-          "array node"
-        );
-        const time = window.innerWidth <= 378 ? 1370 : 1420;
-        setTimeout(() => {
-          document
-            .getElementById("row-1")
-            .childNodes[2].setAttribute("data-playerchip", "two");
-        }, time);
-        // set "data-droppedposition" as empty string
-        const removeDroppedPositionTimer =
-          window.innerWidth <= 378 ? 1520 : 1570;
+      // // row 1
+      // if (objOfCounter.columnThree == 1) {
+      //   console.log(chipNodeElement, "row 1");
+      //   const [row, column] = chipNodeElement
+      //     .getAttribute("data-chipselector")
+      //     .split("-");
+      //   console.log(row, "row");
+      //   console.log(column, "column");
+      //   // row 1 + 4
+      //   console.log(
+      //     arrayOfChipNodes[Number(row) + 4][Number(column) - 1],
+      //     "array node"
+      //   );
+      //   const time = window.innerWidth <= 378 ? 1370 : 1420;
+      //   setTimeout(() => {
+      //     document
+      //       .getElementById("row-1")
+      //       .childNodes[2].setAttribute("data-playerchip", "two");
+      //   }, time);
+      //   // set "data-droppedposition" as empty string
+      //   const removeDroppedPositionTimer =
+      //     window.innerWidth <= 378 ? 1520 : 1570;
 
-        setTimeout(() => {
-          thirdColumn.setAttribute("data-droppedposition", "");
-        }, removeDroppedPositionTimer);
-      }
+      //   setTimeout(() => {
+      //     thirdColumn.setAttribute("data-droppedposition", "");
+      //   }, removeDroppedPositionTimer);
+      // }
     },
     fourth: ({ fourth }) => {
       console.log(fourth);
