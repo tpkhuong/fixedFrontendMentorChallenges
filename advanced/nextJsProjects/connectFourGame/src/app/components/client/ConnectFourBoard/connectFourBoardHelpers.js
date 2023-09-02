@@ -256,7 +256,7 @@ function rowCounter(func) {
       func({
         animateColumn: "animation-column-second",
         columnObj: objOfCounter,
-        columnCounter: "columnOne",
+        columnCounter: "columnTwo",
         chipNodeColumnValue: second,
         childNodeValue: 1,
         arrayNodes: arrayOfChipNodes,
@@ -451,7 +451,7 @@ function rowCounter(func) {
       func({
         animateColumn: "animation-column-third",
         columnObj: objOfCounter,
-        columnCounter: "columnOne",
+        columnCounter: "columnThree",
         chipNodeColumnValue: third,
         childNodeValue: 2,
         arrayNodes: arrayOfChipNodes,
@@ -643,25 +643,53 @@ function rowCounter(func) {
       console.log(fourth);
       // there is no seventh row, return
       if (objOfCounter.columnFour == 7) return;
-      objOfCounter.columnFour += 1;
+      func({
+        animateColumn: "animation-column-fourth",
+        columnObj: objOfCounter,
+        columnCounter: "columnFour",
+        chipNodeColumnValue: fourth,
+        childNodeValue: 3,
+        arrayNodes: arrayOfChipNodes,
+      });
     },
     fifth: ({ fifth }) => {
       console.log(fifth);
       // there is no seventh row, return
       if (objOfCounter.columnFive == 7) return;
-      objOfCounter.columnFive += 1;
+      func({
+        animateColumn: "animation-column-fifth",
+        columnObj: objOfCounter,
+        columnCounter: "columnFive",
+        chipNodeColumnValue: fifth,
+        childNodeValue: 4,
+        arrayNodes: arrayOfChipNodes,
+      });
     },
     sixth: ({ sixth }) => {
       console.log(sixth);
       // there is no seventh row, return
       if (objOfCounter.columnSix == 7) return;
-      objOfCounter.columnSix += 1;
+      func({
+        animateColumn: "animation-column-sixth",
+        columnObj: objOfCounter,
+        columnCounter: "columnSix",
+        chipNodeColumnValue: sixth,
+        childNodeValue: 5,
+        arrayNodes: arrayOfChipNodes,
+      });
     },
     seventh: ({ seventh }) => {
       console.log(seventh);
       // there is no seventh row, return
       if (objOfCounter.columnSeven == 7) return;
-      objOfCounter.columnSeven += 1;
+      func({
+        animateColumn: "animation-column-seventh",
+        columnObj: objOfCounter,
+        columnCounter: "columnSeven",
+        chipNodeColumnValue: seventh,
+        childNodeValue: 6,
+        arrayNodes: arrayOfChipNodes,
+      });
     },
   };
 
