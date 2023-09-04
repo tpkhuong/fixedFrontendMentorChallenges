@@ -732,14 +732,18 @@ function placeHolder({
   childNodeValue,
   arrayNodes,
 }) {
+  // get current player
+  const currentPlayerChip = document
+    .getElementById("game-board-bg-selector")
+    .getAttribute("data-playerturn");
   // add 1 to column counter
   columnObj[columnCounter] += 1;
   // get value of data-playerturn attr of main element with id "game-board-bg-selector"
   const currentPlayer = document
     .getElementById("game-board-bg-selector")
     .getAttribute("data-playerturn");
-  // select first column
-  const firstColumn = document.getElementById(`${animateColumn}`);
+  // select a column
+  const selectedColumn = document.getElementById(`${animateColumn}`);
   // access position in arrayNodes here
   // console.log(
   //   document.querySelector(
@@ -753,7 +757,7 @@ function placeHolder({
 
   // console.log(chipNodeElement.);
   // set value of data-droppedposition attr based on current counter
-  firstColumn.setAttribute(
+  selectedColumn.setAttribute(
     "data-droppedposition",
     `${columnObj[columnCounter]}`
   );
@@ -778,7 +782,7 @@ function placeHolder({
     }, 100);
     // set "data-droppedposition" as empty string
     setTimeout(() => {
-      firstColumn.setAttribute("data-droppedposition", "");
+      selectedColumn.setAttribute("data-droppedposition", "");
     }, 150);
   }
 
@@ -806,7 +810,7 @@ function placeHolder({
     const removeDroppedPositionTimer = window.innerWidth <= 378 ? 1360 : 1410;
 
     setTimeout(() => {
-      firstColumn.setAttribute("data-droppedposition", "");
+      selectedColumn.setAttribute("data-droppedposition", "");
     }, removeDroppedPositionTimer);
   }
 
@@ -834,7 +838,7 @@ function placeHolder({
     const removeDroppedPositionTimer = window.innerWidth <= 378 ? 1390 : 1440;
 
     setTimeout(() => {
-      firstColumn.setAttribute("data-droppedposition", "");
+      selectedColumn.setAttribute("data-droppedposition", "");
     }, removeDroppedPositionTimer);
   }
 
@@ -862,7 +866,7 @@ function placeHolder({
     const removeDroppedPositionTimer = window.innerWidth <= 378 ? 1420 : 1470;
 
     setTimeout(() => {
-      firstColumn.setAttribute("data-droppedposition", "");
+      selectedColumn.setAttribute("data-droppedposition", "");
     }, removeDroppedPositionTimer);
   }
 
@@ -890,7 +894,7 @@ function placeHolder({
     const removeDroppedPositionTimer = window.innerWidth <= 378 ? 1450 : 1500;
 
     setTimeout(() => {
-      firstColumn.setAttribute("data-droppedposition", "");
+      selectedColumn.setAttribute("data-droppedposition", "");
     }, removeDroppedPositionTimer);
   }
 
@@ -917,7 +921,19 @@ function placeHolder({
     const removeDroppedPositionTimer = window.innerWidth <= 378 ? 1520 : 1570;
 
     setTimeout(() => {
-      firstColumn.setAttribute("data-droppedposition", "");
+      selectedColumn.setAttribute("data-droppedposition", "");
     }, removeDroppedPositionTimer);
+  }
+  // change data-playerturn value after animation
+  if (currentPlayerChip == "one") {
+    // change value to "two"
+    document
+      .getElementById("game-board-bg-selector")
+      .setAttribute("data-playerturn", "two");
+  } else {
+    // change value to "one"
+    document
+      .getElementById("game-board-bg-selector")
+      .setAttribute("data-playerturn", "one");
   }
 }
