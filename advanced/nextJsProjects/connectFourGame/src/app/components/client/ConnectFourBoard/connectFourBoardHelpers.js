@@ -924,7 +924,11 @@ function placeHolder({
       selectedColumn.setAttribute("data-droppedposition", "");
     }, removeDroppedPositionTimer);
   }
+}
+
+function changePlayerChip({ currentPlayerChip }) {
   // change data-playerturn value after animation
+  // make this work with each column and row combination
   if (currentPlayerChip == "one") {
     // change value to "two"
     document
