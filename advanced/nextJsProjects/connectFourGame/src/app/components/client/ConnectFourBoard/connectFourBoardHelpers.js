@@ -772,6 +772,7 @@ function placeHolder({
     console.log(column, "column");
     // row 6 - 6
     console.log(arrayNodes[Number(row) - 6][Number(column) - 1], "array node");
+    // chip dropped animation
     setTimeout(() => {
       document
         .getElementById("row-6")
@@ -784,6 +785,11 @@ function placeHolder({
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
     }, 150);
+
+    // change player
+    // setTimeout(()=>{
+    //   changePlayerChip({currentPlayerChip});
+    // },200)
   }
 
   // row 5
@@ -797,6 +803,7 @@ function placeHolder({
     // row 5 - 4
     console.log(arrayNodes[Number(row) - 4][Number(column) - 1], "array node");
     const time = window.innerWidth <= 378 ? 1260 : 1310;
+    // chip dropped animation
     setTimeout(() => {
       document
         .getElementById("row-5")
@@ -811,7 +818,9 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
-    }, removeDroppedPositionTimer);
+    }, time + 100);
+
+    // change player
   }
 
   // row 4
@@ -825,6 +834,7 @@ function placeHolder({
     // row 4 - 2
     console.log(arrayNodes[Number(row) - 2][Number(column) - 1], "array node");
     const time = window.innerWidth <= 378 ? 1290 : 1340;
+    // chip dropped animation
     setTimeout(() => {
       document
         .getElementById("row-4")
@@ -839,7 +849,9 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
-    }, removeDroppedPositionTimer);
+    }, time + 100);
+
+    // change player
   }
 
   // row 3
@@ -853,6 +865,7 @@ function placeHolder({
     // row 3
     console.log(arrayNodes[Number(row)][Number(column) - 1], "array node");
     const time = window.innerWidth <= 378 ? 1320 : 1370;
+    // chip dropped animation
     setTimeout(() => {
       document
         .getElementById("row-3")
@@ -867,7 +880,9 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
-    }, removeDroppedPositionTimer);
+    }, time + 100);
+
+    // change player
   }
 
   // row 2
@@ -881,6 +896,7 @@ function placeHolder({
     // row 2 + 2
     console.log(arrayNodes[Number(row) + 2][Number(column) - 1], "array node");
     const time = window.innerWidth <= 378 ? 1350 : 1400;
+    // chip dropped animation
     setTimeout(() => {
       document
         .getElementById("row-2")
@@ -895,7 +911,9 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
-    }, removeDroppedPositionTimer);
+    }, time + 100);
+
+    // change player
   }
 
   // row 1
@@ -909,6 +927,7 @@ function placeHolder({
     // row 1 + 4
     console.log(arrayNodes[Number(row) + 4][Number(column) - 1], "array node");
     const time = window.innerWidth <= 378 ? 1370 : 1420;
+    // chip dropped animation
     setTimeout(() => {
       document
         .getElementById("row-1")
@@ -920,9 +939,14 @@ function placeHolder({
     // set "data-droppedposition" as empty string
     const removeDroppedPositionTimer = window.innerWidth <= 378 ? 1520 : 1570;
 
+    // setTimeout(() => {
+    //   selectedColumn.setAttribute("data-droppedposition", "");
+    // }, removeDroppedPositionTimer);
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
-    }, removeDroppedPositionTimer);
+    }, time + 150);
+
+    // change player
   }
 }
 

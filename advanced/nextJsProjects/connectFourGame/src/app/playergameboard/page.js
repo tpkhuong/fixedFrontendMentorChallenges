@@ -9,7 +9,7 @@ export default function PlayerGameBoard({ children }) {
   return (
     <main
       id="game-board-bg-selector"
-      data-playerturn="one"
+      data-playerturn="null"
       data-result="null"
       className={styles[`game-board-bg-container`]}
     >
