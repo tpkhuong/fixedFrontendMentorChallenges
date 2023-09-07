@@ -787,9 +787,9 @@ function placeHolder({
     }, 150);
 
     // change player
-    // setTimeout(()=>{
-    //   changePlayerChip({currentPlayerChip});
-    // },200)
+    setTimeout(() => {
+      changePlayerChip({ currentPlayerChip });
+    }, 250);
   }
 
   // row 5
@@ -821,6 +821,9 @@ function placeHolder({
     }, time + 100);
 
     // change player
+    setTimeout(() => {
+      changePlayerChip({ currentPlayerChip });
+    }, time + 250);
   }
 
   // row 4
@@ -852,6 +855,9 @@ function placeHolder({
     }, time + 100);
 
     // change player
+    setTimeout(() => {
+      changePlayerChip({ currentPlayerChip });
+    }, time + 250);
   }
 
   // row 3
@@ -883,6 +889,9 @@ function placeHolder({
     }, time + 100);
 
     // change player
+    setTimeout(() => {
+      changePlayerChip({ currentPlayerChip });
+    }, time + 250);
   }
 
   // row 2
@@ -914,6 +923,9 @@ function placeHolder({
     }, time + 100);
 
     // change player
+    setTimeout(() => {
+      changePlayerChip({ currentPlayerChip });
+    }, time + 250);
   }
 
   // row 1
@@ -947,6 +959,9 @@ function placeHolder({
     }, time + 150);
 
     // change player
+    setTimeout(() => {
+      changePlayerChip({ currentPlayerChip });
+    }, time + 250);
   }
 }
 
