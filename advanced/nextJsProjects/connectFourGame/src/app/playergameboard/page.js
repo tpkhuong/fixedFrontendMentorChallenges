@@ -15,7 +15,7 @@ export default function PlayerGameBoard({ children }) {
     >
       {/* lower bg change bg color based on results */}
       <div id="lower-bg-selector" className={styles[`bottom-bg`]}></div>
-      <MenuPlayerDisplayBoard />
+      {/* <MenuPlayerDisplayBoard /> */}
       {/* <ConnectFourBoard /> */}
       {/* <ResultsDisplay /> */}
       {/* <div className={styles[`circle-container`]}>
@@ -25,7 +25,7 @@ export default function PlayerGameBoard({ children }) {
         <div className={`${styles[`circle`]} ${styles[`chip-border`]}`}></div>
       </div> */}
       {/* <div className={`${styles[`circle`]} ${styles[`top`]}`}></div> */}
-      {/* <div className={styles[`dropped-circle-container`]}>
+      <div className={styles[`dropped-circle-container`]}>
         <div
           className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
         ></div>
@@ -35,7 +35,7 @@ export default function PlayerGameBoard({ children }) {
         <div
           className={`${styles[`circle`]} ${styles[`dropped-chip-border`]}`}
         ></div>
-      </div> */}
+      </div>
 
       {/* <PlayerTurnTimer /> */}
 

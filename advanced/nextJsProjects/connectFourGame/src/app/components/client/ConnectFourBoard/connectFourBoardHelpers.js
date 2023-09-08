@@ -980,3 +980,7 @@ function changePlayerChip({ currentPlayerChip }) {
       .setAttribute("data-playerturn", "one");
   }
 }
+
+function movePointer() {
+  //
+}

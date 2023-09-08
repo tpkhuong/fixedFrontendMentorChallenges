@@ -57,7 +57,7 @@ we can click on connect for chips */
   top: 7px;
   margin-block-start: 0px;
 }
-
+/* move code from player game board for dropped chip and and chip to here */
 .row[id="row-1"] span {
   background-color: transparent;
 }
