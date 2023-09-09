@@ -8,7 +8,7 @@
   --playerchipcolor: var(--color-yellow);
 }
 
-.circle-container,
+/* .circle-container,
 .dropped-circle-container {
   --circle-size: 80px;
   width: var(--circle-size);
@@ -18,19 +18,19 @@
   inset: 0;
 
   margin-block-start: 80px;
-}
+} */
 
 .circle {
-  --circle-size: 80px;
+  /* --circle-size: 80px;
   width: var(--circle-size);
   height: var(--circle-size);
   background-color: var(--circle-color);
-  border-radius: 50%;
+  border-radius: 50%; */
 
   /* position: absolute; */
 }
 
-.chip-bg,
+/* .chip-bg,
 .chip-bottom,
 .chip-top,
 .chip-border,
@@ -60,7 +60,7 @@
 .dropped-chip-border {
   border: 5px solid black;
   transform: translateY(-5px);
-}
+} */
 
 .dropped-chip-top {
 }

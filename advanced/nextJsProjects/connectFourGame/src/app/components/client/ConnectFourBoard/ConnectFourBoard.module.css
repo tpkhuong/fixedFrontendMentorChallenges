@@ -1,5 +1,63 @@
 /* mobile */
 
+.connect-four-board-container {
+  display: none;
+}
+
+.circle-container,
+.dropped-circle-container {
+  --circle-size: 40px;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  margin-inline: auto;
+  position: absolute;
+  inset: 0;
+
+  margin-block-start: 80px;
+}
+
+.circle {
+  --circle-size: 40px;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background-color: var(--circle-color);
+  border-radius: 50%;
+
+  /* position: absolute; */
+}
+
+.chip-bg,
+.chip-bottom,
+.chip-top,
+.chip-border,
+.dropped-chip-bg,
+.dropped-chip-top,
+.dropped-chip-border {
+  position: absolute;
+}
+
+.chip-bg,
+.dropped-chip-bg {
+  --circle-color: var(--color-yellow);
+}
+
+.chip-bottom {
+  border: 6px solid black;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.chip-top,
+.dropped-chip-top {
+  border: 6px solid hsla(0, 0%, 0%, 0.5);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+
+.chip-border,
+.dropped-chip-border {
+  border: 5px solid black;
+  transform: translateY(-5px);
+}
+
 /* use custom properties */
 
 .row[id="animation-row"] [data-droppedposition="last"] {
