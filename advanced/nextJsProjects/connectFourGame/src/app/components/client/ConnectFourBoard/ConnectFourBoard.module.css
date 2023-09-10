@@ -6,7 +6,7 @@
 
 .circle-container,
 .dropped-circle-container {
-  --circle-size: 40px;
+  --circle-size: 39px;
   width: var(--circle-size);
   height: var(--circle-size);
   margin-inline: auto;
@@ -16,8 +16,12 @@
   margin-block-start: 80px;
 }
 
+.dropped-circle-container {
+  z-index: 1;
+}
+
 .circle {
-  --circle-size: 40px;
+  --circle-size: 39px;
   width: var(--circle-size);
   height: var(--circle-size);
   background-color: var(--circle-color);
@@ -42,20 +46,20 @@
 }
 
 .chip-bottom {
-  border: 6px solid black;
+  border: 3px solid black;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
 }
 
 .chip-top,
 .dropped-chip-top {
-  border: 6px solid hsla(0, 0%, 0%, 0.5);
+  border: 4.5px solid hsla(0, 0%, 0%, 0.5);
   clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
 }
 
 .chip-border,
 .dropped-chip-border {
-  border: 5px solid black;
-  transform: translateY(-5px);
+  border: 3px solid black;
+  transform: translateY(-2px);
 }
 
 /* use custom properties */
@@ -75,6 +79,7 @@ we can click on connect for chips */
 .front-game-board {
   position: absolute;
   transform: translateY(-320px);
+  z-index: 1;
 }
 /* span:first-child */
 /* one option */
@@ -174,6 +179,7 @@ we can click on connect for chips */
 /* tablet */
 
 @media screen and (min-width: 48rem) {
+  /* tablet size and above look at player game board module css for circle css declarations */
   .front-game-board {
     transform: translateY(-593px);
   }
