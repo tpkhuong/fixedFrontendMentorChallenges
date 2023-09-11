@@ -45,6 +45,10 @@
   --circle-color: var(--color-yellow);
 }
 
+.dropped-chip-bg {
+  height: 36px;
+}
+
 .chip-bottom {
   border: 3px solid black;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
@@ -215,6 +219,53 @@ we can click on connect for chips */
 
   .clicking-container span {
     flex-basis: 71px;
+  }
+
+  /* chip circle and dropped chip circle */
+
+  .circle-container,
+  .dropped-circle-container {
+    --circle-size: 71px;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    /* margin-inline: auto;
+  position: absolute;
+  inset: 0;
+
+  margin-block-start: 80px; */
+  }
+
+  .dropped-circle-container {
+    z-index: 1;
+  }
+
+  .circle {
+    --circle-size: 71px;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    /* background-color: var(--circle-color);
+  border-radius: 50%; */
+
+    /* position: absolute; */
+  }
+
+  .chip-bottom {
+    border: 5px solid black;
+  }
+
+  .chip-top,
+  .dropped-chip-top {
+    border: 5px solid hsla(0, 0%, 0%, 0.5);
+  }
+
+  .chip-border,
+  .dropped-chip-border {
+    border: 5px solid black;
+    transform: translateY(-4.5px);
+  }
+
+  .dropped-chip-bg {
+    height: 65.9px;
   }
 }
 
