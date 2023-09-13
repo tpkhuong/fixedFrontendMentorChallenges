@@ -66,6 +66,18 @@
   transform: translateY(-2px);
 }
 
+/* winning circle */
+
+/* mobile 20 */
+/* tablet and above 34 */
+
+.winning-white-circle {
+}
+
+.winning-center-circle {
+  /* background color will match chip and dropped chip background */
+}
+
 /* use custom properties */
 
 .row[id="animation-row"] [data-droppedposition="last"] {

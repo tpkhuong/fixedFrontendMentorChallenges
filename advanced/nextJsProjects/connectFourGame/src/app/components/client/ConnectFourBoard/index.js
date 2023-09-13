@@ -24,6 +24,9 @@ export default function ConnectFourBoard({ children }) {
         <div
           className={`${styles[`circle`]} ${styles[`dropped-chip-border`]}`}
         ></div>
+        <span className={styles[`winning-white-circle`]}>
+          <span className={styles[`winning-center-circle`]}></span>
+        </span>
       </div>
       <div className={styles[`connect-four-board-container`]}>
         <PlayerTurnTimer />
