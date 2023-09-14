@@ -66,16 +66,41 @@
   transform: translateY(-2px);
 }
 
+.dropped-chip-border {
+  /* background should be transparent */
+}
+
 /* winning circle */
 
 /* mobile 20 */
 /* tablet and above 34 */
 
 .winning-white-circle {
+  --winning-circle-size: 20px;
+  display: block;
+  width: var(--winning-circle-size);
+  height: var(--winning-circle-size);
+  background-color: var(--color-neutral-white);
+
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 50%;
+  transform: translate(-0.9px, -2px);
 }
 
 .winning-center-circle {
   /* background color will match chip and dropped chip background */
+  --winning-circle-size: 20px;
+  display: block;
+  width: calc(var(--winning-circle-size) / 2);
+  height: calc(var(--winning-circle-size) / 2);
+  background-color: var(--playerchipcolor);
+
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 50%;
 }
 
 /* use custom properties */
