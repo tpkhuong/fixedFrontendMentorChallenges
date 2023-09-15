@@ -42,7 +42,7 @@
 
 .chip-bg,
 .dropped-chip-bg {
-  --circle-color: var(--color-yellow);
+  --circle-color: var(--playerchipcolor);
 }
 
 .dropped-chip-bg {
@@ -64,10 +64,8 @@
 .dropped-chip-border {
   border: 3px solid black;
   transform: translateY(-2px);
-}
-
-.dropped-chip-border {
   /* background should be transparent */
+  background-color: transparent;
 }
 
 /* winning circle */
@@ -304,7 +302,26 @@ we can click on connect for chips */
   .dropped-chip-bg {
     height: 65.9px;
   }
+
+  /* winning circle */
+
+  /* tablet and above 34 */
+
+  .winning-white-circle {
+    --winning-circle-size: 34px;
+
+    width: var(--winning-circle-size);
+    height: var(--winning-circle-size);
+
+    transform: translateY(-4px);
+  }
+
+  .winning-center-circle {
+    width: 20px;
+    height: 20px;
+  }
 }
+/* background color will match chip and dropped chip background */
 
 /* desktop */
 
