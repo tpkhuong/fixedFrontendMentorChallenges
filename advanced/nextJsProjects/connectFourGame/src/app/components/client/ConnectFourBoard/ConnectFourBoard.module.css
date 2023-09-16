@@ -1,7 +1,7 @@
 /* mobile */
 
 .connect-four-board-container {
-  display: none;
+  /* display: none; */
 }
 
 .circle-container,
@@ -13,6 +13,8 @@
   position: absolute;
   inset: 0;
 
+  position: relative;
+  /* --circle-size: 36px; */
   margin-block-start: 80px;
 }
 
@@ -103,9 +105,9 @@
 
 /* use custom properties */
 
-.row[id="animation-row"] [data-droppedposition="last"] {
+/* .row[id="animation-row"] [data-droppedposition="last"] {
   animation: MobileDroppedPositionSixthRow 1500ms ease-out forwards;
-}
+} */
 
 .connect-four-board-container {
   width: max-content;
@@ -119,6 +121,7 @@ we can click on connect for chips */
   position: absolute;
   transform: translateY(-320px);
   z-index: 1;
+  pointer-events: none;
 }
 /* span:first-child */
 /* one option */
@@ -152,12 +155,17 @@ we can click on connect for chips */
 .row {
   display: flex;
   gap: 7px;
+
+  /* gap: 11px; */
 }
 
 .row[id="animation-row"] {
   position: absolute;
   top: 7px;
   margin-block-start: 0px;
+
+  /* top: 9px;
+  margin-block-start: 1px; */
 }
 /* move code from player game board for dropped chip and and chip to here */
 .row[id="row-1"] span {
@@ -192,13 +200,13 @@ we can click on connect for chips */
 .chips-container [row-1] [data-playerchip] {
 }
 
-.chips-container span[data-playerchip="one"] {
+/* .chips-container span[data-playerchip="one"] {
   background-color: var(--color-red);
 }
 
 .chips-container span[data-playerchip="two"] {
   background-color: var(--color-yellow);
-}
+} */
 
 .clicking-container {
   width: 328px;

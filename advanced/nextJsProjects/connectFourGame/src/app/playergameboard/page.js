@@ -15,8 +15,8 @@ export default function PlayerGameBoard({ children }) {
     >
       {/* lower bg change bg color based on results */}
       <div id="lower-bg-selector" className={styles[`bottom-bg`]}></div>
-      {/* <MenuPlayerDisplayBoard /> */}
-      <ConnectFourBoard />
+      <MenuPlayerDisplayBoard />
+      {/* <ConnectFourBoard /> */}
       {/* <ResultsDisplay /> */}
       {/* <div className={styles[`circle-container`]}>
         <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>

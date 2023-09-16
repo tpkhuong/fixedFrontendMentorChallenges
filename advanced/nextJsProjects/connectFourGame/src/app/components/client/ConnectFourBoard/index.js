@@ -8,13 +8,13 @@ import { checking } from "./connectFourBoardHelpers";
 export default function ConnectFourBoard({ children }) {
   return (
     <React.Fragment>
-      <div className={styles[`circle-container`]}>
+      {/* <div className={styles[`circle-container`]}>
         <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
         <div className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}></div>
         <div className={`${styles[`circle`]} ${styles[`chip-top`]}`}></div>
         <div className={`${styles[`circle`]} ${styles[`chip-border`]}`}></div>
-      </div>
-      <div className={styles[`dropped-circle-container`]}>
+      </div> */}
+      {/* <div className={styles[`dropped-circle-container`]}>
         <div
           className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
         ></div>
@@ -27,7 +27,7 @@ export default function ConnectFourBoard({ children }) {
         <span className={styles[`winning-white-circle`]}>
           <span className={styles[`winning-center-circle`]}></span>
         </span>
-      </div>
+      </div> */}
       <div className={styles[`connect-four-board-container`]}>
         <PlayerTurnTimer />
         <ResultsDisplay />
@@ -308,25 +308,144 @@ export default function ConnectFourBoard({ children }) {
               console.log(event);
             }}
           >
-            <span
+            {/* column 1 */}
+            <div
               id="animation-column-first"
               data-droppedposition=""
-              onClick={(event) => {
-                console.log(event);
-                document
-                  .getElementById("first-row")
-                  .firstElementChild.setAttribute(
-                    "data-droppedposition",
-                    "MobileDroppedPositionFirstRow"
-                  );
-              }}
-            ></span>
-            <span id="animation-column-second" data-droppedposition=""></span>
+              className={styles[`circle-container`]}
+            >
+              <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-border`]}`}
+              ></div>
+            </div>
+            {/* column 2 */}
+            <div
+              id="animation-column-second"
+              data-droppedposition=""
+              className={styles[`circle-container`]}
+            >
+              <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-border`]}`}
+              ></div>
+            </div>
+            {/* column 3 */}
+            <div
+              id="animation-column-third"
+              data-droppedposition=""
+              className={styles[`circle-container`]}
+            >
+              <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-border`]}`}
+              ></div>
+            </div>
+            {/* column 4 */}
+            <div
+              id="animation-column-fourth"
+              data-droppedposition=""
+              className={styles[`circle-container`]}
+            >
+              <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-border`]}`}
+              ></div>
+            </div>
+            {/* column 5 */}
+            <div
+              id="animation-column-fifth"
+              data-droppedposition=""
+              className={styles[`circle-container`]}
+            >
+              <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-border`]}`}
+              ></div>
+            </div>
+            {/* column 6 */}
+            <div
+              id="animation-column-sixth"
+              data-droppedposition=""
+              className={styles[`circle-container`]}
+            >
+              <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-border`]}`}
+              ></div>
+            </div>
+            {/* column 7 */}
+            <div
+              id="animation-column-seventh"
+              data-droppedposition=""
+              className={styles[`circle-container`]}
+            >
+              <div className={`${styles[`circle`]} ${styles[`chip-bg`]}`}></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-bottom`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`chip-border`]}`}
+              ></div>
+            </div>
+            {/* <span
+              id="animation-column-first"
+              data-droppedposition=""
+              // onClick={(event) => {
+              //   console.log(event);
+              //   document
+              //     .getElementById("first-row")
+              //     .firstElementChild.setAttribute(
+              //       "data-droppedposition",
+              //       "MobileDroppedPositionFirstRow"
+              //     );
+              // }}
+            ></span> */}
+            {/* <span id="animation-column-second" data-droppedposition=""></span>
             <span id="animation-column-third" data-droppedposition=""></span>
             <span id="animation-column-fourth" data-droppedposition=""></span>
             <span id="animation-column-fifth" data-droppedposition=""></span>
             <span id="animation-column-sixth" data-droppedposition=""></span>
-            <span id="animation-column-seventh" data-droppedposition=""></span>
+            <span id="animation-column-seventh" data-droppedposition=""></span> */}
           </div>
           {/* drop pointer container */}
           <div

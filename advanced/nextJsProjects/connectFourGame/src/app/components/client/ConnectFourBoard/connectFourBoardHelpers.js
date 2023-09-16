@@ -695,7 +695,7 @@ function rowCounter(func) {
 
   return function innerFunc(event) {
     const columnClicked = event.target.getAttribute("data-column");
-
+    console.log(columnClicked);
     if (columnClicked && objOfMethods[columnClicked]) {
       objOfMethods[columnClicked]({
         first: 1,
