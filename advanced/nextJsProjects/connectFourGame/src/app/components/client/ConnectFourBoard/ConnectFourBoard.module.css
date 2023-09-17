@@ -6,16 +6,17 @@
 
 .circle-container,
 .dropped-circle-container {
-  --circle-size: 39px;
+  --circle-size: 36px;
   width: var(--circle-size);
   height: var(--circle-size);
   margin-inline: auto;
-  position: absolute;
   inset: 0;
+  border-radius: 50%;
 
   position: relative;
+  /* position: absolute; */
   /* --circle-size: 36px; */
-  margin-block-start: 80px;
+  /* margin-block-start: 80px; */
 }
 
 .dropped-circle-container {
@@ -154,15 +155,16 @@ we can click on connect for chips */
 
 .row {
   display: flex;
-  gap: 7px;
+  gap: 11px;
 
   /* gap: 11px; */
 }
 
 .row[id="animation-row"] {
   position: absolute;
-  top: 7px;
-  margin-block-start: 0px;
+  top: 9px;
+  margin-block-start: 1px;
+  gap: 0px;
 
   /* top: 9px;
   margin-block-start: 1px; */
@@ -170,6 +172,22 @@ we can click on connect for chips */
 /* move code from player game board for dropped chip and and chip to here */
 .row[id="row-1"] span {
   background-color: transparent;
+}
+
+.row [id="animation-column-first"] {
+  margin-inline-start: 2px;
+}
+
+.row [id="animation-column-second"],
+.row [id="animation-column-third"],
+.row [id="animation-column-fifth"],
+.row [id="animation-column-seventh"] {
+  margin-inline-start: 11px;
+}
+
+.row [id="animation-column-fourth"],
+.row [id="animation-column-sixth"] {
+  margin-inline-start: 10px;
 }
 
 .chips-container span {
