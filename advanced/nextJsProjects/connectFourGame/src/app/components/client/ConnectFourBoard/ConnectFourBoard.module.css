@@ -169,6 +169,7 @@ we can click on connect for chips */
   /* top: 9px;
   margin-block-start: 1px; */
 }
+
 /* move code from player game board for dropped chip and and chip to here */
 .row[id="row-1"] span {
   background-color: transparent;
@@ -269,6 +270,28 @@ we can click on connect for chips */
     height: 71px;
   }
 
+  /* animation row */
+
+  .row[id="animation-row"] {
+    top: 20px;
+  }
+
+  .row [id="animation-column-first"] {
+    margin-inline-start: 1px;
+  }
+
+  .row [id="animation-column-second"] {
+    margin-inline-start: 20px;
+  }
+
+  .row [id="animation-column-third"],
+  .row [id="animation-column-fourth"],
+  .row [id="animation-column-fifth"],
+  .row [id="animation-column-sixth"],
+  .row [id="animation-column-seventh"] {
+    margin-inline-start: 21px;
+  }
+
   .clicking-container {
     width: 625px;
     height: 545px;
@@ -286,7 +309,7 @@ we can click on connect for chips */
 
   .circle-container,
   .dropped-circle-container {
-    --circle-size: 71px;
+    --circle-size: 67px;
     width: var(--circle-size);
     height: var(--circle-size);
     /* margin-inline: auto;
@@ -522,7 +545,7 @@ we can click on connect for chips */
 
   @keyframes TabletScreenDroppedPositionSixthRow {
     0% {
-      transform: translateY(10px);
+      transform: translateY(0px);
       background-color: transparent;
     }
 
@@ -531,7 +554,7 @@ we can click on connect for chips */
     }
 
     100% {
-      transform: translateY(10px);
+      transform: translateY(0px);
       background-color: var(--playerchipcolor);
     }
   }
@@ -550,7 +573,8 @@ we can click on connect for chips */
     }
 
     100% {
-      transform: translateY(99px);
+      /* 89px */
+      transform: translateY(97px);
       background-color: var(--playerchipcolor);
     }
   }
@@ -569,6 +593,7 @@ we can click on connect for chips */
     }
 
     100% {
+      /* 177px */
       transform: translateY(187px);
       background-color: var(--playerchipcolor);
     }
@@ -588,6 +613,7 @@ we can click on connect for chips */
     }
 
     100% {
+      /* 265px */
       transform: translateY(275px);
       background-color: var(--playerchipcolor);
     }
@@ -607,6 +633,7 @@ we can click on connect for chips */
     }
 
     100% {
+      /* 353px */
       transform: translateY(362px);
       background-color: var(--playerchipcolor);
     }
@@ -626,6 +653,7 @@ we can click on connect for chips */
     }
 
     100% {
+      /* 441px since the chip are smaller size */
       transform: translateY(450px);
       background-color: var(--playerchipcolor);
     }
