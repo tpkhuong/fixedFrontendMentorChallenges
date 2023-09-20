@@ -170,6 +170,8 @@ we can click on connect for chips */
   margin-block-start: 1px; */
 }
 
+/* dropped chip spacing use margin-inline .row[id*="row"] its children */
+
 /* move code from player game board for dropped chip and and chip to here */
 .row[id="row-1"] span {
   background-color: transparent;
@@ -574,7 +576,7 @@ we can click on connect for chips */
 
     100% {
       /* 89px */
-      transform: translateY(97px);
+      transform: translateY(89px);
       background-color: var(--playerchipcolor);
     }
   }
@@ -594,7 +596,7 @@ we can click on connect for chips */
 
     100% {
       /* 177px */
-      transform: translateY(187px);
+      transform: translateY(177px);
       background-color: var(--playerchipcolor);
     }
   }
@@ -614,7 +616,7 @@ we can click on connect for chips */
 
     100% {
       /* 265px */
-      transform: translateY(275px);
+      transform: translateY(265px);
       background-color: var(--playerchipcolor);
     }
   }
@@ -634,7 +636,7 @@ we can click on connect for chips */
 
     100% {
       /* 353px */
-      transform: translateY(362px);
+      transform: translateY(353px);
       background-color: var(--playerchipcolor);
     }
   }
@@ -654,7 +656,7 @@ we can click on connect for chips */
 
     100% {
       /* 441px since the chip are smaller size */
-      transform: translateY(450px);
+      transform: translateY(441px);
       background-color: var(--playerchipcolor);
     }
   }

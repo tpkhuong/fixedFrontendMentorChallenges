@@ -17,6 +17,7 @@
   background-color: var(--color-dark-purple);
   padding-block: 7px;
   border-radius: 100vw;
+  font-weight: 600;
 }
 
 .menu-btn {

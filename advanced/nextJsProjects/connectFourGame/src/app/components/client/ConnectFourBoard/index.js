@@ -28,6 +28,7 @@ export default function ConnectFourBoard({ children }) {
           <span className={styles[`winning-center-circle`]}></span>
         </span>
       </div> */}
+
       <div className={styles[`connect-four-board-container`]}>
         <PlayerTurnTimer />
         <ResultsDisplay />
@@ -70,7 +71,28 @@ export default function ConnectFourBoard({ children }) {
               console.log(event);
             }}
           >
-            <span
+            {/* column 1 */}
+            <div
+              data-playerchip=""
+              data-chipselector="6-1"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-playerchip=""
               data-chipselector="6-1"
               className={styles[`col-1`]}
@@ -83,222 +105,1049 @@ export default function ConnectFourBoard({ children }) {
                     "MobileDroppedPositionFirstRow"
                   );
               }}
-            ></span>
-            <span
+            ></span> */}
+            {/* column 2 */}
+            {/* <span
               data-chipselector="6-2"
               data-playerchip=""
               className={styles[`col-2`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="6-2"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+
+            {/* column 3 */}
+            {/* <span
               data-chipselector="6-3"
               data-playerchip=""
               className={styles[`col-3`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="6-3"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* column 4 */}
+            {/* <span
               data-chipselector="6-4"
               data-playerchip=""
               className={styles[`col-4`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="6-4"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* column 5 */}
+            {/* <span
               data-chipselector="6-5"
               data-playerchip=""
               className={styles[`col-5`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="6-5"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* column 6 */}
+            {/* <span
               data-chipselector="6-6"
               data-playerchip=""
               className={styles[`col-6`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="6-6"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* column 7 */}
+            {/* <span
               data-chipselector="6-7"
               data-playerchip=""
               className={styles[`col-7`]}
-            ></span>
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="6-7"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
           </div>
           <div id="row-5" className={styles[`row`]}>
-            <span
+            {/* <span
               data-chipselector="5-1"
               data-playerchip=""
               className={styles[`col-1`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="5-1"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="5-2"
               data-playerchip=""
               className={styles[`col-2`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="5-2"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="5-3"
               data-playerchip=""
               className={styles[`col-3`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="5-3"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="5-4"
               data-playerchip=""
               className={styles[`col-4`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="5-4"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="5-5"
               data-playerchip=""
               className={styles[`col-5`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="5-5"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="5-6"
               data-playerchip=""
               className={styles[`col-6`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="5-6"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="5-7"
               data-playerchip=""
               className={styles[`col-7`]}
-            ></span>
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="5-7"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
           </div>
           <div id="row-4" className={styles[`row`]}>
-            <span
+            {/* <span
               data-chipselector="4-1"
               data-playerchip=""
               className={styles[`col-1`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="4-1"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="4-2"
               data-playerchip=""
               className={styles[`col-2`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="4-2"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="4-3"
               data-playerchip=""
               className={styles[`col-3`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="4-3"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="4-4"
               data-playerchip=""
               className={styles[`col-4`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="4-4"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="4-5"
               data-playerchip=""
               className={styles[`col-5`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="4-5"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="4-6"
               data-playerchip=""
               className={styles[`col-6`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="4-6"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="4-7"
               data-playerchip=""
               className={styles[`col-7`]}
-            ></span>
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="4-7"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
           </div>
           <div id="row-3" className={styles[`row`]}>
-            <span
+            {/* <span
               data-chipselector="3-1"
               data-playerchip=""
               className={styles[`col-1`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="3-1"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="3-2"
               data-playerchip=""
               className={styles[`col-2`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="3-2"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="3-3"
               data-playerchip=""
               className={styles[`col-3`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="3-3"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="3-4"
               data-playerchip=""
               className={styles[`col-4`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="3-4"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="3-5"
               data-playerchip=""
               className={styles[`col-5`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="3-5"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="3-6"
               data-playerchip=""
               className={styles[`col-6`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="3-6"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="3-7"
               data-playerchip=""
               className={styles[`col-7`]}
-            ></span>
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="3-7"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
           </div>
           <div id="row-2" className={styles[`row`]}>
-            <span
+            {/* <span
               data-chipselector="2-1"
               data-playerchip=""
               className={styles[`col-1`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="2-1"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="2-2"
               data-playerchip=""
               className={styles[`col-2`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="2-2"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="2-3"
               data-playerchip=""
               className={styles[`col-3`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="2-3"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="2-4"
               data-playerchip=""
               className={styles[`col-4`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="2-4"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="2-5"
               data-playerchip=""
               className={styles[`col-5`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="2-5"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="2-6"
               data-playerchip=""
               className={styles[`col-6`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="2-6"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="2-7"
               data-playerchip=""
               className={styles[`col-7`]}
-            ></span>
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="2-7"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
           </div>
           <div id="row-1" className={styles[`row`]}>
-            <span
+            {/* <span
               data-chipselector="1-1"
               data-playerchip=""
               className={styles[`col-1`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="1-1"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="1-2"
               data-playerchip=""
               className={styles[`col-2`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="1-2"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="1-3"
               data-playerchip=""
               className={styles[`col-3`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="1-3"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="1-4"
               data-playerchip=""
               className={styles[`col-4`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="1-4"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="1-5"
               data-playerchip=""
               className={styles[`col-5`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="1-5"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="1-6"
               data-playerchip=""
               className={styles[`col-6`]}
-            ></span>
-            <span
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="1-6"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
+            {/* <span
               data-chipselector="1-7"
               data-playerchip=""
               className={styles[`col-7`]}
-            ></span>
+            ></span> */}
+            <div
+              data-playerchip=""
+              data-chipselector="1-7"
+              className={styles[`dropped-circle-container`]}
+            >
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-bg`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${styles[`dropped-chip-top`]}`}
+              ></div>
+              <div
+                className={`${styles[`circle`]} ${
+                  styles[`dropped-chip-border`]
+                }`}
+              ></div>
+              <span className={styles[`winning-white-circle`]}>
+                <span className={styles[`winning-center-circle`]}></span>
+              </span>
+            </div>
           </div>
           {/* animation row */}
           <div
