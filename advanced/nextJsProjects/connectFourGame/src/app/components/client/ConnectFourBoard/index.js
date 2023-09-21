@@ -88,7 +88,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -128,7 +131,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -155,7 +161,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -181,7 +190,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -207,7 +219,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -233,7 +248,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -259,7 +277,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -286,7 +307,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -311,7 +335,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -336,7 +363,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -361,7 +391,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -386,7 +419,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -411,7 +447,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -436,7 +475,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -463,7 +505,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -488,7 +533,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -513,7 +561,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -538,7 +589,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -563,7 +617,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -588,7 +645,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -613,7 +673,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -640,7 +703,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -665,7 +731,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -690,7 +759,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -715,7 +787,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -740,7 +815,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -765,7 +843,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -790,7 +871,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -817,7 +901,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -842,7 +929,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -867,7 +957,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -892,7 +985,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -917,7 +1013,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -942,7 +1041,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -967,7 +1069,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -994,7 +1099,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -1019,7 +1127,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -1044,7 +1155,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -1069,7 +1183,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -1094,7 +1211,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -1119,7 +1239,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>
@@ -1144,7 +1267,10 @@ export default function ConnectFourBoard({ children }) {
                   styles[`dropped-chip-border`]
                 }`}
               ></div>
-              <span className={styles[`winning-white-circle`]}>
+              <span
+                data-connectfour="false"
+                className={styles[`winning-white-circle`]}
+              >
                 <span className={styles[`winning-center-circle`]}></span>
               </span>
             </div>

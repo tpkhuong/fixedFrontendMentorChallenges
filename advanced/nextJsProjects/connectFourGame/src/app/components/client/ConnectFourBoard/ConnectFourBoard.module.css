@@ -76,9 +76,13 @@
 /* mobile 20 */
 /* tablet and above 34 */
 
+.winning-white-circle[data-connectfour="true"] {
+  display: block;
+}
+
 .winning-white-circle {
   --winning-circle-size: 20px;
-  display: block;
+  display: none;
   width: var(--winning-circle-size);
   height: var(--winning-circle-size);
   background-color: var(--color-neutral-white);
@@ -87,7 +91,7 @@
   inset: 0;
   margin: auto;
   border-radius: 50%;
-  transform: translate(-0.9px, -2px);
+  transform: translateX(1px);
 }
 
 .winning-center-circle {
@@ -145,8 +149,20 @@ we can click on connect for chips */
   padding-inline-start: 6px;
 }
 
-.chips-container > * + * {
+/* .chips-container > * + * {
   margin-block-start: 7px;
+} */
+
+.chips-container .row:not(:nth-child(3)) {
+  margin-block-start: 11px;
+}
+
+.chips-container .row:nth-child(3) {
+  margin-block-start: 10px;
+}
+
+.chips-container .row:nth-child(1) {
+  margin-block-start: 3px;
 }
 
 .click-row {
@@ -155,7 +171,7 @@ we can click on connect for chips */
 
 .row {
   display: flex;
-  gap: 11px;
+  /* gap: 11px; */
 
   /* gap: 11px; */
 }
@@ -172,10 +188,31 @@ we can click on connect for chips */
 
 /* dropped chip spacing use margin-inline .row[id*="row"] its children */
 
-/* move code from player game board for dropped chip and and chip to here */
-.row[id="row-1"] span {
-  background-color: transparent;
+.row[id*="row-"] {
+  position: relative;
+  z-index: 2;
+  margin-inline-start: 2px;
+  /* margin-block-start: 4px; */
 }
+
+/* 2,3,4,6,7 11px 5 10px */
+
+.row[id*="row"] [data-playerchip]:nth-child(5) {
+  margin-inline-start: 10px;
+}
+
+.row[id*="row"] [data-playerchip]:not(:nth-child(5)) {
+  margin-inline-start: 11px;
+}
+
+.row[id*="row"] [data-playerchip]:first-child {
+  margin-inline-start: 0px;
+}
+
+/* move code from player game board for dropped chip and and chip to here */
+/* .row[id="row-1"] span {
+  background-color: transparent;
+} */
 
 .row [id="animation-column-first"] {
   margin-inline-start: 2px;
@@ -193,14 +230,14 @@ we can click on connect for chips */
   margin-inline-start: 10px;
 }
 
-.chips-container span {
+/* .chips-container span {
   display: block;
-  /* width: 39px; */
-  /* background-color: black; */
+  width: 39px;
+  background-color: black;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-}
+} */
 
 /* row 6 */
 .chips-container [row-6] [data-playerchip] {
