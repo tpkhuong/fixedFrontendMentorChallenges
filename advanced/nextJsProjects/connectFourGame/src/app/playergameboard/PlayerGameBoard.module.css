@@ -8,6 +8,10 @@
   --playerchipcolor: var(--color-yellow);
 }
 
+.game-board-bg-container[data-playerturn=""] {
+  --playerchipcolor: transparent;
+}
+
 /* .circle-container,
 .dropped-circle-container {
   --circle-size: 80px;

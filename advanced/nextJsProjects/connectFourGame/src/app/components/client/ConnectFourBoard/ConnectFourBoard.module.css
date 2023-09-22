@@ -43,7 +43,18 @@
   position: absolute;
 }
 
-.chip-bg,
+/* .chips-container span[data-playerchip="one"] {
+  background-color: var(--color-red);
+}
+
+.chips-container span[data-playerchip="two"] {
+  background-color: var(--color-yellow);
+} */
+
+.chip-bg {
+  --circle-color: var(--playerchipcolor);
+}
+
 .dropped-chip-bg {
   --circle-color: var(--playerchipcolor);
 }
@@ -175,7 +186,7 @@ we can click on connect for chips */
 
   /* gap: 11px; */
 }
-
+/* update margin-block-start for animation row from 11px to 1px */
 .row[id="animation-row"] {
   position: absolute;
   top: 9px;
