@@ -1,3 +1,15 @@
+.chips-container div[data-playerchip="one"] {
+  --circle-color: var(--color-red);
+}
+
+.chips-container div[data-playerchip="two"] {
+  --circle-color: var(--color-yellow);
+}
+
+.chips-container div[data-playerchip=""] {
+  --circle-color: transparent;
+}
+
 /* mobile */
 
 .connect-four-board-container {
@@ -51,13 +63,10 @@
   background-color: var(--color-yellow);
 } */
 
-.chip-bg {
-  --circle-color: var(--playerchipcolor);
-}
-
+/* .chip-bg,
 .dropped-chip-bg {
-  --circle-color: var(--playerchipcolor);
-}
+  background-color: var(--circle-color);
+} */
 
 .dropped-chip-bg {
   height: 36px;
@@ -111,7 +120,7 @@
   display: block;
   width: calc(var(--winning-circle-size) / 2);
   height: calc(var(--winning-circle-size) / 2);
-  background-color: var(--playerchipcolor);
+  background-color: var(--circle-color);
 
   position: absolute;
   inset: 0;
@@ -187,7 +196,7 @@ we can click on connect for chips */
   /* gap: 11px; */
 }
 /* update margin-block-start for animation row from 11px to 1px */
-.row[id="animation-row"] {
+.chips-container .row[id="animation-row"] {
   position: absolute;
   top: 9px;
   margin-block-start: 1px;
@@ -208,11 +217,17 @@ we can click on connect for chips */
 
 /* 2,3,4,6,7 11px 5 10px */
 
-.row[id*="row"] [data-playerchip]:nth-child(5) {
+.row[id*="row"] [data-playerchip]:nth-child(5),
+.row [id="animation-column-fourth"],
+.row [id="animation-column-sixth"] {
   margin-inline-start: 10px;
 }
 
-.row[id*="row"] [data-playerchip]:not(:nth-child(5)) {
+.row[id*="row"] [data-playerchip]:not(:nth-child(5)),
+.row [id="animation-column-second"],
+.row [id="animation-column-third"],
+.row [id="animation-column-fifth"],
+.row [id="animation-column-seventh"] {
   margin-inline-start: 11px;
 }
 
@@ -229,7 +244,7 @@ we can click on connect for chips */
   margin-inline-start: 2px;
 }
 
-.row [id="animation-column-second"],
+/* .row [id="animation-column-second"],
 .row [id="animation-column-third"],
 .row [id="animation-column-fifth"],
 .row [id="animation-column-seventh"] {
@@ -239,7 +254,7 @@ we can click on connect for chips */
 .row [id="animation-column-fourth"],
 .row [id="animation-column-sixth"] {
   margin-inline-start: 10px;
-}
+} */
 
 /* .chips-container span {
   display: block;
@@ -268,14 +283,6 @@ we can click on connect for chips */
 /* row 1 */
 .chips-container [row-1] [data-playerchip] {
 }
-
-/* .chips-container span[data-playerchip="one"] {
-  background-color: var(--color-red);
-}
-
-.chips-container span[data-playerchip="two"] {
-  background-color: var(--color-yellow);
-} */
 
 .clicking-container {
   width: 328px;
@@ -312,7 +319,7 @@ we can click on connect for chips */
   }
 
   .row {
-    gap: 17px;
+    /* gap: 17px; */
   }
 
   .chips-container span {
@@ -320,17 +327,22 @@ we can click on connect for chips */
     height: 71px;
   }
 
+  .chips-container .row:nth-child(n + 2):nth-child(-n + 6) {
+    margin-block-start: 21px;
+  }
+
+  .chips-container .row:nth-child(1) {
+    margin-block-start: 5px;
+  }
+
   /* animation row */
 
-  .row[id="animation-row"] {
+  .chips-container .row[id="animation-row"] {
     top: 20px;
   }
 
-  .row [id="animation-column-first"] {
-    margin-inline-start: 1px;
-  }
-
-  .row [id="animation-column-second"] {
+  .row [id="animation-column-second"],
+  .row[id*="row"] [data-playerchip]:nth-child(2) {
     margin-inline-start: 20px;
   }
 
@@ -338,8 +350,14 @@ we can click on connect for chips */
   .row [id="animation-column-fourth"],
   .row [id="animation-column-fifth"],
   .row [id="animation-column-sixth"],
-  .row [id="animation-column-seventh"] {
+  .row [id="animation-column-seventh"],
+  .row[id*="row"] [data-playerchip]:not(:nth-child(2)) {
     margin-inline-start: 21px;
+  }
+
+  .row [id="animation-column-first"],
+  .row[id*="row"] [data-playerchip]:nth-child(1) {
+    margin-inline-start: 1px;
   }
 
   .clicking-container {

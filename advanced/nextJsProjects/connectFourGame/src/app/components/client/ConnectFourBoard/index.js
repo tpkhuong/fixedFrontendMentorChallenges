@@ -1277,6 +1277,7 @@ export default function ConnectFourBoard({ children }) {
           </div>
           {/* animation row */}
           <div
+            // id={styles[`animation-row`]}
             id="animation-row"
             className={styles[`row`]}
             onClick={(event) => {
