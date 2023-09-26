@@ -167,6 +167,8 @@ we can click on connect for chips */
   top: 0;
   padding-block-start: 7px;
   padding-inline-start: 6px;
+
+  pointer-events: none;
 }
 
 /* .chips-container > * + * {

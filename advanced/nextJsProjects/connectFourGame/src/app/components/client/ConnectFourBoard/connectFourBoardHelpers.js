@@ -694,6 +694,7 @@ function rowCounter(func) {
   };
 
   return function innerFunc(event) {
+    console.log("hello");
     const columnClicked = event.target.getAttribute("data-column");
     console.log(columnClicked);
     if (columnClicked && objOfMethods[columnClicked]) {
@@ -733,6 +734,7 @@ function placeHolder({
   arrayNodes,
 }) {
   // get current player
+  console.log("hello");
   const currentPlayerChip = document
     .getElementById("game-board-bg-selector")
     .getAttribute("data-playerturn");
