@@ -986,3 +986,13 @@ function changePlayerChip({ currentPlayerChip }) {
 function movePointer() {
   //
 }
+
+function diagonalTopLeft() {}
+function diagonalTopRight() {}
+function diagonalBottomRight() {}
+function diagonalBottomLeft() {}
+
+function Up() {}
+function right() {}
+function down() {}
+function left() {}
