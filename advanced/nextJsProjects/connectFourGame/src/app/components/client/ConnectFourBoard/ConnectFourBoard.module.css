@@ -324,10 +324,10 @@ we can click on connect for chips */
     /* gap: 17px; */
   }
 
-  .chips-container span {
+  /* .chips-container span {
     width: 71px;
     height: 71px;
-  }
+  } */
 
   .chips-container .row:nth-child(n + 2):nth-child(-n + 6) {
     margin-block-start: 21px;
