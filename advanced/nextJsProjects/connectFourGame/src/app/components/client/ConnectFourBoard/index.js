@@ -1425,7 +1425,7 @@ export default function ConnectFourBoard({ children }) {
           </div>
           {/* drop pointer container */}
           <div
-            data-chipdroplocation=""
+            data-chipdroplocation="first"
             id="chip-drop-pointer-selector"
             className={styles[`drop-selection-pointer-container`]}
           >

@@ -1,4 +1,4 @@
-function rowCounter(func) {
+function rowCounter({ placeHolder, movePointer }) {
   const arrayOfChipNodes = [
     // row 6 - 6
     // index 0
@@ -47,7 +47,7 @@ function rowCounter(func) {
       // there is no seventh row, return
       console.log(objOfCounter);
       if (objOfCounter.columnOne == 7) return;
-      func({
+      placeHolder({
         animateColumn: "animation-column-first",
         columnObj: objOfCounter,
         columnCounter: "columnOne",
@@ -253,7 +253,7 @@ function rowCounter(func) {
       console.log(second);
       // there is no seventh row, return
       if (objOfCounter.columnTwo == 7) return;
-      func({
+      placeHolder({
         animateColumn: "animation-column-second",
         columnObj: objOfCounter,
         columnCounter: "columnTwo",
@@ -448,7 +448,7 @@ function rowCounter(func) {
       console.log(third);
       // there is no seventh row, return
       if (objOfCounter.columnThree == 7) return;
-      func({
+      placeHolder({
         animateColumn: "animation-column-third",
         columnObj: objOfCounter,
         columnCounter: "columnThree",
@@ -643,7 +643,7 @@ function rowCounter(func) {
       console.log(fourth);
       // there is no seventh row, return
       if (objOfCounter.columnFour == 7) return;
-      func({
+      placeHolder({
         animateColumn: "animation-column-fourth",
         columnObj: objOfCounter,
         columnCounter: "columnFour",
@@ -656,7 +656,7 @@ function rowCounter(func) {
       console.log(fifth);
       // there is no seventh row, return
       if (objOfCounter.columnFive == 7) return;
-      func({
+      placeHolder({
         animateColumn: "animation-column-fifth",
         columnObj: objOfCounter,
         columnCounter: "columnFive",
@@ -669,7 +669,7 @@ function rowCounter(func) {
       console.log(sixth);
       // there is no seventh row, return
       if (objOfCounter.columnSix == 7) return;
-      func({
+      placeHolder({
         animateColumn: "animation-column-sixth",
         columnObj: objOfCounter,
         columnCounter: "columnSix",
@@ -682,7 +682,7 @@ function rowCounter(func) {
       console.log(seventh);
       // there is no seventh row, return
       if (objOfCounter.columnSeven == 7) return;
-      func({
+      placeHolder({
         animateColumn: "animation-column-seventh",
         columnObj: objOfCounter,
         columnCounter: "columnSeven",
@@ -696,22 +696,23 @@ function rowCounter(func) {
   return function innerFunc(event) {
     console.log("hello");
     const columnClicked = event.target.getAttribute("data-column");
+    movePointer({ columnClicked });
     console.log(columnClicked);
-    if (columnClicked && objOfMethods[columnClicked]) {
-      objOfMethods[columnClicked]({
-        first: 1,
-        second: 2,
-        third: 3,
-        fourth: 4,
-        fifth: 5,
-        sixth: 6,
-        seventh: 7,
-      });
-    }
+    // if (columnClicked && objOfMethods[columnClicked]) {
+    //   objOfMethods[columnClicked]({
+    //     first: 1,
+    //     second: 2,
+    //     third: 3,
+    //     fourth: 4,
+    //     fifth: 5,
+    //     sixth: 6,
+    //     seventh: 7,
+    //   });
+    // }
   };
 }
 
-export const checking = rowCounter(placeHolder);
+export const checking = rowCounter({ placeHolder, movePointer });
 
 // obj for each node in our matrix
 const objForNode = {
@@ -983,8 +984,14 @@ function changePlayerChip({ currentPlayerChip }) {
   }
 }
 
-function movePointer() {
-  //
+function movePointer({ columnClicked }) {
+  // get data-column value then assign that value to data-chipdroplocation
+  // of element with id "chip-drop-pointer-selector"
+  const chipPointerElement = document.getElementById(
+    "chip-drop-pointer-selector"
+  );
+  // assign value of columnClicked to chipPointerElement
+  chipPointerElement.setAttribute("data-chipdroplocation", `${columnClicked}`);
 }
 
 function diagonalTopLeft() {}
