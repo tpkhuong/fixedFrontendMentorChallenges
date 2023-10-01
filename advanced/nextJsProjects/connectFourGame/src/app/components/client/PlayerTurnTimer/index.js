@@ -32,6 +32,7 @@ export default function PlayerTurnTimer({ children }) {
   );
 }
 
+// move coundownTimer function to connectFourBoardHelpers
 function countdownTimer(element) {
   let startingNumber = 30;
 

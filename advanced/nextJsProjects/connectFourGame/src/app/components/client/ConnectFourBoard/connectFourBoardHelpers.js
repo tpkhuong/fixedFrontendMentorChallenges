@@ -994,10 +994,18 @@ function movePointer({ columnClicked }) {
   chipPointerElement.setAttribute("data-chipdroplocation", `${columnClicked}`);
 }
 
-function diagonalTopLeft() {}
-function diagonalTopRight() {}
-function diagonalBottomRight() {}
-function diagonalBottomLeft() {}
+function diagonalTopLeft() {
+  // arr[+][-]
+}
+function diagonalTopRight() {
+  // arr[+][+]
+}
+function diagonalBottomRight() {
+  // arr[-][+]
+}
+function diagonalBottomLeft() {
+  // arr[-][-]
+}
 
 function Up() {}
 function right() {}
