@@ -8,7 +8,7 @@ export default function PlayerTurnTimer({ children }) {
     <React.Fragment>
       <div
         onClick={(event) => {
-          countdownTimer(document.getElementById("turn-countdown-selector"));
+          // countdownTimer(document.getElementById("turn-countdown-selector"));
         }}
         className={styles[`player-turns-bg-container`]}
       >
@@ -33,21 +33,21 @@ export default function PlayerTurnTimer({ children }) {
 }
 
 // move coundownTimer function to connectFourBoardHelpers
-function countdownTimer(element) {
-  let startingNumber = 30;
+// function countdownTimer(element) {
+//   let startingNumber = 30;
 
-  const stopInterval = setInterval(() => {
-    startingNumber = startingNumber - 1;
-    console.log(startingNumber);
-    element.textContent = `${startingNumber}`;
+//   const stopInterval = setInterval(() => {
+//     startingNumber = startingNumber - 1;
+//     console.log(startingNumber);
+//     element.textContent = `${startingNumber}`;
 
-    if (startingNumber === 0) {
-      const stopIntervalDigit = JSON.parse(
-        localStorage.getItem("stopCountdown")
-      );
-      element.textContent = `00`;
-      clearInterval(stopIntervalDigit);
-    }
-  }, 1000);
-  localStorage.setItem("stopCountdown", JSON.stringify(stopInterval));
-}
+//     if (startingNumber === 0) {
+//       const stopIntervalDigit = JSON.parse(
+//         localStorage.getItem("stopCountdown")
+//       );
+//       element.textContent = `00`;
+//       clearInterval(stopIntervalDigit);
+//     }
+//   }, 1000);
+//   localStorage.setItem("stopCountdown", JSON.stringify(stopInterval));
+// }

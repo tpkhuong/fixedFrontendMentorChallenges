@@ -1,4 +1,4 @@
-function rowCounter({ placeHolder, movePointer }) {
+function rowCounter({ placeHolder, movePointer, countdownTimer }) {
   const arrayOfChipNodes = [
     // row 6 - 6
     // index 0
@@ -697,22 +697,32 @@ function rowCounter({ placeHolder, movePointer }) {
     console.log("hello");
     const columnClicked = event.target.getAttribute("data-column");
     movePointer({ columnClicked });
+    localStorage.getItem("stopCountdown");
+    const playersTurnTimer = JSON.parse(localStorage.getItem("stopCountdown"));
+    if (playersTurnTimer) {
+      clearInterval(playersTurnTimer);
+      countdownTimer(document.getElementById("turn-countdown-selector"));
+    }
     console.log(columnClicked);
-    // if (columnClicked && objOfMethods[columnClicked]) {
-    //   objOfMethods[columnClicked]({
-    //     first: 1,
-    //     second: 2,
-    //     third: 3,
-    //     fourth: 4,
-    //     fifth: 5,
-    //     sixth: 6,
-    //     seventh: 7,
-    //   });
-    // }
+    if (columnClicked && objOfMethods[columnClicked]) {
+      objOfMethods[columnClicked]({
+        first: 1,
+        second: 2,
+        third: 3,
+        fourth: 4,
+        fifth: 5,
+        sixth: 6,
+        seventh: 7,
+      });
+    }
   };
 }
 
-export const checking = rowCounter({ placeHolder, movePointer });
+export const checking = rowCounter({
+  placeHolder,
+  movePointer,
+  countdownTimer,
+});
 
 // obj for each node in our matrix
 const objForNode = {
@@ -992,6 +1002,26 @@ function movePointer({ columnClicked }) {
   );
   // assign value of columnClicked to chipPointerElement
   chipPointerElement.setAttribute("data-chipdroplocation", `${columnClicked}`);
+}
+
+// moved coundownTimer function PlayerTurnTimer component connectFourBoardHelpers
+function countdownTimer(element) {
+  let startingNumber = 30;
+  // make the time value dynamic
+  const stopInterval = setInterval(() => {
+    startingNumber = startingNumber - 1;
+    console.log(startingNumber);
+    element.textContent = `${startingNumber}`;
+
+    if (startingNumber === 0) {
+      const stopIntervalDigit = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      element.textContent = `00`;
+      clearInterval(stopIntervalDigit);
+    }
+  }, 1000);
+  localStorage.setItem("stopCountdown", JSON.stringify(stopInterval));
 }
 
 function diagonalTopLeft() {
