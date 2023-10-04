@@ -697,12 +697,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     console.log("hello");
     const columnClicked = event.target.getAttribute("data-column");
     movePointer({ columnClicked });
-    localStorage.getItem("stopCountdown");
-    const playersTurnTimer = JSON.parse(localStorage.getItem("stopCountdown"));
-    if (playersTurnTimer) {
-      clearInterval(playersTurnTimer);
-      countdownTimer(document.getElementById("turn-countdown-selector"));
-    }
+
     console.log(columnClicked);
     if (columnClicked && objOfMethods[columnClicked]) {
       objOfMethods[columnClicked]({
@@ -797,6 +792,14 @@ function placeHolder({
     // set "data-droppedposition" as empty string
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
+      // start timer
+      const playersTurnTimer = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      if (playersTurnTimer) {
+        clearInterval(playersTurnTimer);
+      }
+      countdownTimer(document.getElementById("turn-countdown-selector"));
     }, 150);
 
     // change player
@@ -831,6 +834,14 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
+      // start timer
+      const playersTurnTimer = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      if (playersTurnTimer) {
+        clearInterval(playersTurnTimer);
+      }
+      countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
     // change player
@@ -865,6 +876,14 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
+      // start timer
+      const playersTurnTimer = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      if (playersTurnTimer) {
+        clearInterval(playersTurnTimer);
+      }
+      countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
     // change player
@@ -899,6 +918,14 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
+      // start timer
+      const playersTurnTimer = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      if (playersTurnTimer) {
+        clearInterval(playersTurnTimer);
+      }
+      countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
     // change player
@@ -933,6 +960,14 @@ function placeHolder({
 
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
+      // start timer
+      const playersTurnTimer = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      if (playersTurnTimer) {
+        clearInterval(playersTurnTimer);
+      }
+      countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
     // change player
@@ -969,6 +1004,14 @@ function placeHolder({
     // }, removeDroppedPositionTimer);
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
+      // start timer
+      const playersTurnTimer = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      if (playersTurnTimer) {
+        clearInterval(playersTurnTimer);
+      }
+      countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 150);
 
     // change player
@@ -1004,7 +1047,6 @@ function movePointer({ columnClicked }) {
   chipPointerElement.setAttribute("data-chipdroplocation", `${columnClicked}`);
 }
 
-// moved coundownTimer function PlayerTurnTimer component connectFourBoardHelpers
 function countdownTimer(element) {
   let startingNumber = 30;
   // make the time value dynamic
