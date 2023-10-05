@@ -700,6 +700,13 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
 
     console.log(columnClicked);
     if (columnClicked && objOfMethods[columnClicked]) {
+      // clear setInterval
+      const playersTurnTimer = JSON.parse(
+        localStorage.getItem("stopCountdown")
+      );
+      if (playersTurnTimer) {
+        clearInterval(playersTurnTimer);
+      }
       objOfMethods[columnClicked]({
         first: 1,
         second: 2,
@@ -772,6 +779,8 @@ function placeHolder({
   // show player chip
   // row 6
   if (columnObj[columnCounter] == 6) {
+    // stop timer
+    stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 6");
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
@@ -793,12 +802,6 @@ function placeHolder({
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
-      const playersTurnTimer = JSON.parse(
-        localStorage.getItem("stopCountdown")
-      );
-      if (playersTurnTimer) {
-        clearInterval(playersTurnTimer);
-      }
       countdownTimer(document.getElementById("turn-countdown-selector"));
     }, 150);
 
@@ -810,6 +813,8 @@ function placeHolder({
 
   // row 5
   if (columnObj[columnCounter] == 5) {
+    // stop timer
+    stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 5");
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
@@ -835,12 +840,6 @@ function placeHolder({
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
-      const playersTurnTimer = JSON.parse(
-        localStorage.getItem("stopCountdown")
-      );
-      if (playersTurnTimer) {
-        clearInterval(playersTurnTimer);
-      }
       countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
@@ -852,6 +851,8 @@ function placeHolder({
 
   // row 4
   if (columnObj[columnCounter] == 4) {
+    // stop timer
+    stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 4");
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
@@ -877,12 +878,6 @@ function placeHolder({
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
-      const playersTurnTimer = JSON.parse(
-        localStorage.getItem("stopCountdown")
-      );
-      if (playersTurnTimer) {
-        clearInterval(playersTurnTimer);
-      }
       countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
@@ -894,6 +889,8 @@ function placeHolder({
 
   // row 3
   if (columnObj[columnCounter] == 3) {
+    // stop timer
+    stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 3");
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
@@ -919,12 +916,6 @@ function placeHolder({
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
-      const playersTurnTimer = JSON.parse(
-        localStorage.getItem("stopCountdown")
-      );
-      if (playersTurnTimer) {
-        clearInterval(playersTurnTimer);
-      }
       countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
@@ -936,6 +927,8 @@ function placeHolder({
 
   // row 2
   if (columnObj[columnCounter] == 2) {
+    // stop timer
+    stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 2");
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
@@ -961,12 +954,6 @@ function placeHolder({
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
-      const playersTurnTimer = JSON.parse(
-        localStorage.getItem("stopCountdown")
-      );
-      if (playersTurnTimer) {
-        clearInterval(playersTurnTimer);
-      }
       countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 100);
 
@@ -978,6 +965,8 @@ function placeHolder({
 
   // row 1
   if (columnObj[columnCounter] == 1) {
+    // stop timer
+    stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 1");
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
@@ -1005,12 +994,6 @@ function placeHolder({
     setTimeout(() => {
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
-      const playersTurnTimer = JSON.parse(
-        localStorage.getItem("stopCountdown")
-      );
-      if (playersTurnTimer) {
-        clearInterval(playersTurnTimer);
-      }
       countdownTimer(document.getElementById("turn-countdown-selector"));
     }, time + 150);
 
@@ -1045,6 +1028,13 @@ function movePointer({ columnClicked }) {
   );
   // assign value of columnClicked to chipPointerElement
   chipPointerElement.setAttribute("data-chipdroplocation", `${columnClicked}`);
+}
+
+function stopTimer({ getItemValue }) {
+  const playersTurnTimer = JSON.parse(localStorage.getItem(getItemValue));
+  if (playersTurnTimer) {
+    clearInterval(playersTurnTimer);
+  }
 }
 
 function countdownTimer(element) {
