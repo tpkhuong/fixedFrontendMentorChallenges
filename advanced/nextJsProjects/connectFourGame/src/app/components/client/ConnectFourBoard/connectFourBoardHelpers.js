@@ -1,4 +1,10 @@
 function rowCounter({ placeHolder, movePointer, countdownTimer }) {
+  const checkForWinner = {
+    diagonalChips: [],
+    verticalChips: [],
+    horizontalChips: [],
+  };
+
   const arrayOfChipNodes = [
     // row 6 - 6
     // index 0
@@ -19,6 +25,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     // index 5
     ["1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7"],
   ];
+
   const objOfCounter = {
     columnOne: 0,
     columnTwo: 0,
@@ -54,6 +61,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         chipNodeColumnValue: first,
         childNodeValue: 0,
         arrayNodes: arrayOfChipNodes,
+        countdownTimer,
       });
       // // add 1 to column counter
       // objOfCounter.columnOne += 1;
@@ -260,6 +268,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         chipNodeColumnValue: second,
         childNodeValue: 1,
         arrayNodes: arrayOfChipNodes,
+        countdownTimer,
       });
       // // add 1 to column counter
       // objOfCounter.columnTwo += 1;
@@ -455,6 +464,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         chipNodeColumnValue: third,
         childNodeValue: 2,
         arrayNodes: arrayOfChipNodes,
+        countdownTimer,
       });
       // objOfCounter.columnThree += 1;
 
@@ -650,6 +660,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         chipNodeColumnValue: fourth,
         childNodeValue: 3,
         arrayNodes: arrayOfChipNodes,
+        countdownTimer,
       });
     },
     fifth: ({ fifth }) => {
@@ -663,6 +674,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         chipNodeColumnValue: fifth,
         childNodeValue: 4,
         arrayNodes: arrayOfChipNodes,
+        countdownTimer,
       });
     },
     sixth: ({ sixth }) => {
@@ -676,6 +688,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         chipNodeColumnValue: sixth,
         childNodeValue: 5,
         arrayNodes: arrayOfChipNodes,
+        countdownTimer,
       });
     },
     seventh: ({ seventh }) => {
@@ -689,6 +702,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         chipNodeColumnValue: seventh,
         childNodeValue: 6,
         arrayNodes: arrayOfChipNodes,
+        countdownTimer,
       });
     },
   };
@@ -705,6 +719,9 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         localStorage.getItem("stopCountdown")
       );
       if (playersTurnTimer) {
+        // reset timer display to 30s
+        document.getElementById("turn-countdown-selector").textContent = "30";
+        // reset timer function
         clearInterval(playersTurnTimer);
       }
       objOfMethods[columnClicked]({
@@ -745,6 +762,7 @@ function placeHolder({
   chipNodeColumnValue,
   childNodeValue,
   arrayNodes,
+  countdownTimer,
 }) {
   // get current player
   console.log("hello");
@@ -770,7 +788,7 @@ function placeHolder({
     `#row-${columnObj[columnCounter]} [data-chipselector='${columnObj[columnCounter]}-${chipNodeColumnValue}']`
   );
 
-  // console.log(chipNodeElement.);
+  console.log(chipNodeElement, "chipNodeElement");
   // set value of data-droppedposition attr based on current counter
   selectedColumn.setAttribute(
     "data-droppedposition",
@@ -1041,8 +1059,8 @@ function countdownTimer(element) {
   let startingNumber = 30;
   // make the time value dynamic
   const stopInterval = setInterval(() => {
-    startingNumber = startingNumber - 1;
     console.log(startingNumber);
+    startingNumber = startingNumber - 1;
     element.textContent = `${startingNumber}`;
 
     if (startingNumber === 0) {
@@ -1055,21 +1073,38 @@ function countdownTimer(element) {
   }, 1000);
   localStorage.setItem("stopCountdown", JSON.stringify(stopInterval));
 }
-
-function diagonalTopLeft() {
+// push string "one" or "two" in to array
+// then run check to see if there are four consecutive "one" or "two"
+function diagonalTopLeft({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
   // arr[+][-]
 }
-function diagonalTopRight() {
+function diagonalTopRight({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
   // arr[+][+]
 }
-function diagonalBottomRight() {
+function diagonalBottomRight({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
   // arr[-][+]
 }
-function diagonalBottomLeft() {
+function diagonalBottomLeft({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
   // arr[-][-]
 }
 
-function Up() {}
-function right() {}
-function down() {}
-function left() {}
+function Up({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
+  // arr[+][same]
+}
+function right({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
+  // arr[same][+]
+}
+function down({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
+  // arr[-][same]
+}
+function left({ arrayNodes }) {
+  // check if item in array of nodes at dropped position is an string
+  // arr[same][-]
+}
