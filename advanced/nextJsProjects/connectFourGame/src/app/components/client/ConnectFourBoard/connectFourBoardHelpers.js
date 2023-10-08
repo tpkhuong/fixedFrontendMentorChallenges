@@ -797,6 +797,16 @@ function placeHolder({
   // show player chip
   // row 6
   if (columnObj[columnCounter] == 6) {
+    // each row has seven columns
+    // chipNodeColumnValue use the value assigned to this variable
+    // first: right, diagonalDownRight, down
+    // second: left, right, diagonalDownRight, down
+    // third: left, right, diagonalDownRight, down
+    // fourth: left, right, diagonalDownRight, down, diagonalDownLeft
+    // fifth: left, right, down, diagonalDownLeft
+    // sixth: left, right, down, diagonalDownLeft
+    // seventh: left, diagonalDownLeft, down
+
     // stop timer
     stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 6");
@@ -831,6 +841,16 @@ function placeHolder({
 
   // row 5
   if (columnObj[columnCounter] == 5) {
+    // each row has seven columns
+    // chipNodeColumnValue use the value assigned to this variable
+    // first: right, diagonalDownRight, down
+    // second: left, diagonalTopLeft, up, right, diagonalDownRight, down
+    // third: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fourth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fifth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // sixth: diagonalDownLeft, left, up, right, down
+    // seventh: diagonalDownLeft, left, up, down
+
     // stop timer
     stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 5");
@@ -869,6 +889,16 @@ function placeHolder({
 
   // row 4
   if (columnObj[columnCounter] == 4) {
+    // each row has seven columns
+    // chipNodeColumnValue use the value assigned to this variable
+    // first: up, right, diagonalDownRight, down
+    // second: diagonalDownLeft, left, up, diagonalTopRight, right, diagonalDownRight, down
+    // third: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fourth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fifth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // sixth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // seventh: diagonalDownLeft, left, up, down
+
     // stop timer
     stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 4");
@@ -907,6 +937,16 @@ function placeHolder({
 
   // row 3
   if (columnObj[columnCounter] == 3) {
+    // each row has seven columns
+    // chipNodeColumnValue use the value assigned to this variable
+    // first: up, diagonalTopRight, right, down
+    // second: diagonalDownLeft, left, up, diagonalTopRight, right, diagonalDownRight, down
+    // third: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fourth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fifth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // sixth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // seventh: left, diagonalTopLeft, up, down
+
     // stop timer
     stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 3");
@@ -945,6 +985,16 @@ function placeHolder({
 
   // row 2
   if (columnObj[columnCounter] == 2) {
+    // each row has seven columns
+    // chipNodeColumnValue use the value assigned to this variable
+    // first: up, diagonalTopRight, right, down
+    // second: diagonalDownLeft, left, up, diagonalTopRight, right, down
+    // third: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fourth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // fifth: diagonalDownLeft, left, diagonalTopLeft, up, diagonalTopRight, right, diagonalDownRight, down
+    // sixth: left, diagonalTopLeft, up, right, diagonalDownRight, down
+    // seventh: left, diagonalTopLeft, up, down
+
     // stop timer
     stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 2");
@@ -983,6 +1033,16 @@ function placeHolder({
 
   // row 1
   if (columnObj[columnCounter] == 1) {
+    // each row has seven columns
+    // chipNodeColumnValue use the value assigned to this variable
+    // first: up, diagonalTopRight, right
+    // second: left, up, diagonalTopRight, right
+    // third: left, up, diagonalTopRight, right
+    // fourth: left, diagonalTopLeft, up, diagonalTopRight, right
+    // fifth: left, diagonalTopLeft, up, right
+    // sixth: left, diagonalTopLeft, up, right
+    // seventh: left, diagonalTopLeft, up
+
     // stop timer
     stopTimer({ getItemValue: "stopCountdown" });
     console.log(chipNodeElement, "row 1");
