@@ -8,22 +8,22 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
   const arrayOfChipNodes = [
     // row 6 - 6
     // index 0
-    ["6-1", "6-2", "6-3", "6-4", "6-5", "6-6", "6-7"],
+    [null, null, null, null, null, null, null],
     // row 5 - 4
     // index 1
-    ["5-1", "5-2", "5-3", "5-4", "5-5", "5-6", "5-7"],
+    [null, null, null, null, null, null, null],
     // row 4 - 2
     // index 2
-    ["4-1", "4-2", "4-3", "4-4", "4-5", "5-6", "6-7"],
+    [null, null, null, null, null, null, null],
     // row 3
     // index 3
-    ["3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-7"],
+    [null, null, null, null, null, null, null],
     // row 2 + 2
     // index 4
-    ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7"],
+    [null, null, null, null, null, null, null],
     // row 1 + 4
     // index 5
-    ["1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7"],
+    [null, null, null, null, null, null, null],
   ];
 
   const objOfCounter = {
