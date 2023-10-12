@@ -1005,6 +1005,7 @@ function placeHolder({
     console.log(column, "column");
     // row 2 + 2
     console.log(arrayNodes[Number(row) + 2][Number(column) - 1], "array node");
+
     const time = window.innerWidth <= 378 ? 1350 : 1400;
     // chip dropped animation
     setTimeout(() => {
@@ -1053,6 +1054,16 @@ function placeHolder({
     console.log(column, "column");
     // row 1 + 4
     console.log(arrayNodes[Number(row) + 4][Number(column) - 1], "array node");
+    console.log(typeof arrayNodes[Number(row) + 2][Number(column) - 1]);
+    console.log(
+      Object.is(arrayNodes[Number(row) + 2][Number(column) - 1], null)
+    );
+    const position = [Number(row) + 4][Number(column) - 1];
+    console.log(position, "position");
+    setPlayerChip({
+      arrayNodes,
+      position,
+    });
     const time = window.innerWidth <= 378 ? 1370 : 1420;
     // chip dropped animation
     setTimeout(() => {
@@ -1133,6 +1144,21 @@ function countdownTimer(element) {
   }, 1000);
   localStorage.setItem("stopCountdown", JSON.stringify(stopInterval));
 }
+
+function setPlayerChip({ arrayNodes, position }) {
+  console.log(arrayNodes);
+  console.log(typeof arrayNodes[position] == "object");
+  console.log(position);
+  // why is this false
+  console.log(Object.is(arrayNodes[position], null));
+  if (
+    typeof arrayNodes[position] == "object" &&
+    Object.is(arrayNodes[position], null)
+  ) {
+    console.log("hello this is chip.");
+  }
+}
+
 // push string "one" or "two" in to array
 // then run check to see if there are four consecutive "one" or "two"
 function diagonalTopLeft({ arrayNodes }) {
