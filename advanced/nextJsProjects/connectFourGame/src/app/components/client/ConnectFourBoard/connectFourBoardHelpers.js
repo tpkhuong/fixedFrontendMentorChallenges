@@ -772,9 +772,9 @@ function placeHolder({
   // add 1 to column counter
   columnObj[columnCounter] += 1;
   // get value of data-playerturn attr of main element with id "game-board-bg-selector"
-  const currentPlayer = document
-    .getElementById("game-board-bg-selector")
-    .getAttribute("data-playerturn");
+  // const currentPlayer = document
+  //   .getElementById("game-board-bg-selector")
+  //   .getAttribute("data-playerturn");
   // select a column
   const selectedColumn = document.getElementById(`${animateColumn}`);
   // access position in arrayNodes here
@@ -813,17 +813,27 @@ function placeHolder({
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
       .split("-");
-    console.log(row, "row");
-    console.log(column, "column");
+    // console.log(row, "row");
+    // console.log(column, "column");
     // row 6 - 6
-    console.log(arrayNodes[Number(row) - 6][Number(column) - 1], "array node");
+    // console.log(arrayNodes[Number(row) - 6][Number(column) - 1], "array node");
+    const positionRow = Number(row) - 6;
+    const positionColumn = Number(column) - 1;
+    // console.log(position, "position");
+    setPlayerChip({
+      arrayNodes,
+      positionRow,
+      positionColumn,
+      currentPlayerChip,
+    });
+    console.log(arrayNodes);
     // chip dropped animation
     setTimeout(() => {
       document
         .getElementById("row-6")
         .childNodes[childNodeValue].setAttribute(
           "data-playerchip",
-          `${currentPlayer}`
+          `${currentPlayerChip}`
         );
     }, 100);
     // set "data-droppedposition" as empty string
@@ -857,10 +867,20 @@ function placeHolder({
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
       .split("-");
-    console.log(row, "row");
-    console.log(column, "column");
+    // console.log(row, "row");
+    // console.log(column, "column");
     // row 5 - 4
-    console.log(arrayNodes[Number(row) - 4][Number(column) - 1], "array node");
+    // console.log(arrayNodes[Number(row) - 4][Number(column) - 1], "array node");
+    const positionRow = Number(row) - 4;
+    const positionColumn = Number(column) - 1;
+    // console.log(position, "position");
+    setPlayerChip({
+      arrayNodes,
+      positionRow,
+      positionColumn,
+      currentPlayerChip,
+    });
+    console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1260 : 1310;
     // chip dropped animation
     setTimeout(() => {
@@ -868,7 +888,7 @@ function placeHolder({
         .getElementById("row-5")
         .childNodes[childNodeValue].setAttribute(
           "data-playerchip",
-          `${currentPlayer}`
+          `${currentPlayerChip}`
         );
     }, time);
 
@@ -905,10 +925,20 @@ function placeHolder({
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
       .split("-");
-    console.log(row, "row");
-    console.log(column, "column");
+    // console.log(row, "row");
+    // console.log(column, "column");
     // row 4 - 2
-    console.log(arrayNodes[Number(row) - 2][Number(column) - 1], "array node");
+    // console.log(arrayNodes[Number(row) - 2][Number(column) - 1], "array node");
+    const positionRow = Number(row) - 2;
+    const positionColumn = Number(column) - 1;
+    // console.log(position, "position");
+    setPlayerChip({
+      arrayNodes,
+      positionRow,
+      positionColumn,
+      currentPlayerChip,
+    });
+    console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1290 : 1340;
     // chip dropped animation
     setTimeout(() => {
@@ -916,7 +946,7 @@ function placeHolder({
         .getElementById("row-4")
         .childNodes[childNodeValue].setAttribute(
           "data-playerchip",
-          `${currentPlayer}`
+          `${currentPlayerChip}`
         );
     }, time);
 
@@ -953,10 +983,20 @@ function placeHolder({
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
       .split("-");
-    console.log(row, "row");
-    console.log(column, "column");
+    // console.log(row, "row");
+    // console.log(column, "column");
     // row 3
-    console.log(arrayNodes[Number(row)][Number(column) - 1], "array node");
+    // console.log(arrayNodes[Number(row)][Number(column) - 1], "array node");
+    const positionRow = Number(row);
+    const positionColumn = Number(column) - 1;
+    // console.log(position, "position");
+    setPlayerChip({
+      arrayNodes,
+      positionRow,
+      positionColumn,
+      currentPlayerChip,
+    });
+    console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1320 : 1370;
     // chip dropped animation
     setTimeout(() => {
@@ -964,7 +1004,7 @@ function placeHolder({
         .getElementById("row-3")
         .childNodes[childNodeValue].setAttribute(
           "data-playerchip",
-          `${currentPlayer}`
+          `${currentPlayerChip}`
         );
     }, time);
 
@@ -1001,11 +1041,21 @@ function placeHolder({
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
       .split("-");
-    console.log(row, "row");
-    console.log(column, "column");
+    // console.log(row, "row");
+    // console.log(column, "column");
     // row 2 + 2
-    console.log(arrayNodes[Number(row) + 2][Number(column) - 1], "array node");
+    // console.log(arrayNodes[Number(row) + 2][Number(column) - 1], "array node");
 
+    const positionRow = Number(row) + 2;
+    const positionColumn = Number(column) - 1;
+    // console.log(position, "position");
+    setPlayerChip({
+      arrayNodes,
+      positionRow,
+      positionColumn,
+      currentPlayerChip,
+    });
+    console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1350 : 1400;
     // chip dropped animation
     setTimeout(() => {
@@ -1013,7 +1063,7 @@ function placeHolder({
         .getElementById("row-2")
         .childNodes[childNodeValue].setAttribute(
           "data-playerchip",
-          `${currentPlayer}`
+          `${currentPlayerChip}`
         );
     }, time);
 
@@ -1050,20 +1100,25 @@ function placeHolder({
     const [row, column] = chipNodeElement
       .getAttribute("data-chipselector")
       .split("-");
-    console.log(row, "row");
-    console.log(column, "column");
+    // console.log(row, "row");
+    // console.log(column, "column");
     // row 1 + 4
-    console.log(arrayNodes[Number(row) + 4][Number(column) - 1], "array node");
-    console.log(typeof arrayNodes[Number(row) + 2][Number(column) - 1]);
-    console.log(
-      Object.is(arrayNodes[Number(row) + 2][Number(column) - 1], null)
-    );
-    const position = [Number(row) + 4][Number(column) - 1];
-    console.log(position, "position");
+    // console.log(arrayNodes[Number(row) + 4][Number(column) - 1], "array node");
+    // console.log(typeof arrayNodes[Number(row) + 2][Number(column) - 1]);
+    // console.log(
+    //   Object.is(arrayNodes[Number(row) + 2][Number(column) - 1], null)
+    // );
+    // const position = [Number(row) + 4][Number(column) - 1];
+    const positionRow = Number(row) + 4;
+    const positionColumn = Number(column) - 1;
+    // console.log(position, "position");
     setPlayerChip({
       arrayNodes,
-      position,
+      positionRow,
+      positionColumn,
+      currentPlayerChip,
     });
+    console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1370 : 1420;
     // chip dropped animation
     setTimeout(() => {
@@ -1071,7 +1126,7 @@ function placeHolder({
         .getElementById("row-1")
         .childNodes[childNodeValue].setAttribute(
           "data-playerchip",
-          `${currentPlayer}`
+          `${currentPlayerChip}`
         );
     }, time);
     // set "data-droppedposition" as empty string
@@ -1145,17 +1200,25 @@ function countdownTimer(element) {
   localStorage.setItem("stopCountdown", JSON.stringify(stopInterval));
 }
 
-function setPlayerChip({ arrayNodes, position }) {
-  console.log(arrayNodes);
-  console.log(typeof arrayNodes[position] == "object");
-  console.log(position);
-  // why is this false
-  console.log(Object.is(arrayNodes[position], null));
+function setPlayerChip({
+  arrayNodes,
+  positionRow,
+  positionColumn,
+  currentPlayerChip,
+}) {
   if (
-    typeof arrayNodes[position] == "object" &&
-    Object.is(arrayNodes[position], null)
+    typeof arrayNodes[positionRow][positionColumn] == "object" &&
+    Object.is(arrayNodes[positionRow][positionColumn], null)
   ) {
+    console.log("positionRow", positionRow);
+    console.log("positionColumn", positionColumn);
+    console.log(
+      "arrayNodes[positionRow][positionColumn]",
+      arrayNodes[positionRow][positionColumn]
+    );
     console.log("hello this is chip.");
+    // change value null to string "one" or "two"
+    arrayNodes[positionRow][positionColumn] = currentPlayerChip;
   }
 }
 
