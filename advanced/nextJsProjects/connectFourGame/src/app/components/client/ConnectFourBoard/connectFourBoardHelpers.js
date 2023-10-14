@@ -1241,9 +1241,10 @@ function diagonalBottomLeft({ arrayNodes }) {
   // arr[-][-]
 }
 
-function Up({ arrayNodes }) {
+function Up({ arrayNodes, positionRow, positionColumn }) {
   // check if item in array of nodes at dropped position is an string
   // arr[+][same]
+  // we need row
 }
 function right({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
