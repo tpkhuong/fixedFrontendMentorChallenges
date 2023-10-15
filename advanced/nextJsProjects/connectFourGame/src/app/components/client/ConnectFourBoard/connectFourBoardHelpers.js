@@ -1226,25 +1226,26 @@ function setPlayerChip({
 // then run check to see if there are four consecutive "one" or "two"
 function diagonalTopLeft({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
-  // arr[+][-]
+  // arr[-][-]
 }
 function diagonalTopRight({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
-  // arr[+][+]
+  // arr[-][+]
 }
 function diagonalBottomRight({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
-  // arr[-][+]
+  // arr[+][+]
 }
 function diagonalBottomLeft({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
-  // arr[-][-]
+  // arr[+][-]
 }
 
 function Up({ arrayNodes, positionRow, positionColumn }) {
   // check if item in array of nodes at dropped position is an string
-  // arr[+][same]
-  // we need row
+  // arr[-][same]
+  // positionRow is the index position of our matrix
+  for (let index = positionRow; index !== 0; index--) {}
 }
 function right({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
@@ -1252,9 +1253,47 @@ function right({ arrayNodes }) {
 }
 function down({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
-  // arr[-][same]
+  // arr[+][same]
 }
 function left({ arrayNodes }) {
   // check if item in array of nodes at dropped position is an string
   // arr[same][-]
 }
+
+function testLoop(array, row, column) {
+  let previousValue = array[row][column];
+  let nextValue = previousValue;
+  for (let index = row; previousValue !== nextValue || index !== 0; index--) {
+    // push value into array
+    console.log(previousValue);
+    console.log(nextValue);
+
+    previousValue = array[index][column];
+    nextValue = array[index - 1][column];
+
+    console.log(previousValue);
+    console.log(nextValue);
+    console.log(array);
+  }
+}
+
+const testArray = [
+  // row 6 - 6
+  // index 0
+  [null, null, "one", null, null, null, null],
+  // row 5 - 4
+  // index 1
+  [null, null, "one", null, null, null, null],
+  // row 4 - 2
+  // index 2
+  [null, null, "one", null, null, null, null],
+  // row 3
+  // index 3
+  [null, null, "two", null, null, null, null],
+  // row 2 + 2
+  // index 4
+  [null, null, "two", null, null, null, null],
+  // row 1 + 4
+  // index 5
+  [null, null, null, null, null, null, null],
+];
