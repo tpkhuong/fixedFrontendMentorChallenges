@@ -1260,10 +1260,25 @@ function left({ arrayNodes }) {
   // arr[same][-]
 }
 
+// make a recursive function
+
 function testLoop(array, row, column) {
   let previousValue = array[row][column];
   let nextValue = previousValue;
-  for (let index = row; previousValue !== nextValue || index !== 0; index--) {
+  let index = row;
+  // for (let index = row; previousValue !== nextValue || index !== 0; index--) {
+  //   // push value into array
+  //   console.log(previousValue);
+  //   console.log(nextValue);
+
+  //   previousValue = array[index][column];
+  //   nextValue = array[index - 1][column];
+
+  //   console.log(previousValue);
+  //   console.log(nextValue);
+  //   console.log(array);
+  // }
+  while (previousValue !== nextValue) {
     // push value into array
     console.log(previousValue);
     console.log(nextValue);
@@ -1274,6 +1289,7 @@ function testLoop(array, row, column) {
     console.log(previousValue);
     console.log(nextValue);
     console.log(array);
+    // index--;
   }
 }
 
