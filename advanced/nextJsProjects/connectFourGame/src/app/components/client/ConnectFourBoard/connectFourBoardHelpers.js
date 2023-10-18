@@ -1263,10 +1263,24 @@ function left({ arrayNodes }) {
 // make a recursive function
 
 function testLoop(array, row, column) {
+  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // break
+  const firstValue = array[row][column];
+  const result = [firstValue];
   let previousValue = array[row][column];
-  let nextValue = previousValue;
-  let index = row;
-  // for (let index = row; previousValue !== nextValue || index !== 0; index--) {
+
+  for (let index = row; index !== 0; index--) {
+    // push value into array
+    const currentValue = array[row - 1][column];
+    console.log(previousValue);
+    console.log(currentValue);
+    if (currentValue !== result[result.length - 1]) {
+    }
+    console.log(previousValue);
+    console.log(currentValue);
+    console.log(array);
+  }
+  // while (previousValue !== nextValue) {
   //   // push value into array
   //   console.log(previousValue);
   //   console.log(nextValue);
@@ -1277,21 +1291,13 @@ function testLoop(array, row, column) {
   //   console.log(previousValue);
   //   console.log(nextValue);
   //   console.log(array);
+  //   // index--;
   // }
-  while (previousValue !== nextValue) {
-    // push value into array
-    console.log(previousValue);
-    console.log(nextValue);
-
-    previousValue = array[index][column];
-    nextValue = array[index - 1][column];
-
-    console.log(previousValue);
-    console.log(nextValue);
-    console.log(array);
-    // index--;
-  }
 }
+
+// function recursiveCheckWinner({ array }) {
+
+// }
 
 const testArray = [
   // row 6 - 6
