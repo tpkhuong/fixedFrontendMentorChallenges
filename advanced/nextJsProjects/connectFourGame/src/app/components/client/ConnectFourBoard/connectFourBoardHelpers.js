@@ -1267,14 +1267,16 @@ function testLoop(array, row, column) {
   // break
   const firstValue = array[row][column];
   const result = [firstValue];
-  let previousValue = array[row][column];
 
-  for (let index = row; index !== 0; index--) {
+  for (let index = row - 1; index < 0; index--) {
     // push value into array
     const currentValue = array[row - 1][column];
     console.log(previousValue);
     console.log(currentValue);
-    if (currentValue !== result[result.length - 1]) {
+    if (currentValue == result[result.length - 1]) {
+      result.push(currentValue);
+    } else {
+      return result;
     }
     console.log(previousValue);
     console.log(currentValue);
