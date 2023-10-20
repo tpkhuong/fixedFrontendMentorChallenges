@@ -1262,39 +1262,106 @@ function left({ arrayNodes }) {
 
 // make a recursive function
 
-function testLoop(array, row, column) {
+function testLoopGoingUp(array, row, column) {
   // loop through array add chip to result array if last value in array does not match currentVale of our loop
   // break
   const firstValue = array[row][column];
   const result = [firstValue];
 
-  for (let index = row - 1; index < 0; index--) {
+  for (let index = row - 1; index != -1; index--) {
     // push value into array
-    const currentValue = array[row - 1][column];
-    console.log(previousValue);
+    const currentValue = array[index][column];
+    // console.log(previousValue);
     console.log(currentValue);
+    console.log(result, "result");
     if (currentValue == result[result.length - 1]) {
       result.push(currentValue);
     } else {
       return result;
     }
-    console.log(previousValue);
+    // console.log(previousValue);
     console.log(currentValue);
+    console.log(result, "result");
     console.log(array);
   }
-  // while (previousValue !== nextValue) {
-  //   // push value into array
-  //   console.log(previousValue);
-  //   console.log(nextValue);
+  return result;
+}
 
-  //   previousValue = array[index][column];
-  //   nextValue = array[index - 1][column];
+function testLoopGoingDown(array, row, column) {
+  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // break
+  const firstValue = array[row][column];
+  const result = [firstValue];
 
-  //   console.log(previousValue);
-  //   console.log(nextValue);
-  //   console.log(array);
-  //   // index--;
-  // }
+  for (let index = row + 1; index != array.length; index++) {
+    // push value into array
+    const currentValue = array[index][column];
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    if (currentValue == result[result.length - 1]) {
+      result.push(currentValue);
+    } else {
+      return result;
+    }
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    console.log(array);
+  }
+  return result;
+}
+
+function testLoopGoingLeft(array, row, column) {
+  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // break
+  const firstValue = array[row][column];
+  const rowArray = array[row];
+  const result = [firstValue];
+
+  for (let index = column - 1; index != rowArray.length; index--) {
+    // push value into array
+    const currentValue = rowArray[index];
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    if (currentValue == result[result.length - 1]) {
+      result.push(currentValue);
+    } else {
+      return result;
+    }
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    console.log(array);
+  }
+  return result;
+}
+
+function testLoopGoingRight(array, row, column) {
+  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // break
+  const firstValue = array[row][column];
+  const rowArray = array[row];
+  const result = [firstValue];
+
+  for (let index = column + 1; index != rowArray.length; index++) {
+    // push value into array
+    const currentValue = rowArray[index];
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    if (currentValue == result[result.length - 1]) {
+      result.push(currentValue);
+    } else {
+      return result;
+    }
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    console.log(array);
+  }
+  return result;
 }
 
 // function recursiveCheckWinner({ array }) {
@@ -1304,19 +1371,19 @@ function testLoop(array, row, column) {
 const testArray = [
   // row 6 - 6
   // index 0
-  [null, null, "one", null, null, null, null],
+  [null, null, "one", "two", null, null, null],
   // row 5 - 4
   // index 1
-  [null, null, "one", null, null, null, null],
+  [null, null, "one", "one", null, null, null],
   // row 4 - 2
   // index 2
   [null, null, "one", null, null, null, null],
   // row 3
   // index 3
-  [null, null, "two", null, null, null, null],
+  [null, null, "two", "two", null, null, null],
   // row 2 + 2
   // index 4
-  [null, null, "two", null, null, null, null],
+  [null, null, "two", "one", null, null, null],
   // row 1 + 4
   // index 5
   [null, null, null, null, null, null, null],
