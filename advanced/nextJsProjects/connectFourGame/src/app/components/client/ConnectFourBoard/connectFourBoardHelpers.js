@@ -1393,6 +1393,35 @@ function goingUpLeft(array, row, column) {
   return result;
 }
 
+function goingDownLeft(array, row, column) {
+  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // break
+  const firstValue = array[row][column];
+  const result = [firstValue];
+
+  for (
+    let index = row + 1, columnIndex = column - 1;
+    index < array.length;
+    index--, columnIndex--
+  ) {
+    // push value into array
+    const currentValue = array[index][columnIndex];
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    if (currentValue == result[result.length - 1]) {
+      result.push(currentValue);
+    } else {
+      return result;
+    }
+    // console.log(previousValue);
+    console.log(currentValue);
+    console.log(result, "result");
+    console.log(array);
+  }
+  return result;
+}
+
 // function recursiveCheckWinner({ array }) {
 
 // }
