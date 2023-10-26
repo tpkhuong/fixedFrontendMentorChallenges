@@ -1218,6 +1218,7 @@ function setPlayerChip({
     );
     console.log("hello this is chip.");
     // change value null to string "one" or "two"
+    // needs to be an obj with player and position
     arrayNodes[positionRow][positionColumn] = currentPlayerChip;
   }
 }
@@ -1401,7 +1402,7 @@ function goingDownRight(array, row, column) {
 
   for (
     let index = row + 1, columnIndex = column + 1;
-    index > array.length;
+    index < array.length;
     index++, columnIndex++
   ) {
     // push value into array
@@ -1480,9 +1481,16 @@ function goingDownLeft(array, row, column) {
   return result;
 }
 
-// function recursiveCheckWinner({ array }) {
+function getValuesOfBothArrays(...rest) {
+  // combine both arrays values into one array
+  // if length of array is == to 4 return the array
+  // if the length is < 4 return string not connect four
+}
 
-// }
+function connectFourChecker(...rest) {
+  // get values of position of obj in array
+  // use values to find element and apply winning circle attr
+}
 
 const testArray = [
   // row 6 - 6
