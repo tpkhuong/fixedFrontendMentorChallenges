@@ -708,7 +708,6 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
   };
 
   return function innerFunc(event) {
-    console.log("hello");
     const columnClicked = event.target.getAttribute("data-column");
     movePointer({ columnClicked });
 
@@ -784,9 +783,19 @@ function placeHolder({
   //   )
   // );
 
-  const chipNodeElement = document.querySelector(
-    `#row-${columnObj[columnCounter]} [data-chipselector='${columnObj[columnCounter]}-${chipNodeColumnValue}']`
-  );
+  // const chipNodeElement = document.querySelector(
+  //   `#row-${columnObj[columnCounter]} [data-chipselector='${columnObj[columnCounter]}-${chipNodeColumnValue}']`
+  // );
+
+  const chipNodeElement = document.getElementById(
+    `row-${columnObj[columnCounter]}`
+  ).children[chipNodeColumnValue - 1];
+
+  // console.log(
+  //   document.getElementById(`row-${columnObj[columnCounter]}`).children[
+  //     chipNodeColumnValue - 1
+  //   ]
+  // );
 
   console.log(chipNodeElement, "chipNodeElement");
   // set value of data-droppedposition attr based on current counter
@@ -996,6 +1005,7 @@ function placeHolder({
       positionColumn,
       currentPlayerChip,
     });
+
     console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1320 : 1370;
     // chip dropped animation
@@ -1216,9 +1226,13 @@ function setPlayerChip({
       "arrayNodes[positionRow][positionColumn]",
       arrayNodes[positionRow][positionColumn]
     );
+    console.log(
+      document.getElementById(`row-${positionRow}`).children[positionColumn - 1]
+    );
     console.log("hello this is chip.");
     // change value null to string "one" or "two"
     // needs to be an obj with player and position
+    // with positionRow and positionColumn we can target chip element to apply winning circle attr
     arrayNodes[positionRow][positionColumn] = currentPlayerChip;
   }
 }
@@ -1481,10 +1495,20 @@ function goingDownLeft(array, row, column) {
   return result;
 }
 
-function getValuesOfBothArrays(...rest) {
+function getValuesOfBothArrays(firstArray, secondArray) {
   // combine both arrays values into one array
+  const combinedArrays = [...firstArray, ...secondArray];
+  // copy first four values
+  const firstFourValues = combinedArrays.slice(0, 4);
+  // if array length is 3, combinedArrays.slice(0,4) will return an array with items at index 0,1,2
   // if length of array is == to 4 return the array
+  if (firstFourValues.length == 4) {
+    return firstFourValues;
+  }
   // if the length is < 4 return string not connect four
+  if (firstFourValues.length < 4) {
+    return null;
+  }
 }
 
 function connectFourChecker(...rest) {
