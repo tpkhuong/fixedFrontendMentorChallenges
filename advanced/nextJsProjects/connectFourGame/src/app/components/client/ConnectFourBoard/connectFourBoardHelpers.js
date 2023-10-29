@@ -834,7 +834,12 @@ function placeHolder({
       positionRow,
       positionColumn,
       currentPlayerChip,
+      row,
+      column,
     });
+
+    testingAlgorithm({ arrayNodes, positionRow, positionColumn });
+
     console.log(arrayNodes);
     // chip dropped animation
     setTimeout(() => {
@@ -888,7 +893,12 @@ function placeHolder({
       positionRow,
       positionColumn,
       currentPlayerChip,
+      row,
+      column,
     });
+
+    testingAlgorithm({ arrayNodes, positionRow, positionColumn });
+
     console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1260 : 1310;
     // chip dropped animation
@@ -946,7 +956,12 @@ function placeHolder({
       positionRow,
       positionColumn,
       currentPlayerChip,
+      row,
+      column,
     });
+
+    testingAlgorithm({ arrayNodes, positionRow, positionColumn });
+
     console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1290 : 1340;
     // chip dropped animation
@@ -1004,7 +1019,11 @@ function placeHolder({
       positionRow,
       positionColumn,
       currentPlayerChip,
+      row,
+      column,
     });
+
+    testingAlgorithm({ arrayNodes, positionRow, positionColumn });
 
     console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1320 : 1370;
@@ -1064,7 +1083,12 @@ function placeHolder({
       positionRow,
       positionColumn,
       currentPlayerChip,
+      row,
+      column,
     });
+
+    testingAlgorithm({ arrayNodes, positionRow, positionColumn });
+
     console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1350 : 1400;
     // chip dropped animation
@@ -1127,7 +1151,12 @@ function placeHolder({
       positionRow,
       positionColumn,
       currentPlayerChip,
+      row,
+      column,
     });
+
+    testingAlgorithm({ arrayNodes, positionRow, positionColumn });
+
     console.log(arrayNodes);
     const time = window.innerWidth <= 378 ? 1370 : 1420;
     // chip dropped animation
@@ -1215,6 +1244,8 @@ function setPlayerChip({
   positionRow,
   positionColumn,
   currentPlayerChip,
+  row,
+  column,
 }) {
   if (
     typeof arrayNodes[positionRow][positionColumn] == "object" &&
@@ -1232,9 +1263,19 @@ function setPlayerChip({
     console.log("hello this is chip.");
     // change value null to string "one" or "two"
     // needs to be an obj with player and position
-    // with positionRow and positionColumn we can target chip element to apply winning circle attr
-    arrayNodes[positionRow][positionColumn] = currentPlayerChip;
+    // with row and column we can target chip element to apply winning circle attr
+    // arrayNodes[positionRow][positionColumn] = currentPlayerChip;
+    arrayNodes[positionRow][positionColumn] = {
+      playerChip: currentPlayerChip,
+      chipPosition: [`${row}`, `${column}`],
+    };
   }
+}
+
+function testingAlgorithm({ arrayNodes, positionRow, positionColumn }) {
+  // get value at chip position
+  console.log("this is testingAlgorithm function");
+  console.log(arrayNodes[positionRow][positionColumn]);
 }
 
 // push string "one" or "two" in to array
