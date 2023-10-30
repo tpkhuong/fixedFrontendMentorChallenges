@@ -1276,6 +1276,14 @@ function testingAlgorithm({ arrayNodes, positionRow, positionColumn }) {
   // get value at chip position
   console.log("this is testingAlgorithm function");
   console.log(arrayNodes[positionRow][positionColumn]);
+  const chipObj = arrayNodes[positionRow][positionColumn];
+  const [chipRow, chipColumn] = chipObj.chipPosition;
+  // the position property in our obj at arrayNodes[positionRow][positionColumn]
+  // will have the correct row and column we can use to select the chip element
+  console.log(
+    document.getElementById(`row-${chipRow}`).children[chipColumn - 1],
+    "chip element in testingAlgorithm"
+  );
 }
 
 // push string "one" or "two" in to array
