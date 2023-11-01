@@ -1329,26 +1329,31 @@ function left({ arrayNodes }) {
 function testLoopGoingUp(array, row, column) {
   // loop through array add chip to result array if last value in array does not match currentVale of our loop
   // break
-  const firstValue = array[row][column];
-  const result = [firstValue];
-
-  for (let index = row - 1; index != -1; index--) {
-    // push value into array
-    const currentValue = array[index][column];
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    if (currentValue == result[result.length - 1]) {
-      result.push(currentValue);
-    } else {
-      return result;
+  if (
+    typeof array[row][column] &&
+    array[row][column].hasOwnProperty("playerChip")
+  ) {
+    // only run algorithm if value in an is an "object" and has property "playerChip"
+    const firstValue = array[row][column].playerChip;
+    const result = [firstValue];
+    for (let index = row - 1; index != -1; index--) {
+      // push value into array
+      const currentValue = array[index][column].playerChip;
+      // console.log(previousValue);
+      console.log(currentValue);
+      console.log(result, "result");
+      if (currentValue == result[result.length - 1].playerChip) {
+        result.push(currentValue);
+      } else {
+        return result;
+      }
+      // console.log(previousValue);
+      console.log(currentValue);
+      console.log(result, "result");
+      console.log(array);
     }
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    console.log(array);
+    return result;
   }
-  return result;
 }
 
 function testLoopGoingDown(array, row, column) {
