@@ -1329,14 +1329,17 @@ function left({ arrayNodes }) {
 function testLoopGoingUp(array, row, column) {
   // loop through array add chip to result array if last value in array does not match currentVale of our loop
   // break
+  const firstValue = array[row][column].playerChip;
+  const result = [firstValue];
   if (
     typeof array[row][column] &&
     array[row][column].hasOwnProperty("playerChip")
   ) {
-    // only run algorithm if value in an is an "object" and has property "playerChip"
-    const firstValue = array[row][column].playerChip;
-    const result = [firstValue];
     for (let index = row - 1; index != -1; index--) {
+      // only run algorithm if value in an is an "object" and has property "playerChip"
+      // check if the value at array indexes is an obj in our loop
+      // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
+      // assign that obj to correct array index
       // push value into array
       const currentValue = array[index][column].playerChip;
       // console.log(previousValue);
