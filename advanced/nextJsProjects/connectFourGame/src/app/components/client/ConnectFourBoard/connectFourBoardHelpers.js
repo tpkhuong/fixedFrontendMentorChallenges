@@ -1327,12 +1327,13 @@ function left({ arrayNodes }) {
 // make a recursive function
 
 function testLoopGoingUp(array, row, column) {
-  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // each array[row][column] is an obj
+  // loop through array add chip to arrayOfPlayersChips if last value in array does not match currentVale of our loop
   // break
-  const firstValue = array[row][column].playerChip;
-  const result = [firstValue];
+  const firstChip = array[row][column].playerChip;
+  const arrayOfPlayersChips = [firstChip];
   if (
-    typeof array[row][column] &&
+    typeof array[row][column] == "object" &&
     array[row][column].hasOwnProperty("playerChip")
   ) {
     for (let index = row - 1; index != -1; index--) {
@@ -1344,18 +1345,21 @@ function testLoopGoingUp(array, row, column) {
       const currentValue = array[index][column].playerChip;
       // console.log(previousValue);
       console.log(currentValue);
-      console.log(result, "result");
-      if (currentValue == result[result.length - 1].playerChip) {
-        result.push(currentValue);
+      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
+      if (
+        currentValue ==
+        arrayOfPlayersChips[arrayOfPlayersChips.length - 1].playerChip
+      ) {
+        arrayOfPlayersChips.push(currentValue);
       } else {
-        return result;
+        return arrayOfPlayersChips;
       }
       // console.log(previousValue);
       console.log(currentValue);
-      console.log(result, "result");
+      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
       console.log(array);
     }
-    return result;
+    return arrayOfPlayersChips;
   }
 }
 
@@ -1613,4 +1617,79 @@ const anotherArray = [
   // row 1 + 4
   // index 5
   ["two", "one", "two", "two", "two", "two", "two"],
+];
+
+const arrayOfTestObjs = [
+  // row 6 - 6
+  // index 0
+  [
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+  ],
+  // ["two", "one", "one", "two", "one", "one", "one"],
+  // row 5 - 4
+  // index 1
+  [
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+  ],
+  // ["two", "one", "one", "one", "one", "two", "two"],
+  // row 4 - 2
+  // index 2
+  [
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+  ],
+  // ["one", "two", "one", "one", "one", "one", "one"],
+  // row 3
+  // index 3
+  [
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+  ],
+  // ["two", "one", "two", "two", "one", "one", "two"],
+  // row 2 + 2
+  // index 4
+  [
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+  ],
+  // ["one", "two", "two", "one", "two", "two", "one"],
+  // row 1 + 4
+  // index 5
+  [
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
+  ],
+  // ["two", "one", "two", "two", "two", "two", "two"],
 ];
