@@ -1623,13 +1623,13 @@ const arrayOfTestObjs = [
   // row 6 - 6
   // index 0
   [
-    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
-    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
-    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
-    { playerChip: "two", chipPosition: [`${row}`, `${column}`] },
-    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
-    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
-    { playerChip: "one", chipPosition: [`${row}`, `${column}`] },
+    { playerChip: "two", chipPosition: [`6`, `1`] },
+    { playerChip: "one", chipPosition: [`6`, `2`] },
+    { playerChip: "one", chipPosition: [`6`, `3`] },
+    { playerChip: "two", chipPosition: [`6`, `4`] },
+    { playerChip: "one", chipPosition: [`6`, `5`] },
+    { playerChip: "one", chipPosition: [`6`, `6`] },
+    { playerChip: "one", chipPosition: [`6`, `7`] },
   ],
   // ["two", "one", "one", "two", "one", "one", "one"],
   // row 5 - 4
