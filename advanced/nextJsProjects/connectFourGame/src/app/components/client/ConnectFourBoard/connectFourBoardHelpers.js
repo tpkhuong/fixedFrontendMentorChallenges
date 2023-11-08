@@ -1328,40 +1328,39 @@ function left({ arrayNodes }) {
 
 function testLoopGoingUp(array, row, column) {
   // each array[row][column] is an obj
-  // loop through array add chip to arrayOfPlayersChips if last value in array does not match currentVale of our loop
+  // loop through array add chip to arrayOfObj if last value in array does not match currentVale of our loop
   // break
-  const firstChip = array[row][column].playerChip;
-  const arrayOfPlayersChips = [firstChip];
+  const firstObj = array[row][column];
+  const arrayOfObj = [firstObj];
 
   for (let index = row - 1; index != -1; index--) {
     if (
-      typeof array[row][column] == "object" &&
-      array[row][column].hasOwnProperty("playerChip")
+      typeof array[index][column] == "object" &&
+      array[index][column].hasOwnProperty("playerChip")
     ) {
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
       // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
       // assign that obj to correct array index
       // push value into array
-      const currentValue = array[index][column].playerChip;
+      const currentObj = array[index][column];
+      const currentChip = array[index][column].playerChip;
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
-      if (
-        currentValue ==
-        arrayOfPlayersChips[arrayOfPlayersChips.length - 1].playerChip
-      ) {
-        arrayOfPlayersChips.push(currentValue);
+      console.log(currentObj);
+      console.log(arrayOfObj, "arrayOfObj");
+      if (currentChip == arrayOfObj[arrayOfObj.length - 1].playerChip) {
+        arrayOfObj.push(currentObj);
       } else {
-        return arrayOfPlayersChips;
+        // to break out of our function/loop
+        return arrayOfObj;
       }
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
+      console.log(currentObj);
+      console.log(arrayOfObj, "arrayOfObj");
       console.log(array);
     }
   }
-  return arrayOfPlayersChips;
+  return arrayOfObj;
 }
 
 function testLoopGoingDown(array, row, column) {
