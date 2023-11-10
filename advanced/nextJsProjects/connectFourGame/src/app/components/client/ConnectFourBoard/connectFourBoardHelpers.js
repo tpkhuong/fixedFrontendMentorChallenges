@@ -1328,10 +1328,10 @@ function left({ arrayNodes }) {
 
 function testLoopGoingUp(array, row, column) {
   // each array[row][column] is an obj
-  // loop through array add chip to arrayOfObj if last value in array does not match currentVale of our loop
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
   const firstObj = array[row][column];
-  const arrayOfObj = [firstObj];
+  const arrayOfObjs = [firstObj];
 
   for (let index = row - 1; index != -1; index--) {
     if (
@@ -1347,244 +1347,299 @@ function testLoopGoingUp(array, row, column) {
       const currentChip = array[index][column].playerChip;
       // console.log(previousValue);
       console.log(currentObj);
-      console.log(arrayOfObj, "arrayOfObj");
-      if (currentChip == arrayOfObj[arrayOfObj.length - 1].playerChip) {
-        arrayOfObj.push(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
       } else {
         // to break out of our function/loop
-        return arrayOfObj;
+        return arrayOfObjs;
       }
       // console.log(previousValue);
       console.log(currentObj);
-      console.log(arrayOfObj, "arrayOfObj");
+      console.log(arrayOfObjs, "arrayOfObjs");
       console.log(array);
     }
   }
-  return arrayOfObj;
+  return arrayOfObjs;
 }
 
 function testLoopGoingDown(array, row, column) {
   // each array[row][column] is an obj
-  // loop through array add chip to arrayOfPlayersChips if last value in array does not match currentVale of our loop
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
-  const firstChip = array[row][column].playerChip;
-  const arrayOfPlayersChips = [firstChip];
+  const firstObj = array[row][column];
+  const arrayOfObjs = [firstObj];
 
-  for (let index = row - 1; index != -1; index--) {
+  for (let index = row + 1; index < array.length; index++) {
     if (
-      typeof array[row][column] == "object" &&
-      array[row][column].hasOwnProperty("playerChip")
+      typeof array[index][column] == "object" &&
+      array[index][column].hasOwnProperty("playerChip")
     ) {
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
       // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
       // assign that obj to correct array index
       // push value into array
-      const currentValue = array[index][column].playerChip;
+      const currentObj = array[index][column];
+      const currentChip = array[index][column].playerChip;
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
-      if (
-        currentValue ==
-        arrayOfPlayersChips[arrayOfPlayersChips.length - 1].playerChip
-      ) {
-        arrayOfPlayersChips.push(currentValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
       } else {
-        return arrayOfPlayersChips;
+        // to break out of our function/loop
+        return arrayOfObjs;
       }
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
       console.log(array);
     }
   }
-  return arrayOfPlayersChips;
+  return arrayOfObjs;
 }
 
 function testLoopGoingLeft(array, row, column) {
-  // loop through array add chip to arrayOfPlayersChips array if last value in array does not match currentVale of our loop
+  // each array[row][column] is an obj
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
-  const firstChip = array[row][column].playerChip;
   const rowArray = array[row];
-  const arrayOfPlayersChips = [firstChip];
 
-  for (let index = column - 1; index != rowArray.length; index--) {
+  const firstObj = array[row][column];
+  const arrayOfObjs = [firstObj];
+
+  for (let index = column - 1; index != -1; index--) {
     if (
-      typeof array[row][column] == "object" &&
-      array[row][column].hasOwnProperty("playerChip")
+      typeof rowArray[column] == "object" &&
+      rowArray[column].hasOwnProperty("playerChip")
     ) {
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
       // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
       // assign that obj to correct array index
       // push value into array
-      const currentValue = rowArray[index].playerChip;
+      const currentObj = rowArray[index];
+      const currentChip = rowArray[index].playerChip;
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
-      if (currentValue == arrayOfPlayersChips[arrayOfPlayersChips.length - 1]) {
-        arrayOfPlayersChips.push(currentValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
       } else {
-        return arrayOfPlayersChips;
+        // to break out of our function/loop
+        return arrayOfObjs;
       }
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
       console.log(array);
     }
   }
-  return arrayOfPlayersChips;
+  return arrayOfObjs;
 }
 
 function testLoopGoingRight(array, row, column) {
-  // loop through array add chip to arrayOfPlayersChips array if last value in array does not match currentVale of our loop
+  // each array[row][column] is an obj
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
-  const firstChip = array[row][column].playerChip;
   const rowArray = array[row];
-  const arrayOfPlayersChips = [firstChip];
 
-  for (let index = column + 1; index != rowArray.length; index++) {
+  const firstObj = array[row][column];
+  const arrayOfObjs = [firstObj];
+
+  for (let index = column + 1; index < rowArray.length; index++) {
     if (
-      typeof array[row][column] == "object" &&
-      array[row][column].hasOwnProperty("playerChip")
+      typeof rowArray[column] == "object" &&
+      rowArray[column].hasOwnProperty("playerChip")
     ) {
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
       // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
       // assign that obj to correct array index
       // push value into array
-      const currentValue = rowArray[index];
+      const currentObj = rowArray[index];
+      const currentChip = rowArray[index].playerChip;
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
-      if (currentValue == arrayOfPlayersChips[arrayOfPlayersChips.length - 1]) {
-        arrayOfPlayersChips.push(currentValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
       } else {
-        return arrayOfPlayersChips;
+        // to break out of our function/loop
+        return arrayOfObjs;
       }
       // console.log(previousValue);
-      console.log(currentValue);
-      console.log(arrayOfPlayersChips, "arrayOfPlayersChips");
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
       console.log(array);
     }
   }
-  return arrayOfPlayersChips;
+  return arrayOfObjs;
 }
 
 function goingUpLeft(array, row, column) {
-  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // each array[row][column] is an obj
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
-  const firstValue = array[row][column];
-  const result = [firstValue];
+  const firstObj = array[row][column];
+  const arrayOfObjs = [firstObj];
 
   for (
     let index = row - 1, columnIndex = column - 1;
     index != -1;
     index--, columnIndex--
   ) {
-    // push value into array
-    const currentValue = array[index][columnIndex];
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    if (currentValue == result[result.length - 1]) {
-      result.push(currentValue);
-    } else {
-      return result;
+    if (
+      typeof array[index][columnIndex] == "object" &&
+      array[index][columnIndex].hasOwnProperty("playerChip")
+    ) {
+      // only run algorithm if value in an is an "object" and has property "playerChip"
+      // check if the value at array indexes is an obj in our loop
+      // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
+      // assign that obj to correct array index
+      // push value into array
+      const currentObj = array[index][columnIndex];
+      const currentChip = array[index][columnIndex].playerChip;
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
+      } else {
+        // to break out of our function/loop
+        return arrayOfObjs;
+      }
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      console.log(array);
     }
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    console.log(array);
   }
-  return result;
+  return arrayOfObjs;
 }
 
 function goingDownRight(array, row, column) {
-  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // each array[row][column] is an obj
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
-  const firstValue = array[row][column];
-  const result = [firstValue];
+  const firstObj = array[row][column];
+  const arrayOfObjs = [firstObj];
 
   for (
     let index = row + 1, columnIndex = column + 1;
     index < array.length;
     index++, columnIndex++
   ) {
-    // push value into array
-    const currentValue = array[index][columnIndex];
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    if (currentValue == result[result.length - 1]) {
-      result.push(currentValue);
-    } else {
-      return result;
+    if (
+      typeof array[index][columnIndex] == "object" &&
+      array[index][columnIndex].hasOwnProperty("playerChip")
+    ) {
+      // only run algorithm if value in an is an "object" and has property "playerChip"
+      // check if the value at array indexes is an obj in our loop
+      // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
+      // assign that obj to correct array index
+      // push value into array
+      const currentObj = array[index][columnIndex];
+      const currentChip = array[index][columnIndex].playerChip;
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
+      } else {
+        // to break out of our function/loop
+        return arrayOfObjs;
+      }
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      console.log(array);
     }
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    console.log(array);
   }
-  return result;
+  return arrayOfObjs;
 }
 
 function goingUpRight(array, row, column) {
-  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // each array[row][column] is an obj
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
-  const firstValue = array[row][column];
-  const result = [firstValue];
+  const firstObj = array[row][column];
+  const arrayOfObjs = [firstObj];
 
   for (
     let index = row - 1, columnIndex = column + 1;
     index != -1;
     index--, columnIndex++
   ) {
-    // push value into array
-    const currentValue = array[index][columnIndex];
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    if (currentValue == result[result.length - 1]) {
-      result.push(currentValue);
-    } else {
-      return result;
+    if (
+      typeof array[index][columnIndex] == "object" &&
+      array[index][columnIndex].hasOwnProperty("playerChip")
+    ) {
+      // only run algorithm if value in an is an "object" and has property "playerChip"
+      // check if the value at array indexes is an obj in our loop
+      // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
+      // assign that obj to correct array index
+      // push value into array
+      const currentObj = array[index][columnIndex];
+      const currentChip = array[index][columnIndex].playerChip;
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
+      } else {
+        // to break out of our function/loop
+        return arrayOfObjs;
+      }
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      console.log(array);
     }
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    console.log(array);
   }
-  return result;
+  return arrayOfObjs;
 }
 
 function goingDownLeft(array, row, column) {
-  // loop through array add chip to result array if last value in array does not match currentVale of our loop
+  // each array[row][column] is an obj
+  // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
-  const firstValue = array[row][column];
-  const result = [firstValue];
+  const firstObj = array[row][column];
+  const arrayOfObjs = [firstObj];
 
   for (
     let index = row + 1, columnIndex = column - 1;
     index < array.length;
     index++, columnIndex--
   ) {
-    // push value into array
-    const currentValue = array[index][columnIndex];
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    if (currentValue == result[result.length - 1]) {
-      result.push(currentValue);
-    } else {
-      return result;
+    if (
+      typeof array[index][columnIndex] == "object" &&
+      array[index][columnIndex].hasOwnProperty("playerChip")
+    ) {
+      // only run algorithm if value in an is an "object" and has property "playerChip"
+      // check if the value at array indexes is an obj in our loop
+      // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
+      // assign that obj to correct array index
+      // push value into array
+      const currentObj = array[index][columnIndex];
+      const currentChip = array[index][columnIndex].playerChip;
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      if (currentChip == arrayOfObjs[arrayOfObjs.length - 1].playerChip) {
+        arrayOfObjs.push(currentObj);
+      } else {
+        // to break out of our function/loop
+        return arrayOfObjs;
+      }
+      // console.log(previousValue);
+      console.log(currentObj);
+      console.log(arrayOfObjs, "arrayOfObjs");
+      console.log(array);
     }
-    // console.log(previousValue);
-    console.log(currentValue);
-    console.log(result, "result");
-    console.log(array);
   }
-  return result;
+  return arrayOfObjs;
 }
 
 function getValuesOfBothArrays(firstArray, secondArray) {
