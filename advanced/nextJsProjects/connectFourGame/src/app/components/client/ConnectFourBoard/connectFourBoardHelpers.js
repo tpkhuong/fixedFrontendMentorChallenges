@@ -1269,6 +1269,8 @@ function setPlayerChip({
       playerChip: currentPlayerChip,
       chipPosition: [`${row}`, `${column}`],
     };
+    // testing
+    testingAlgorithm({ arrayNodes, positionRow, positionColumn });
   }
 }
 
@@ -1281,7 +1283,12 @@ function testingAlgorithm({ arrayNodes, positionRow, positionColumn }) {
   // the position property in our obj at arrayNodes[positionRow][positionColumn]
   // will have the correct row and column we can use to select the chip element
   console.log(
-    document.getElementById(`row-${chipRow}`).children[chipColumn - 1],
+    document
+      .getElementById(`row-${chipRow}`)
+      .children[chipColumn - 1].children[3].setAttribute(
+        "data-connectfour",
+        "true"
+      ),
     "chip element in testingAlgorithm"
   );
 }
