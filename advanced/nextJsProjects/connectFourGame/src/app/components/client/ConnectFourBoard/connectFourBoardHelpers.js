@@ -963,6 +963,10 @@ function placeHolder({
     testingAlgorithm({ arrayNodes, positionRow, positionColumn });
 
     console.log(arrayNodes);
+    console.log(row, "row");
+    console.log(column, "column");
+    console.log(positionRow, "positionRow");
+    console.log(positionColumn, "positionColumn");
     const time = window.innerWidth <= 378 ? 1290 : 1340;
     // chip dropped animation
     setTimeout(() => {
@@ -981,6 +985,9 @@ function placeHolder({
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
       countdownTimer(document.getElementById("turn-countdown-selector"));
+      // check for winner here
+      // we want to use positionRow and positionColumn
+      testLoopGoingDown(arrayNodes, positionRow, positionColumn);
     }, time + 100);
 
     // change player
