@@ -987,7 +987,12 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
-      testLoopGoingDown(arrayNodes, positionRow, positionColumn);
+      const goingDownArrayValues = testLoopGoingDown(
+        arrayNodes,
+        positionRow,
+        positionColumn
+      );
+      console.log(goingDownArrayValues, "goingDownArrayValues");
     }, time + 100);
 
     // change player
@@ -1051,6 +1056,8 @@ function placeHolder({
       selectedColumn.setAttribute("data-droppedposition", "");
       // start timer
       countdownTimer(document.getElementById("turn-countdown-selector"));
+      // check for winner here
+      // we want to use positionRow and positionColumn
     }, time + 100);
 
     // change player
@@ -1348,10 +1355,16 @@ function testLoopGoingUp(array, row, column) {
   const arrayOfObjs = [firstObj];
 
   for (let index = row - 1; index != -1; index--) {
+    // if there is no obj at array[index][column] return
+    if (!array[index][column]) {
+      console.log("return");
+      return;
+    }
     if (
       typeof array[index][column] == "object" &&
       array[index][column].hasOwnProperty("playerChip")
     ) {
+      console.log("someting is here");
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
       // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
@@ -1793,3 +1806,118 @@ const arrayOfTestObjs = [
   ],
   // ["two", "one", "two", "two", "two", "two", "two"],
 ];
+
+function convertToText(columnNumberValue) {
+  switch (columnNumberValue) {
+    case "1":
+      return "first";
+    case "2":
+      return "second";
+    case "3":
+      return "third";
+    case "4":
+      return "fourth";
+    case "5":
+      return "fifth";
+    case "6":
+      return "sixth";
+    case "7":
+      return "seventh";
+  }
+}
+
+// row one
+const methodsForRowOne = {
+  first: function ({ arrayNodes, positionRow, positionColumn }) {
+    // goingTopRight, right
+    return "first";
+  },
+  second: function () {
+    // goingLeft, topRight and right
+    return "second";
+  },
+  third: function () {
+    // goingLeft, topRight and right
+    return "third";
+  },
+  fourth: function () {
+    // goingLeft, topLeft, topRight and right
+    return "fourth";
+  },
+  fifth: function () {
+    // goingLeft, topLeft, and right
+    return "fifth";
+  },
+  sixth: function () {
+    // goingLeft, topLeft
+    return "sixth";
+  },
+  seventh: function () {
+    // goingLeft, topLeft
+    return "seventh";
+  },
+};
+
+// row two
+const methodsForRowTwo = {
+  first: function ({ arrayNodes, positionRow, positionColumn }) {
+    // goingTopRight, right
+    return "first";
+  },
+  second: function () {
+    // goingLeft, topRight and right
+    return "second";
+  },
+  third: function () {
+    // goingDownLeft, goingLeft, goingTopLeft, topRight, right, downRight
+    return "third";
+  },
+  fourth: function () {
+    // goingDownLeft, goingLeft, goingTopLeft, topRight, right, downRight
+    return "fourth";
+  },
+  fifth: function () {
+    // goingDownLeft, goingLeft, goingTopLeft, topRight, right, downRight
+    return "fifth";
+  },
+  sixth: function () {
+    // goingLeft, goingTopLeft, right, downRight
+    return "sixth";
+  },
+  seventh: function () {
+    // goingLeft, topLeft
+    return "seventh";
+  },
+};
+
+// row three
+const methodsForRowThree = {
+  first: function ({ arrayNodes, positionRow, positionColumn }) {
+    // goingTopRight, right
+    return "first";
+  },
+  second: function () {
+    // goingDownLeft, left, topLeft, topRight, right, downRight
+    return "second";
+  },
+  third: function () {
+    // goingDownLeft, left, topLeft, topRight, right, downRight
+    return "third";
+  },
+  fourth: function () {
+    // goingDownLeft, left, topLeft, topRight, right, downRight
+    return "fourth";
+  },
+  fifth: function () {
+    // goingDownLeft, left, topLeft, topRight, right, downRight
+    return "fifth";
+  },
+  sixth: function () {
+    // goingDownLeft, left, topLeft, topRight, right, downRight
+    return "sixth";
+  },
+  seventh: function () {
+    // goingLeft, topLeft
+    return "seventh";
+  },
+};
