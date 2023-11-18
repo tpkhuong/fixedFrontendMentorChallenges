@@ -1921,3 +1921,99 @@ const methodsForRowThree = {
     return "seventh";
   },
 };
+
+// row four
+const methodsForRowFour = {
+  first: function ({ arrayNodes, positionRow, positionColumn }) {
+    // goingRight,goingDownRight,goingDown
+    return "first";
+  },
+  second: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "second";
+  },
+  third: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "third";
+  },
+  fourth: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "fourth";
+  },
+  fifth: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "fifth";
+  },
+  sixth: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "sixth";
+  },
+  seventh: function () {
+    // goingDownLeft, goingLeft
+    return "seventh";
+  },
+};
+
+// row five
+const methodsForRowFive = {
+  first: function ({ arrayNodes, positionRow, positionColumn }) {
+    // goingRight,goingDownRight,goingDown
+    return "first";
+  },
+  second: function () {
+    // goingLeft, goingTopLeft, goingRight, goingDownRight, goingDown
+    return "second";
+  },
+  third: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "third";
+  },
+  fourth: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "fourth";
+  },
+  fifth: function () {
+    // goingLeft, goingTopLeft, goingTopRight, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "fifth";
+  },
+  sixth: function () {
+    // goingLeft, goingTopRight, goingRight, goingDown, goingDownLeft
+    return "sixth";
+  },
+  seventh: function () {
+    // goingDownLeft, goingLeft
+    return "seventh";
+  },
+};
+
+// row six
+const methodsForRowSix = {
+  first: function ({ arrayNodes, positionRow, positionColumn }) {
+    // goingRight, goingDownRight, goingDown
+    return "first";
+  },
+  second: function () {
+    // goingLeft, goingRight, goingDownRight, goingDown
+    return "second";
+  },
+  third: function () {
+    // goingLeft, goingRight, goingDownRight, goingDown
+    return "third";
+  },
+  fourth: function () {
+    // goingLeft, goingRight, goingDownRight, goingDown, goingDownLeft
+    return "fourth";
+  },
+  fifth: function () {
+    // goingLeft, goingRight, goingDown, goingDownLeft
+    return "fifth";
+  },
+  sixth: function () {
+    // goingLeft, goingRight, goingDown, goingDownLeft
+    return "sixth";
+  },
+  seventh: function () {
+    // goingLeft, goingDown, goingDownLeft
+    return "seventh";
+  },
+};
