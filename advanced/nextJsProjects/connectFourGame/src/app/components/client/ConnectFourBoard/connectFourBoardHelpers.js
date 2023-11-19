@@ -1685,9 +1685,30 @@ function getValuesOfBothArrays(firstArray, secondArray) {
   }
 }
 
-function connectFourChecker(...rest) {
-  // get values of position of obj in array
-  // use values to find element and apply winning circle attr
+function connectFourChecker({
+  getValuesOfBothArrays,
+  firstArray,
+  secondArray,
+}) {
+  // find out value of calling/executing func getValuesOfBothArrays
+  const isConnectFour = getValuesOfBothArrays(firstArray, secondArray);
+  if (Array.isArray(isConnectFour) && isConnectFour.length == 4) {
+    // when we get here it means isConnectFour is an array with four objs
+    // get values of position of obj in array
+    // use values to find element and apply winning circle attr
+    isConnectFour.forEach(function loopThroughArrayAddAttr(obj, index, list) {
+      const [chipRow, chipColumn] = obj.chipPosition;
+      // select chip element and add winning circle attr
+      document
+        .getElementById(`row-${chipRow}`)
+        .children[chipColumn - 1].children[3].setAttribute(
+          "data-connectfour",
+          "true"
+        );
+    });
+  }
+  // when we get here it means isConnectFour is null meaning the length of the array is less than 4
+  return;
 }
 
 const testArray = [
@@ -1828,7 +1849,13 @@ function convertToText(columnNumberValue) {
 
 // row one
 const methodsForRowOne = {
-  first: function ({ arrayNodes, positionRow, positionColumn }) {
+  first: function ({
+    arrayNodes,
+    positionRow,
+    positionColumn,
+    goingUpRight,
+    testLoopGoingRight,
+  }) {
     // goingTopRight, right
     return "first";
   },
