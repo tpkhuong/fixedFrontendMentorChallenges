@@ -1855,8 +1855,32 @@ const methodsForRowOne = {
     positionColumn,
     goingUpRight,
     testLoopGoingRight,
+    getValuesOfBothArrays,
+    connectFourChecker,
   }) {
     // goingTopRight, right
+    // get chip going up right
+    const arrayOfGoingUpRight = goingUpRight(
+      arrayNodes,
+      positionRow,
+      positionColumn
+    );
+    // get chip going right
+    const arrayOfGoingRight = testLoopGoingRight(
+      arrayNodes,
+      positionRow,
+      positionColumn
+    );
+    // check for connect four with func connectFourChecker
+    connectFourChecker({
+      getValuesOfBothArrays,
+      firstArray: arrayOfGoingUpRight,
+      secondArray: arrayOfGoingRight,
+    });
+    const objValuesOfBothArrays = getValuesOfBothArrays(
+      arrayOfGoingUpRight,
+      arrayOfGoingRight
+    );
     return "first";
   },
   second: function () {
