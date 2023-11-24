@@ -1877,13 +1877,19 @@ const methodsForRowOne = {
       firstArray: arrayOfGoingUpRight,
       secondArray: arrayOfGoingRight,
     });
-    const objValuesOfBothArrays = getValuesOfBothArrays(
-      arrayOfGoingUpRight,
-      arrayOfGoingRight
-    );
+
     return "first";
   },
-  second: function () {
+  second: function ({
+    arrayNodes,
+    positionRow,
+    positionColumn,
+    testLoopGoingLeft,
+    goingUpRight,
+    testLoopGoingRight,
+    getValuesOfBothArrays,
+    connectFourChecker,
+  }) {
     // goingLeft, topRight and right
     return "second";
   },
