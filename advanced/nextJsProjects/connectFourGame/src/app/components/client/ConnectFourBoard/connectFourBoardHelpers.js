@@ -1669,12 +1669,17 @@ function goingDownLeft(array, row, column) {
   return arrayOfObjs;
 }
 
-function getValuesOfBothArrays(firstArray, secondArray) {
+function getValuesForCheckFunc(...subarrays) {
   // combine both arrays values into one array
-  const combinedArrays = [...firstArray, ...secondArray];
+  const objValuesOfArray =
+    subarrays.length == 1
+      ? [...subarrays[0]]
+      : subarrays.length == 2
+      ? [...subarrays[0], ...subarrays[1]]
+      : null;
   // copy first four values
-  const firstFourValues = combinedArrays.slice(0, 4);
-  // if array length is 3, combinedArrays.slice(0,4) will return an array with items at index 0,1,2
+  const firstFourValues = objValuesOfArray.slice(0, 4);
+  // if array length is 3, objValuesOfArray.slice(0,4) will return an array with items at index 0,1,2
   // if length of array is == to 4 return the array
   if (firstFourValues.length == 4) {
     return firstFourValues;
@@ -1685,13 +1690,9 @@ function getValuesOfBothArrays(firstArray, secondArray) {
   }
 }
 
-function connectFourChecker({
-  getValuesOfBothArrays,
-  firstArray,
-  secondArray,
-}) {
-  // find out value of calling/executing func getValuesOfBothArrays
-  const isConnectFour = getValuesOfBothArrays(firstArray, secondArray);
+function connectFourChecker(getValuesForCheckFunc, ...arrays) {
+  // find out value of calling/executing func getValuesForCheckFunc
+  const isConnectFour = getValuesForCheckFunc(...arrays);
   if (Array.isArray(isConnectFour) && isConnectFour.length == 4) {
     // when we get here it means isConnectFour is an array with four objs
     // get values of position of obj in array
@@ -1706,9 +1707,10 @@ function connectFourChecker({
           "true"
         );
     });
+    return "winner";
   }
   // when we get here it means isConnectFour is null meaning the length of the array is less than 4
-  return;
+  return null;
 }
 
 const testArray = [
@@ -1855,7 +1857,7 @@ const methodsForRowOne = {
     positionColumn,
     goingUpRight,
     testLoopGoingRight,
-    getValuesOfBothArrays,
+    getValuesForCheckFunc,
     connectFourChecker,
   }) {
     // goingTopRight, right
@@ -1872,11 +1874,9 @@ const methodsForRowOne = {
       positionColumn
     );
     // check for connect four with func connectFourChecker
-    connectFourChecker({
-      getValuesOfBothArrays,
-      firstArray: arrayOfGoingUpRight,
-      secondArray: arrayOfGoingRight,
-    });
+    connectFourChecker(getValuesForCheckFunc, arrayOfGoingUpRight);
+
+    connectFourChecker(getValuesForCheckFunc, arrayOfGoingRight);
 
     return "first";
   },
@@ -1887,7 +1887,7 @@ const methodsForRowOne = {
     testLoopGoingLeft,
     goingUpRight,
     testLoopGoingRight,
-    getValuesOfBothArrays,
+    getValuesForCheckFunc,
     connectFourChecker,
   }) {
     // goingLeft, topRight and right
@@ -2074,3 +2074,38 @@ const methodsForRowSix = {
     return "seventh";
   },
 };
+
+/**
+ * Testing
+ * **/
+
+function getValuesForCheckFunc(...subarrays) {
+  // combine both arrays values into one array
+  const objValuesOfArray =
+    subarrays.length == 1 ? "winner" : subarrays.length == 2 ? null : null;
+
+  return objValuesOfArray;
+}
+
+function connectFourChecker(getValuesForCheckFunc, ...arrays) {
+  // find out value of calling/executing func getValuesForCheckFunc
+  const isConnectFour = getValuesForCheckFunc(...arrays);
+  if (Array.isArray(isConnectFour) && isConnectFour.length == 4) {
+    // when we get here it means isConnectFour is an array with four objs
+    // get values of position of obj in array
+    // use values to find element and apply winning circle attr
+    isConnectFour.forEach(function loopThroughArrayAddAttr(obj, index, list) {
+      const [chipRow, chipColumn] = obj.chipPosition;
+      // select chip element and add winning circle attr
+      document
+        .getElementById(`row-${chipRow}`)
+        .children[chipColumn - 1].children[3].setAttribute(
+          "data-connectfour",
+          "true"
+        );
+    });
+    return "winner";
+  }
+  // when we get here it means isConnectFour is null meaning the length of the array is less than 4
+  return null;
+}
