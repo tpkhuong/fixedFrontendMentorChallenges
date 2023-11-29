@@ -1874,11 +1874,28 @@ const methodsForRowOne = {
       positionColumn
     );
     // check for connect four with func connectFourChecker
-    connectFourChecker(getValuesForCheckFunc, arrayOfGoingUpRight);
+    // connectFourChecker(getValuesForCheckFunc, arrayOfGoingUpRight);
 
-    connectFourChecker(getValuesForCheckFunc, arrayOfGoingRight);
+    // connectFourChecker(getValuesForCheckFunc, arrayOfGoingRight);
+    // using for loop?
 
-    return "first";
+    const checkForWinner = [
+      connectFourChecker(getValuesForCheckFunc, arrayOfGoingUpRight),
+      connectFourChecker(getValuesForCheckFunc, arrayOfGoingRight),
+    ];
+
+    // use some array method
+    const isWinner = checkForWinner.some(function isThereWinner(
+      element,
+      index,
+      list
+    ) {
+      return element == "winner";
+    });
+
+    if (isWinner) {
+      return;
+    }
   },
   second: function ({
     arrayNodes,
@@ -2079,33 +2096,33 @@ const methodsForRowSix = {
  * Testing
  * **/
 
-function getValuesForCheckFunc(...subarrays) {
-  // combine both arrays values into one array
-  const objValuesOfArray =
-    subarrays.length == 1 ? "winner" : subarrays.length == 2 ? null : null;
+// function getValuesForCheckFunc(...subarrays) {
+//   // combine both arrays values into one array
+//   const objValuesOfArray =
+//     subarrays.length == 1 ? "winner" : subarrays.length == 2 ? null : null;
 
-  return objValuesOfArray;
-}
+//   return objValuesOfArray;
+// }
 
-function connectFourChecker(getValuesForCheckFunc, ...arrays) {
-  // find out value of calling/executing func getValuesForCheckFunc
-  const isConnectFour = getValuesForCheckFunc(...arrays);
-  if (Array.isArray(isConnectFour) && isConnectFour.length == 4) {
-    // when we get here it means isConnectFour is an array with four objs
-    // get values of position of obj in array
-    // use values to find element and apply winning circle attr
-    isConnectFour.forEach(function loopThroughArrayAddAttr(obj, index, list) {
-      const [chipRow, chipColumn] = obj.chipPosition;
-      // select chip element and add winning circle attr
-      document
-        .getElementById(`row-${chipRow}`)
-        .children[chipColumn - 1].children[3].setAttribute(
-          "data-connectfour",
-          "true"
-        );
-    });
-    return "winner";
-  }
-  // when we get here it means isConnectFour is null meaning the length of the array is less than 4
-  return null;
-}
+// function connectFourChecker(getValuesForCheckFunc, ...arrays) {
+//   // find out value of calling/executing func getValuesForCheckFunc
+//   const isConnectFour = getValuesForCheckFunc(...arrays);
+//   if (Array.isArray(isConnectFour) && isConnectFour.length == 4) {
+//     // when we get here it means isConnectFour is an array with four objs
+//     // get values of position of obj in array
+//     // use values to find element and apply winning circle attr
+//     isConnectFour.forEach(function loopThroughArrayAddAttr(obj, index, list) {
+//       const [chipRow, chipColumn] = obj.chipPosition;
+//       // select chip element and add winning circle attr
+//       document
+//         .getElementById(`row-${chipRow}`)
+//         .children[chipColumn - 1].children[3].setAttribute(
+//           "data-connectfour",
+//           "true"
+//         );
+//     });
+//     return "winner";
+//   }
+//   // when we get here it means isConnectFour is null meaning the length of the array is less than 4
+//   return null;
+// }
