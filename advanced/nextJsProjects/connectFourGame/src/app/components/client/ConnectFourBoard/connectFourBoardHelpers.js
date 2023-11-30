@@ -1879,23 +1879,31 @@ const methodsForRowOne = {
     // connectFourChecker(getValuesForCheckFunc, arrayOfGoingRight);
     // using for loop?
 
-    const checkForWinner = [
-      connectFourChecker(getValuesForCheckFunc, arrayOfGoingUpRight),
-      connectFourChecker(getValuesForCheckFunc, arrayOfGoingRight),
-    ];
+    const subarrays = [arrayOfGoingUpRight, arrayOfGoingRight];
 
-    // use some array method
-    const isWinner = checkForWinner.some(function isThereWinner(
-      element,
-      index,
-      list
-    ) {
-      return element == "winner";
-    });
-
-    if (isWinner) {
-      return;
+    for (let index = 0; index < subarrays.length; index++) {
+      // call connectFourChecker
+      const isWinner = connectFourChecker(
+        getValuesForCheckFunc,
+        subarrays[index]
+      );
+      // when connectFourChecker return "winner" return
+      if (isWinner) {
+        return;
+      }
     }
+    // use some array method
+    // const isWinner = checkForWinner.some(function isThereWinner(
+    //   element,
+    //   index,
+    //   list
+    // ) {
+    //   return element == "winner";
+    // });
+
+    // if (isWinner) {
+    //   return;
+    // }
   },
   second: function ({
     arrayNodes,
