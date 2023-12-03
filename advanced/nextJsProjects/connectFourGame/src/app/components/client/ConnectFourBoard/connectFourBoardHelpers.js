@@ -26,7 +26,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     [null, null, null, null, null, null, null],
   ];
 
-  const objOfCounter = {
+  const objOfCounters = {
     columnOne: 0,
     columnTwo: 0,
     columnThree: 0,
@@ -34,6 +34,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     columnFive: 0,
     columnSix: 0,
     columnSeven: 0,
+    moveCounter: 0,
   };
 
   const obj = {
@@ -47,16 +48,16 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
   };
 
   const objOfMethods = {
-    // use objOfCounter and value of property of obj passed into
+    // use objOfCounters and value of property of obj passed into
     // objOfMethods func call. For example {first,second, third etc}
     first: ({ first }) => {
       console.log(first);
       // there is no seventh row, return
-      console.log(objOfCounter);
-      if (objOfCounter.columnOne == 7) return;
+      console.log(objOfCounters);
+      if (objOfCounters.columnOne == 7) return;
       placeHolder({
         animateColumn: "animation-column-first",
-        columnObj: objOfCounter,
+        columnObj: objOfCounters,
         columnCounter: "columnOne",
         chipNodeColumnValue: first,
         childNodeValue: 0,
@@ -64,7 +65,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         countdownTimer,
       });
       // // add 1 to column counter
-      // objOfCounter.columnOne += 1;
+      // objOfCounters.columnOne += 1;
       // // get value of data-playerturn attr of main element with id "game-board-bg-selector"
       // const currentPlayer = document
       //   .getElementById("game-board-bg-selector")
@@ -74,23 +75,23 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // // access position in arrayOfChipNodes here
       // // console.log(
       // //   document.querySelector(
-      // //     `#row-${objOfCounter.columnOne} [data-chipselector='${objOfCounter.columnOne}-${first}']`
+      // //     `#row-${objOfCounters.columnOne} [data-chipselector='${objOfCounters.columnOne}-${first}']`
       // //   )
       // // );
 
       // const chipNodeElement = document.querySelector(
-      //   `#row-${objOfCounter.columnOne} [data-chipselector='${objOfCounter.columnOne}-${first}']`
+      //   `#row-${objOfCounters.columnOne} [data-chipselector='${objOfCounters.columnOne}-${first}']`
       // );
 
       // // console.log(chipNodeElement.);
       // // set value of data-droppedposition attr based on current counter
       // firstColumn.setAttribute(
       //   "data-droppedposition",
-      //   `${objOfCounter.columnOne}`
+      //   `${objOfCounters.columnOne}`
       // );
       // // show player chip
       // // row 6
-      // if (objOfCounter.columnOne == 6) {
+      // if (objOfCounters.columnOne == 6) {
       //   console.log(chipNodeElement, "row 6");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -114,7 +115,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 5
-      // if (objOfCounter.columnOne == 5) {
+      // if (objOfCounters.columnOne == 5) {
       //   console.log(chipNodeElement, "row 5");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -143,7 +144,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 4
-      // if (objOfCounter.columnOne == 4) {
+      // if (objOfCounters.columnOne == 4) {
       //   console.log(chipNodeElement, "row 4");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -172,7 +173,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 3
-      // if (objOfCounter.columnOne == 3) {
+      // if (objOfCounters.columnOne == 3) {
       //   console.log(chipNodeElement, "row 3");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -201,7 +202,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 2
-      // if (objOfCounter.columnOne == 2) {
+      // if (objOfCounters.columnOne == 2) {
       //   console.log(chipNodeElement, "row 2");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -230,7 +231,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 1
-      // if (objOfCounter.columnOne == 1) {
+      // if (objOfCounters.columnOne == 1) {
       //   console.log(chipNodeElement, "row 1");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -260,10 +261,10 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     second: ({ second }) => {
       console.log(second);
       // there is no seventh row, return
-      if (objOfCounter.columnTwo == 7) return;
+      if (objOfCounters.columnTwo == 7) return;
       placeHolder({
         animateColumn: "animation-column-second",
-        columnObj: objOfCounter,
+        columnObj: objOfCounters,
         columnCounter: "columnTwo",
         chipNodeColumnValue: second,
         childNodeValue: 1,
@@ -271,22 +272,22 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
         countdownTimer,
       });
       // // add 1 to column counter
-      // objOfCounter.columnTwo += 1;
+      // objOfCounters.columnTwo += 1;
       // // select second column
       // const secondColumn = document.getElementById("animation-column-second");
 
       // const chipNodeElement = document.querySelector(
-      //   `#row-${objOfCounter.columnTwo} [data-chipselector='${objOfCounter.columnTwo}-${second}']`
+      //   `#row-${objOfCounters.columnTwo} [data-chipselector='${objOfCounters.columnTwo}-${second}']`
       // );
 
       // // set value of data-droppedposition attr based on current counter
       // secondColumn.setAttribute(
       //   "data-droppedposition",
-      //   `${objOfCounter.columnTwo}`
+      //   `${objOfCounters.columnTwo}`
       // );
       // // show player chip
       // // row 6
-      // if (objOfCounter.columnTwo == 6) {
+      // if (objOfCounters.columnTwo == 6) {
       //   console.log(chipNodeElement, "row 6");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -310,7 +311,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 5
-      // if (objOfCounter.columnTwo == 5) {
+      // if (objOfCounters.columnTwo == 5) {
       //   console.log(chipNodeElement, "row 5");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -339,7 +340,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 4
-      // if (objOfCounter.columnTwo == 4) {
+      // if (objOfCounters.columnTwo == 4) {
       //   console.log(chipNodeElement, "row 4");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -368,7 +369,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 3
-      // if (objOfCounter.columnTwo == 3) {
+      // if (objOfCounters.columnTwo == 3) {
       //   console.log(chipNodeElement, "row 3");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -397,7 +398,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 2
-      // if (objOfCounter.columnTwo == 2) {
+      // if (objOfCounters.columnTwo == 2) {
       //   console.log(chipNodeElement, "row 2");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -426,7 +427,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 1
-      // if (objOfCounter.columnTwo == 1) {
+      // if (objOfCounters.columnTwo == 1) {
       //   console.log(chipNodeElement, "row 1");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -456,33 +457,33 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     third: ({ third }) => {
       console.log(third);
       // there is no seventh row, return
-      if (objOfCounter.columnThree == 7) return;
+      if (objOfCounters.columnThree == 7) return;
       placeHolder({
         animateColumn: "animation-column-third",
-        columnObj: objOfCounter,
+        columnObj: objOfCounters,
         columnCounter: "columnThree",
         chipNodeColumnValue: third,
         childNodeValue: 2,
         arrayNodes: arrayOfChipNodes,
         countdownTimer,
       });
-      // objOfCounter.columnThree += 1;
+      // objOfCounters.columnThree += 1;
 
       // // select third column
       // const thirdColumn = document.getElementById("animation-column-third");
 
       // const chipNodeElement = document.querySelector(
-      //   `#row-${objOfCounter.columnThree} [data-chipselector='${objOfCounter.columnThree}-${third}']`
+      //   `#row-${objOfCounters.columnThree} [data-chipselector='${objOfCounters.columnThree}-${third}']`
       // );
 
       // // set value of data-droppedposition attr based on current counter
       // thirdColumn.setAttribute(
       //   "data-droppedposition",
-      //   `${objOfCounter.columnThree}`
+      //   `${objOfCounters.columnThree}`
       // );
       // // show player chip
       // // row 6
-      // if (objOfCounter.columnThree == 6) {
+      // if (objOfCounters.columnThree == 6) {
       //   console.log(chipNodeElement, "row 6");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -506,7 +507,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 5
-      // if (objOfCounter.columnThree == 5) {
+      // if (objOfCounters.columnThree == 5) {
       //   console.log(chipNodeElement, "row 5");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -535,7 +536,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 4
-      // if (objOfCounter.columnThree == 4) {
+      // if (objOfCounters.columnThree == 4) {
       //   console.log(chipNodeElement, "row 4");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -564,7 +565,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 3
-      // if (objOfCounter.columnThree == 3) {
+      // if (objOfCounters.columnThree == 3) {
       //   console.log(chipNodeElement, "row 3");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -593,7 +594,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 2
-      // if (objOfCounter.columnThree == 2) {
+      // if (objOfCounters.columnThree == 2) {
       //   console.log(chipNodeElement, "row 2");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -622,7 +623,7 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
       // }
 
       // // row 1
-      // if (objOfCounter.columnThree == 1) {
+      // if (objOfCounters.columnThree == 1) {
       //   console.log(chipNodeElement, "row 1");
       //   const [row, column] = chipNodeElement
       //     .getAttribute("data-chipselector")
@@ -652,10 +653,10 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     fourth: ({ fourth }) => {
       console.log(fourth);
       // there is no seventh row, return
-      if (objOfCounter.columnFour == 7) return;
+      if (objOfCounters.columnFour == 7) return;
       placeHolder({
         animateColumn: "animation-column-fourth",
-        columnObj: objOfCounter,
+        columnObj: objOfCounters,
         columnCounter: "columnFour",
         chipNodeColumnValue: fourth,
         childNodeValue: 3,
@@ -666,10 +667,10 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     fifth: ({ fifth }) => {
       console.log(fifth);
       // there is no seventh row, return
-      if (objOfCounter.columnFive == 7) return;
+      if (objOfCounters.columnFive == 7) return;
       placeHolder({
         animateColumn: "animation-column-fifth",
-        columnObj: objOfCounter,
+        columnObj: objOfCounters,
         columnCounter: "columnFive",
         chipNodeColumnValue: fifth,
         childNodeValue: 4,
@@ -680,10 +681,10 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     sixth: ({ sixth }) => {
       console.log(sixth);
       // there is no seventh row, return
-      if (objOfCounter.columnSix == 7) return;
+      if (objOfCounters.columnSix == 7) return;
       placeHolder({
         animateColumn: "animation-column-sixth",
-        columnObj: objOfCounter,
+        columnObj: objOfCounters,
         columnCounter: "columnSix",
         chipNodeColumnValue: sixth,
         childNodeValue: 5,
@@ -694,10 +695,10 @@ function rowCounter({ placeHolder, movePointer, countdownTimer }) {
     seventh: ({ seventh }) => {
       console.log(seventh);
       // there is no seventh row, return
-      if (objOfCounter.columnSeven == 7) return;
+      if (objOfCounters.columnSeven == 7) return;
       placeHolder({
         animateColumn: "animation-column-seventh",
-        columnObj: objOfCounter,
+        columnObj: objOfCounters,
         columnCounter: "columnSeven",
         chipNodeColumnValue: seventh,
         childNodeValue: 6,
@@ -1219,14 +1220,19 @@ function placeHolder({
       // check for winner here
       // we want to use positionRow and positionColumn
       // start here, work on argument passed into methodsForRowOne func call/execution
+      // only run algorithm below when objOfCounters.moveCounter == || > 7
       methodsForRowOne[convertToText(column)]({
         arrayNodes,
         positionRow,
         positionColumn,
+        testLoopGoingUp,
+        testLoopGoingDown,
         testLoopGoingLeft,
-        goingUpLeft,
-        goingUpRight,
         testLoopGoingRight,
+        goingUpLeft,
+        goingDownRight,
+        goingUpRight,
+        goingDownLeft,
         getValuesForCheckFunc,
         connectFourChecker,
       });
