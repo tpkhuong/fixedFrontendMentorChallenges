@@ -781,6 +781,12 @@ function placeHolder({
   methodsForRowFive,
   methodsForRowSix,
 }) {
+  // start counting each turns here
+  // columnObj.moveCounter
+  // if (columnObj.moveCounter < 8) {
+  //   // add 1 to columnObj.moveCounter
+  //   columnObj.moveCounter++;
+  // }
   // get current player
   console.log("hello");
   const currentPlayerChip = document
@@ -814,7 +820,11 @@ function placeHolder({
   //     chipNodeColumnValue - 1
   //   ]
   // );
-
+  console.log(
+    "what is this",
+    document.getElementById(`row-${columnObj[columnCounter]}`)
+  );
+  console.log("chipNodeColumnValue", chipNodeColumnValue);
   console.log(chipNodeElement, "chipNodeElement");
   // set value of data-droppedposition attr based on current counter
   selectedColumn.setAttribute(
@@ -875,6 +885,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      // if (columnObj.moveCounter == 8) {
+      //   console.log("this is the 8th move");
+      // }
     }, 150);
 
     // change player
@@ -940,6 +953,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      // if (columnObj.moveCounter == 8) {
+      //   console.log("this is the 8th move");
+      // }
     }, time + 100);
 
     // change player
@@ -1009,13 +1025,15 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
-
+      // if (columnObj.moveCounter == 8) {
+      //   console.log("this is the 8th move");
+      // }
       // const goingDownArrayValues = testLoopGoingDown(
       //   arrayNodes,
       //   positionRow,
       //   positionColumn
       // );
-      console.log(goingDownArrayValues, "goingDownArrayValues");
+      // console.log(goingDownArrayValues, "goingDownArrayValues");
     }, time + 100);
 
     // change player
@@ -1081,6 +1099,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      // if (columnObj.moveCounter == 8) {
+      //   console.log("this is the 8th move");
+      // }
     }, time + 100);
 
     // change player
@@ -1147,6 +1168,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      // if (columnObj.moveCounter == 8) {
+      //   console.log("this is the 8th move");
+      // }
     }, time + 100);
 
     // change player
@@ -1221,21 +1245,24 @@ function placeHolder({
       // we want to use positionRow and positionColumn
       // start here, work on argument passed into methodsForRowOne func call/execution
       // only run algorithm below when objOfCounters.moveCounter == || > 7
-      methodsForRowOne[convertToText(column)]({
-        arrayNodes,
-        positionRow,
-        positionColumn,
-        testLoopGoingUp,
-        testLoopGoingDown,
-        testLoopGoingLeft,
-        testLoopGoingRight,
-        goingUpLeft,
-        goingDownRight,
-        goingUpRight,
-        goingDownLeft,
-        getValuesForCheckFunc,
-        connectFourChecker,
-      });
+      // if (columnObj.moveCounter == 8) {
+      //   console.log("this is the 8th move");
+      // }
+      // methodsForRowOne[convertToText(column)]({
+      //   arrayNodes,
+      //   positionRow,
+      //   positionColumn,
+      //   testLoopGoingUp,
+      //   testLoopGoingDown,
+      //   testLoopGoingLeft,
+      //   testLoopGoingRight,
+      //   goingUpLeft,
+      //   goingDownRight,
+      //   goingUpRight,
+      //   goingDownLeft,
+      //   getValuesForCheckFunc,
+      //   connectFourChecker,
+      // });
     }, time + 150);
 
     // change player
@@ -1315,9 +1342,16 @@ function setPlayerChip({
       "arrayNodes[positionRow][positionColumn]",
       arrayNodes[positionRow][positionColumn]
     );
-    console.log(
-      document.getElementById(`row-${positionRow}`).children[positionColumn - 1]
-    );
+    /**
+     * remove was giving errors
+     * **/
+    // console.log("before", document.getElementById(`row-${positionRow}`));
+    // console.log(
+    //   document.getElementById(`row-${positionRow}`).children[positionColumn - 1]
+    // );
+    /**
+     * remove was giving errors
+     * **/
     console.log("hello this is chip.");
     // change value null to string "one" or "two"
     // needs to be an obj with player and position
