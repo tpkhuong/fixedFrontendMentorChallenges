@@ -885,9 +885,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
-      // if (columnObj.moveCounter == 8) {
-      //   console.log("this is the 8th move");
-      // }
+      if (columnObj.moveCounter == 8) {
+        console.log("this is the 8th move");
+      }
     }, 150);
 
     // change player
@@ -953,9 +953,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
-      // if (columnObj.moveCounter == 8) {
-      //   console.log("this is the 8th move");
-      // }
+      if (columnObj.moveCounter == 8) {
+        console.log("this is the 8th move");
+      }
     }, time + 100);
 
     // change player
@@ -1025,9 +1025,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
-      // if (columnObj.moveCounter == 8) {
-      //   console.log("this is the 8th move");
-      // }
+      if (columnObj.moveCounter == 8) {
+        console.log("this is the 8th move");
+      }
       // const goingDownArrayValues = testLoopGoingDown(
       //   arrayNodes,
       //   positionRow,
@@ -1099,9 +1099,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
-      // if (columnObj.moveCounter == 8) {
-      //   console.log("this is the 8th move");
-      // }
+      if (columnObj.moveCounter == 8) {
+        console.log("this is the 8th move");
+      }
     }, time + 100);
 
     // change player
@@ -1168,9 +1168,9 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
-      // if (columnObj.moveCounter == 8) {
-      //   console.log("this is the 8th move");
-      // }
+      if (columnObj.moveCounter == 8) {
+        console.log("this is the 8th move");
+      }
     }, time + 100);
 
     // change player
@@ -1245,9 +1245,9 @@ function placeHolder({
       // we want to use positionRow and positionColumn
       // start here, work on argument passed into methodsForRowOne func call/execution
       // only run algorithm below when objOfCounters.moveCounter == || > 7
-      // if (columnObj.moveCounter == 8) {
-      //   console.log("this is the 8th move");
-      // }
+      if (columnObj.moveCounter == 8) {
+        console.log("this is the 8th move");
+      }
       // methodsForRowOne[convertToText(column)]({
       //   arrayNodes,
       //   positionRow,
