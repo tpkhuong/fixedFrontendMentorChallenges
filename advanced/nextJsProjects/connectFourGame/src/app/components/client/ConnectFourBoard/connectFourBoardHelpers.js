@@ -783,10 +783,16 @@ function placeHolder({
 }) {
   // start counting each turns here
   // columnObj.moveCounter
+  /**
+   * uncomment these code
+   * **/
   // if (columnObj.moveCounter < 8) {
   //   // add 1 to columnObj.moveCounter
   //   columnObj.moveCounter++;
   // }
+  /**
+   * uncomment these code
+   * **/
   // get current player
   console.log("hello");
   const currentPlayerChip = document
@@ -885,6 +891,7 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      console.log(columnObj.moveCounter, "columnObj.moveCounter");
       if (columnObj.moveCounter == 8) {
         console.log("this is the 8th move");
       }
@@ -953,6 +960,7 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      console.log(columnObj.moveCounter, "columnObj.moveCounter");
       if (columnObj.moveCounter == 8) {
         console.log("this is the 8th move");
       }
@@ -1025,6 +1033,7 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      console.log(columnObj.moveCounter, "columnObj.moveCounter");
       if (columnObj.moveCounter == 8) {
         console.log("this is the 8th move");
       }
@@ -1099,6 +1108,7 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      console.log(columnObj.moveCounter, "columnObj.moveCounter");
       if (columnObj.moveCounter == 8) {
         console.log("this is the 8th move");
       }
@@ -1168,6 +1178,7 @@ function placeHolder({
       countdownTimer(document.getElementById("turn-countdown-selector"));
       // check for winner here
       // we want to use positionRow and positionColumn
+      console.log(columnObj.moveCounter, "columnObj.moveCounter");
       if (columnObj.moveCounter == 8) {
         console.log("this is the 8th move");
       }
@@ -1245,6 +1256,7 @@ function placeHolder({
       // we want to use positionRow and positionColumn
       // start here, work on argument passed into methodsForRowOne func call/execution
       // only run algorithm below when objOfCounters.moveCounter == || > 7
+      console.log(columnObj.moveCounter, "columnObj.moveCounter");
       if (columnObj.moveCounter == 8) {
         console.log("this is the 8th move");
       }
