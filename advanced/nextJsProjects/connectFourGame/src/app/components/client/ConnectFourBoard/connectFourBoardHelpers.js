@@ -1,3 +1,13 @@
+// create function to combine two arrays
+
+const verticalChips = createTwoWayArraysFunctions();
+
+const horizontalChips = createTwoWayArraysFunctions();
+
+const diagonalTopLeftBottomRightChips = createTwoWayArraysFunctions();
+
+const diagonalTopRightBottomLeftChips = createTwoWayArraysFunctions();
+
 // row one
 const methodsForRowOne = {
   first: function ({
@@ -63,6 +73,7 @@ const methodsForRowOne = {
     testLoopGoingRight,
     getValuesForCheckFunc,
     connectFourChecker,
+    horizontalChips,
   }) {
     // goingLeft, topRight and right
     // get chips going left
@@ -87,13 +98,19 @@ const methodsForRowOne = {
      * combine arrays then pass array into subarrays before passing the array into connectFourChecker
      * **/
     // using for loop
+    console.log("horizontalChips", horizontalChips);
 
     const subarrays = [
-      arrayOfChipsGoingLeft,
+      horizontalChips(arrayOfChipsGoingLeft, arrayOfChipsGoingRight),
       arrayOfChipsGoingTopRight,
-      arrayOfChipsGoingRight,
     ];
-
+    /**
+     * start here
+     * **/
+    console.log("subarrays", subarrays);
+    /**
+     * start here
+     * **/
     for (let index = 0; index < subarrays.length; index++) {
       // call connectFourChecker
       const isWinner = connectFourChecker(
@@ -116,6 +133,7 @@ const methodsForRowOne = {
     testLoopGoingRight,
     getValuesForCheckFunc,
     connectFourChecker,
+    horizontalChips,
   }) {
     // goingLeft, topRight and right
     // get chips going left
@@ -138,12 +156,21 @@ const methodsForRowOne = {
     );
     // using for loop
 
+    console.log("horizontalChips", horizontalChips);
     const subarrays = [
-      arrayOfChipsGoingLeft,
+      horizontalChips(arrayOfChipsGoingLeft, arrayOfChipsGoingRight),
       arrayOfChipsGoingTopRight,
-      arrayOfChipsGoingRight,
     ];
-
+    /**
+     * start here
+     * **/
+    console.log("subarrays", subarrays);
+    /**
+     * start here
+     * **/
+    /**
+     * change this, it is a nested loop
+     * **/
     for (let index = 0; index < subarrays.length; index++) {
       // call connectFourChecker
       const isWinner = connectFourChecker(
@@ -155,6 +182,9 @@ const methodsForRowOne = {
         return;
       }
     }
+    /**
+     * change this, it is a nested loop
+     * **/
     return "third";
   },
   fourth: function ({
@@ -167,6 +197,7 @@ const methodsForRowOne = {
     testLoopGoingRight,
     getValuesForCheckFunc,
     connectFourChecker,
+    horizontalChips,
   }) {
     // goingLeft, topLeft, topRight and right
     // get chips going left
@@ -196,10 +227,9 @@ const methodsForRowOne = {
     // using for loop
 
     const subarrays = [
-      arrayOfChipsGoingLeft,
+      horizontalChips(arrayOfChipsGoingLeft, arrayOfChipsGoingRight),
       arrayOfChipsGoingTopLeft,
       arrayOfChipsGoingTopRight,
-      arrayOfChipsGoingRight,
     ];
 
     for (let index = 0; index < subarrays.length; index++) {
@@ -224,6 +254,7 @@ const methodsForRowOne = {
     testLoopGoingRight,
     getValuesForCheckFunc,
     connectFourChecker,
+    horizontalChips,
   }) {
     // goingLeft, topLeft, and right
     // get chips going left
@@ -248,9 +279,8 @@ const methodsForRowOne = {
     // using for loop
 
     const subarrays = [
-      arrayOfChipsGoingLeft,
+      horizontalChips(arrayOfChipsGoingLeft, arrayOfChipsGoingRight),
       arrayOfChipsGoingTopLeft,
-      arrayOfChipsGoingRight,
     ];
 
     for (let index = 0; index < subarrays.length; index++) {
@@ -531,10 +561,14 @@ function rowCounter({
   methodsForRowFour,
   methodsForRowFive,
   methodsForRowSix,
+  verticalChips,
+  horizontalChips,
+  diagonalTopLeftBottomRightChips,
+  diagonalTopRightBottomLeftChips,
 }) {
   const checkForWinner = {
     diagonalChips: [],
-    verticalChips: [],
+    verticalChipss: [],
     horizontalChips: [],
   };
 
@@ -613,6 +647,10 @@ function rowCounter({
         methodsForRowFour,
         methodsForRowFive,
         methodsForRowSix,
+        verticalChips,
+        horizontalChips,
+        diagonalTopLeftBottomRightChips,
+        diagonalTopRightBottomLeftChips,
       });
       // // add 1 to column counter
       // objOfCounters.columnOne += 1;
@@ -837,6 +875,10 @@ function rowCounter({
         methodsForRowFour,
         methodsForRowFive,
         methodsForRowSix,
+        verticalChips,
+        horizontalChips,
+        diagonalTopLeftBottomRightChips,
+        diagonalTopRightBottomLeftChips,
       });
       // // add 1 to column counter
       // objOfCounters.columnTwo += 1;
@@ -1050,6 +1092,10 @@ function rowCounter({
         methodsForRowFour,
         methodsForRowFive,
         methodsForRowSix,
+        verticalChips,
+        horizontalChips,
+        diagonalTopLeftBottomRightChips,
+        diagonalTopRightBottomLeftChips,
       });
       // objOfCounters.columnThree += 1;
 
@@ -1263,6 +1309,10 @@ function rowCounter({
         methodsForRowFour,
         methodsForRowFive,
         methodsForRowSix,
+        verticalChips,
+        horizontalChips,
+        diagonalTopLeftBottomRightChips,
+        diagonalTopRightBottomLeftChips,
       });
     },
     fifth: ({ fifth }) => {
@@ -1294,6 +1344,10 @@ function rowCounter({
         methodsForRowFour,
         methodsForRowFive,
         methodsForRowSix,
+        verticalChips,
+        horizontalChips,
+        diagonalTopLeftBottomRightChips,
+        diagonalTopRightBottomLeftChips,
       });
     },
     sixth: ({ sixth }) => {
@@ -1325,6 +1379,10 @@ function rowCounter({
         methodsForRowFour,
         methodsForRowFive,
         methodsForRowSix,
+        verticalChips,
+        horizontalChips,
+        diagonalTopLeftBottomRightChips,
+        diagonalTopRightBottomLeftChips,
       });
     },
     seventh: ({ seventh }) => {
@@ -1356,6 +1414,10 @@ function rowCounter({
         methodsForRowFour,
         methodsForRowFive,
         methodsForRowSix,
+        verticalChips,
+        horizontalChips,
+        diagonalTopLeftBottomRightChips,
+        diagonalTopRightBottomLeftChips,
       });
     },
   };
@@ -1410,6 +1472,10 @@ export const checking = rowCounter({
   methodsForRowFour,
   methodsForRowFive,
   methodsForRowSix,
+  verticalChips,
+  horizontalChips,
+  diagonalTopLeftBottomRightChips,
+  diagonalTopRightBottomLeftChips,
 });
 
 // obj for each node in our matrix
@@ -1449,6 +1515,10 @@ function placeHolder({
   methodsForRowFour,
   methodsForRowFive,
   methodsForRowSix,
+  verticalChips,
+  horizontalChips,
+  diagonalTopLeftBottomRightChips,
+  diagonalTopRightBottomLeftChips,
 }) {
   // start counting each turns here
   // columnObj.moveCounter
@@ -1939,6 +2009,10 @@ function placeHolder({
           goingDownLeft,
           getValuesForCheckFunc,
           connectFourChecker,
+          verticalChips,
+          horizontalChips,
+          diagonalTopLeftBottomRightChips,
+          diagonalTopRightBottomLeftChips,
         });
       }
     }, time + 150);
@@ -2485,7 +2559,22 @@ function goingDownLeft(array, row, column) {
   return arrayOfObjs;
 }
 
+/**
+ * combine two arrays functions
+ * **/
+
+function createTwoWayArraysFunctions() {
+  return function innerFunc(firstArray, secondArray) {
+    return [...firstArray, ...secondArray];
+  };
+}
+
+/**
+ * combine two arrays functions
+ * **/
+
 function getValuesForCheckFunc(array) {
+  console.log("get values", array);
   // combine both arrays values into one array
   // const objValuesOfArray =
   //   subarrays.length == 1
@@ -2507,26 +2596,28 @@ function getValuesForCheckFunc(array) {
 }
 
 function connectFourChecker(getValuesForCheckFunc, arrays) {
+  console.log("this is checker");
   // find out value of calling/executing func getValuesForCheckFunc
   const isConnectFour = getValuesForCheckFunc(arrays);
-  if (Array.isArray(isConnectFour) && isConnectFour.length == 4) {
-    // when we get here it means isConnectFour is an array with four objs
-    // get values of position of obj in array
-    // use values to find element and apply winning circle attr
-    isConnectFour.forEach(function loopThroughArrayAddAttr(obj, index, list) {
-      const [chipRow, chipColumn] = obj.chipPosition;
-      // select chip element and add winning circle attr
-      document
-        .getElementById(`row-${chipRow}`)
-        .children[chipColumn - 1].children[3].setAttribute(
-          "data-connectfour",
-          "true"
-        );
-    });
-    return "winner";
-  }
-  // when we get here it means isConnectFour is null meaning the length of the array is less than 4
-  return null;
+  console.log(isConnectFour, "isConnectFour");
+  // if (Array.isArray(isConnectFour) && isConnectFour.length == 4) {
+  //   // when we get here it means isConnectFour is an array with four objs
+  //   // get values of position of obj in array
+  //   // use values to find element and apply winning circle attr
+  //   isConnectFour.forEach(function loopThroughArrayAddAttr(obj, index, list) {
+  //     const [chipRow, chipColumn] = obj.chipPosition;
+  //     // select chip element and add winning circle attr
+  //     document
+  //       .getElementById(`row-${chipRow}`)
+  //       .children[chipColumn - 1].children[3].setAttribute(
+  //         "data-connectfour",
+  //         "true"
+  //       );
+  //   });
+  //   return "winner";
+  // }
+  // // when we get here it means isConnectFour is null meaning the length of the array is less than 4
+  // return null;
 }
 
 const testArray = [
