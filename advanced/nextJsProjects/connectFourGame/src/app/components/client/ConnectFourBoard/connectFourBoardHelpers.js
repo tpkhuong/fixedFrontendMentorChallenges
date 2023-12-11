@@ -135,6 +135,9 @@ const methodsForRowOne = {
     connectFourChecker,
     horizontalChips,
   }) {
+    console.log("arrayNodes", arrayNodes);
+    console.log("positionRow", positionRow);
+    console.log("positionColumn", positionColumn);
     // goingLeft, topRight and right
     // get chips going left
     const arrayOfChipsGoingLeft = testLoopGoingLeft(
@@ -142,18 +145,21 @@ const methodsForRowOne = {
       positionRow,
       positionColumn
     );
+    console.log(arrayOfChipsGoingLeft, "arrayOfChipsGoingLeft");
     // get chips going top right
     const arrayOfChipsGoingTopRight = goingUpRight(
       arrayNodes,
       positionRow,
       positionColumn
     );
+    // console.log(arrayOfChipsGoingLeft,"arrayOfChipsGoingLeft");
     // get chips going right
     const arrayOfChipsGoingRight = testLoopGoingRight(
       arrayNodes,
       positionRow,
       positionColumn
     );
+    console.log(arrayOfChipsGoingRight, "arrayOfChipsGoingRight");
     // using for loop
 
     console.log("horizontalChips", horizontalChips);
@@ -2271,6 +2277,9 @@ function testLoopGoingDown(array, row, column) {
 function testLoopGoingLeft(array, row, column) {
   // each array[row][column] is an obj
   // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
+  console.log("array", array);
+  console.log("row", row);
+  console.log("column", column);
   // break
   const rowArray = array[row];
 
@@ -2279,7 +2288,7 @@ function testLoopGoingLeft(array, row, column) {
 
   for (let index = column - 1; index != -1; index--) {
     // if there is no obj at array[index][column] or array[index][column] is null return
-    if (array[index][column] == null) {
+    if (rowArray[index] == null) {
       // return arrayOfObjs since there will always be an obj in arrayOfObjs
       // even though the value of array[index][column] is null
       console.log("return");
@@ -2319,6 +2328,9 @@ function testLoopGoingRight(array, row, column) {
   // each array[row][column] is an obj
   // loop through array add chip to arrayOfObjs if last value in array does not match currentVale of our loop
   // break
+  console.log("array", array);
+  console.log("row", row);
+  console.log("column", column);
   const rowArray = array[row];
 
   const firstObj = array[row][column];
@@ -2326,7 +2338,7 @@ function testLoopGoingRight(array, row, column) {
 
   for (let index = column + 1; index < rowArray.length; index++) {
     // if there is no obj at array[index][column] or array[index][column] is null return
-    if (array[index][column] == null) {
+    if (rowArray[index] == null) {
       // return arrayOfObjs since there will always be an obj in arrayOfObjs
       // even though the value of array[index][column] is null
       console.log("return");
@@ -2334,8 +2346,8 @@ function testLoopGoingRight(array, row, column) {
     }
 
     if (
-      typeof rowArray[column] == "object" &&
-      rowArray[column].hasOwnProperty("playerChip")
+      typeof rowArray[index] == "object" &&
+      rowArray[index].hasOwnProperty("playerChip")
     ) {
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
@@ -2375,7 +2387,7 @@ function goingUpLeft(array, row, column) {
     index--, columnIndex--
   ) {
     // if there is no obj at array[index][column] or array[index][column] is null return
-    if (array[index][column] == null) {
+    if (array[index][columnIndex] == null) {
       // return arrayOfObjs since there will always be an obj in arrayOfObjs
       // even though the value of array[index][column] is null
       console.log("return");
