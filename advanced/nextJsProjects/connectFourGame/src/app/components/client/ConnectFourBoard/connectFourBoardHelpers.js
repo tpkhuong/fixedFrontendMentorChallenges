@@ -2203,7 +2203,7 @@ function testLoopGoingUp(array, row, column) {
       typeof array[index][column] == "object" &&
       array[index][column].hasOwnProperty("playerChip")
     ) {
-      console.log("someting is here");
+      console.log("something is here");
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
       // when user click on a column our algorithm will make an obj with properties "playerChip" and "position"
@@ -2296,8 +2296,8 @@ function testLoopGoingLeft(array, row, column) {
     }
 
     if (
-      typeof rowArray[column] == "object" &&
-      rowArray[column].hasOwnProperty("playerChip")
+      typeof rowArray[index] == "object" &&
+      rowArray[index].hasOwnProperty("playerChip")
     ) {
       // only run algorithm if value in an is an "object" and has property "playerChip"
       // check if the value at array indexes is an obj in our loop
@@ -2436,7 +2436,7 @@ function goingDownRight(array, row, column) {
     index++, columnIndex++
   ) {
     // if there is no obj at array[index][column] or array[index][column] is null return
-    if (array[index][column] == null) {
+    if (array[index][columnIndex] == null) {
       // return arrayOfObjs since there will always be an obj in arrayOfObjs
       // even though the value of array[index][column] is null
       console.log("return");
@@ -2485,7 +2485,7 @@ function goingUpRight(array, row, column) {
     index--, columnIndex++
   ) {
     // if there is no obj at array[index][column] or array[index][column] is null return
-    if (array[index][column] == null) {
+    if (array[index][columnIndex] == null) {
       // return arrayOfObjs since there will always be an obj in arrayOfObjs
       // even though the value of array[index][column] is null
       console.log("return");
@@ -2535,7 +2535,7 @@ function goingDownLeft(array, row, column) {
     index++, columnIndex--
   ) {
     // if there is no obj at array[index][column] or array[index][column] is null return
-    if (array[index][column] == null) {
+    if (array[index][columnIndex] == null) {
       // return arrayOfObjs since there will always be an obj in arrayOfObjs
       // even though the value of array[index][column] is null
       console.log("return");
